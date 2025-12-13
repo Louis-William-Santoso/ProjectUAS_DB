@@ -30,11 +30,22 @@
         {
             tabControlPage = new TabControl();
             tabPageHomepage = new TabPage();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox1 = new PictureBox();
             label4 = new Label();
             labelHomepageNama = new Label();
             pictureBoxHomepageProfile = new PictureBox();
             tabPageAccount = new TabPage();
+            labelAccountFullName = new Label();
+            pictureBox4 = new PictureBox();
+            labelAccountUsername = new Label();
             tabPageHistory = new TabPage();
+            tabPageGassRide = new TabPage();
+            tabPageGassKan = new TabPage();
+            tabPage3 = new TabPage();
             panelControl = new Panel();
             labelHistoryButton = new Label();
             labelAccountButton = new Label();
@@ -42,7 +53,12 @@
             buttonMenu = new PictureBox();
             tabControlPage.SuspendLayout();
             tabPageHomepage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageProfile).BeginInit();
+            tabPageAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).BeginInit();
             SuspendLayout();
@@ -53,6 +69,9 @@
             tabControlPage.Controls.Add(tabPageHomepage);
             tabControlPage.Controls.Add(tabPageAccount);
             tabControlPage.Controls.Add(tabPageHistory);
+            tabControlPage.Controls.Add(tabPageGassRide);
+            tabControlPage.Controls.Add(tabPageGassKan);
+            tabControlPage.Controls.Add(tabPage3);
             tabControlPage.Location = new Point(61, -4);
             tabControlPage.Multiline = true;
             tabControlPage.Name = "tabControlPage";
@@ -63,6 +82,11 @@
             // tabPageHomepage
             // 
             tabPageHomepage.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageHomepage.Controls.Add(label2);
+            tabPageHomepage.Controls.Add(label1);
+            tabPageHomepage.Controls.Add(pictureBox3);
+            tabPageHomepage.Controls.Add(pictureBox2);
+            tabPageHomepage.Controls.Add(pictureBox1);
             tabPageHomepage.Controls.Add(label4);
             tabPageHomepage.Controls.Add(labelHomepageNama);
             tabPageHomepage.Controls.Add(pictureBoxHomepageProfile);
@@ -72,6 +96,56 @@
             tabPageHomepage.Size = new Size(1181, 623);
             tabPageHomepage.TabIndex = 0;
             tabPageHomepage.Text = "Homepage";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(216, 308);
+            label2.Name = "label2";
+            label2.Size = new Size(99, 27);
+            label2.TabIndex = 8;
+            label2.Text = "Gass-Kan";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(58, 308);
+            label1.Name = "label1";
+            label1.Size = new Size(105, 27);
+            label1.TabIndex = 7;
+            label1.Text = "Gass-Ride";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = Properties.Resources.meal;
+            pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox3.Location = new Point(229, 239);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(66, 66);
+            pictureBox3.TabIndex = 6;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = Properties.Resources.bike;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox2.Location = new Point(72, 239);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(66, 66);
+            pictureBox2.TabIndex = 5;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -107,13 +181,53 @@
             // 
             // tabPageAccount
             // 
+            tabPageAccount.AutoScroll = true;
             tabPageAccount.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageAccount.Controls.Add(labelAccountFullName);
+            tabPageAccount.Controls.Add(pictureBox4);
+            tabPageAccount.Controls.Add(labelAccountUsername);
             tabPageAccount.Location = new Point(4, 4);
             tabPageAccount.Name = "tabPageAccount";
             tabPageAccount.Padding = new Padding(3);
-            tabPageAccount.Size = new Size(1005, 515);
+            tabPageAccount.Size = new Size(1181, 623);
             tabPageAccount.TabIndex = 1;
             tabPageAccount.Text = "Account";
+            // 
+            // labelAccountFullName
+            // 
+            labelAccountFullName.AutoSize = true;
+            labelAccountFullName.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelAccountFullName.ForeColor = Color.White;
+            labelAccountFullName.Location = new Point(888, 104);
+            labelAccountFullName.Name = "labelAccountFullName";
+            labelAccountFullName.RightToLeft = RightToLeft.Yes;
+            labelAccountFullName.Size = new Size(72, 20);
+            labelAccountFullName.TabIndex = 5;
+            labelAccountFullName.Text = "full name";
+            labelAccountFullName.TextAlign = ContentAlignment.TopRight;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackgroundImage = Properties.Resources.account;
+            pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox4.Location = new Point(996, 37);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(110, 103);
+            pictureBox4.TabIndex = 4;
+            pictureBox4.TabStop = false;
+            // 
+            // labelAccountUsername
+            // 
+            labelAccountUsername.AutoSize = true;
+            labelAccountUsername.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelAccountUsername.ForeColor = Color.White;
+            labelAccountUsername.Location = new Point(801, 59);
+            labelAccountUsername.Name = "labelAccountUsername";
+            labelAccountUsername.RightToLeft = RightToLeft.Yes;
+            labelAccountUsername.Size = new Size(171, 45);
+            labelAccountUsername.TabIndex = 3;
+            labelAccountUsername.Text = "Username";
+            labelAccountUsername.TextAlign = ContentAlignment.TopRight;
             // 
             // tabPageHistory
             // 
@@ -121,9 +235,39 @@
             tabPageHistory.Location = new Point(4, 4);
             tabPageHistory.Name = "tabPageHistory";
             tabPageHistory.Padding = new Padding(3);
-            tabPageHistory.Size = new Size(1005, 515);
+            tabPageHistory.Size = new Size(1181, 623);
             tabPageHistory.TabIndex = 2;
             tabPageHistory.Text = "History";
+            // 
+            // tabPageGassRide
+            // 
+            tabPageGassRide.Location = new Point(4, 4);
+            tabPageGassRide.Name = "tabPageGassRide";
+            tabPageGassRide.Padding = new Padding(3);
+            tabPageGassRide.Size = new Size(1181, 623);
+            tabPageGassRide.TabIndex = 3;
+            tabPageGassRide.Text = "GassRide";
+            tabPageGassRide.UseVisualStyleBackColor = true;
+            // 
+            // tabPageGassKan
+            // 
+            tabPageGassKan.Location = new Point(4, 4);
+            tabPageGassKan.Name = "tabPageGassKan";
+            tabPageGassKan.Padding = new Padding(3);
+            tabPageGassKan.Size = new Size(1181, 623);
+            tabPageGassKan.TabIndex = 4;
+            tabPageGassKan.Text = "GassKan";
+            tabPageGassKan.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Location = new Point(4, 4);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Padding = new Padding(3);
+            tabPage3.Size = new Size(1181, 623);
+            tabPage3.TabIndex = 5;
+            tabPage3.Text = "tabPage3";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // panelControl
             // 
@@ -203,7 +347,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
-            ClientSize = new Size(1245, 646);
+            ClientSize = new Size(1245, 648);
             Controls.Add(panelControl);
             Controls.Add(tabControlPage);
             Name = "FormUtama";
@@ -214,7 +358,13 @@
             tabControlPage.ResumeLayout(false);
             tabPageHomepage.ResumeLayout(false);
             tabPageHomepage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageProfile).EndInit();
+            tabPageAccount.ResumeLayout(false);
+            tabPageAccount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panelControl.ResumeLayout(false);
             panelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).EndInit();
@@ -235,5 +385,16 @@
         private Label labelHomepageNama;
         private PictureBox pictureBoxHomepageProfile;
         private TabPage tabPageHistory;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private PictureBox pictureBox3;
+        private Label label2;
+        private TabPage tabPageGassRide;
+        private TabPage tabPageGassKan;
+        private TabPage tabPage3;
+        private Label labelAccountUsername;
+        private PictureBox pictureBox4;
+        private Label labelAccountFullName;
     }
 }
