@@ -1,3 +1,8 @@
+using System.IO;
+using System;
+using System.Text;
+using System.Reflection;
+
 namespace projectUas
 {
     public partial class FormUtama : Form
@@ -7,15 +12,18 @@ namespace projectUas
             InitializeComponent();
         }
 
+        //Declaration
         int controlPanelWidthNormal = 67;
         int controlPanelWidthExpanded = 300;
         int groupBoxControlHeight = 514;
         int groupBoxControlWidth = 1002;
+        int settingsConrolHeight = 75;
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
 
         }
+
 
         private void FormUtama_Resize(object sender, EventArgs e)
         {
@@ -42,9 +50,9 @@ namespace projectUas
             panelControl.Size = new Size(controlPanelWidthNormal, this.Size.Height - 35);
         }
 
-        private void labelAccountButton_Click(object sender, EventArgs e)
+        private void labelSettingsButton_Click(object sender, EventArgs e)
         {
-            tabControlPage.SelectedTab = tabPageAccount;
+            tabControlPage.SelectedTab = tabPageSettings;
             panelControl.Size = new Size(controlPanelWidthNormal, this.Size.Height - 35);
         }
 
@@ -54,5 +62,42 @@ namespace projectUas
             panelControl.Size = new Size(controlPanelWidthNormal, this.Size.Height - 35);
         }
         #endregion
+
+        #region Settings Page
+        private void PanelSetting_Click(object sender, EventArgs e)
+        {
+            int panelWidth = 1000;
+            Panel temp = new Panel();
+
+
+            if (sender is Panel) temp = (Panel)sender;
+            else if (sender is Label)
+            {
+                Label lab = (Label)sender;
+                temp = (Panel)lab.Parent;
+            }
+
+            if (temp.Size.Height > settingsConrolHeight)
+            {
+                temp.Size = new Size(panelWidth, settingsConrolHeight);
+            }
+            else
+            {
+                temp.Size = new Size(panelWidth, 300);
+            }
+        }
+
+        private void TexboxInputFirstTime(object sender, EventArgs e)
+        {
+            //sender
+        }
+        #endregion
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormMapSelector map = new FormMapSelector();
+            map.ShowDialog();
+        }
     }
 }

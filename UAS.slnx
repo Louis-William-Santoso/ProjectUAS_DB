@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="Class_Gass-livery/Class_Gass-livery.csproj" Id="fb04066a-13a9-4539-88a8-1d9df4bc1c18" />
+  <Project Path="csweb/csweb.csproj" />
   <Project Path="projectUas/projectUas.csproj" />
 </Solution>

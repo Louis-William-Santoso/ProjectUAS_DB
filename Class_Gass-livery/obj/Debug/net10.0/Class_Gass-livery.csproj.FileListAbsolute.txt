@@ -1,0 +1,12 @@
+D:\(=^.^=)\database\UAS\Class_Gass-livery\bin\Debug\net10.0\Class_Gass-livery.deps.json
+D:\(=^.^=)\database\UAS\Class_Gass-livery\bin\Debug\net10.0\Class_Gass-livery.dll
+D:\(=^.^=)\database\UAS\Class_Gass-livery\bin\Debug\net10.0\Class_Gass-livery.pdb
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.GeneratedMSBuildEditorConfig.editorconfig
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.AssemblyInfoInputs.cache
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.AssemblyInfo.cs
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.csproj.CoreCompileInputs.cache
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.sourcelink.json
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.dll
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\refint\Class_Gass-livery.dll
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\Class_Gass-livery.pdb
+D:\(=^.^=)\database\UAS\Class_Gass-livery\obj\Debug\net10.0\ref\Class_Gass-livery.dll
