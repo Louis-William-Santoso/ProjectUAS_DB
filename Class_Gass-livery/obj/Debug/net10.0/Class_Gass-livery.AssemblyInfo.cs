@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Class_Gass-livery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d561ab03609349d8f9fb13764776f4252a98d6d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdc4456e46a015f11395ef51b7e28c3dbcbea4a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Class_Gass-livery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Class_Gass-livery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
