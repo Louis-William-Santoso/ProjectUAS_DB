@@ -5,7 +5,87 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v10.0": {}
+    ".NETCoreApp,Version=v10.0": {
+      "Microsoft.AspNetCore.Components.WebView/10.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.FileProviders.Embedded": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Components.WebView.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.WebView.WindowsForms/10.0.20": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.WebView": "10.0.0",
+          "Microsoft.Web.WebView2": "1.0.3179.45"
+        },
+        "runtime": {
+          "lib/net10.0-windows7.0/Microsoft.AspNetCore.Components.WebView.WindowsForms.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.2025.61502"
+          }
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Embedded/10.0.0": {
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.FileProviders.Embedded.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
+      "Microsoft.Web.WebView2/1.0.3179.45": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "1.0.3179.45"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.3179.45"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.3179.45"
+          }
+        }
+      }
+    }
   },
-  "libraries": {}
+  "libraries": {
+    "Microsoft.AspNetCore.Components.WebView/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fdBlMj2W0Kv5qIsUKotipoaCUQT1LgWc9QVbS0dJpiFL5UWytp6JvKrB71dj6tuqCZwb2VpcKyIj6uQWfG5VLw==",
+      "path": "microsoft.aspnetcore.components.webview/10.0.0",
+      "hashPath": "microsoft.aspnetcore.components.webview.10.0.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Components.WebView.WindowsForms/10.0.20": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vSKNlMqm8/iccVKndGg1oez8mkrgXGk6XGqVbyM2Fllqskm5GGmLIgUFLoTdg6xC4B0rU/sOU7AlvY313SAhCQ==",
+      "path": "microsoft.aspnetcore.components.webview.windowsforms/10.0.20",
+      "hashPath": "microsoft.aspnetcore.components.webview.windowsforms.10.0.20.nupkg.sha512"
+    },
+    "Microsoft.Extensions.FileProviders.Embedded/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ECaTMB4NdV9W1es9J6tN0yoXRPUHKMi5+2L7hcVZ5k9zVdxccIx6+vMllwEYcdTaO0mCETEmdH4F0KxCqgnPaw==",
+      "path": "microsoft.extensions.fileproviders.embedded/10.0.0",
+      "hashPath": "microsoft.extensions.fileproviders.embedded.10.0.0.nupkg.sha512"
+    },
+    "Microsoft.Web.WebView2/1.0.3179.45": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3pokSH5CnN0G6rGhGFo1y87inxYhNxBQ2Vdf0wlvBj99KHxQJormjDACmqRnFeUsmuNFIhWwfAL1ztq7wD5qRA==",
+      "path": "microsoft.web.webview2/1.0.3179.45",
+      "hashPath": "microsoft.web.webview2.1.0.3179.45.nupkg.sha512"
+    }
+  }
 }

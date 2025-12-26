@@ -14,7 +14,7 @@ namespace projectUas
 
         //Declaration
         int controlPanelWidthNormal = 67;
-        int controlPanelWidthExpanded = 300;
+        int controlPanelWidthExpanded = 350;
         int groupBoxControlHeight = 514;
         int groupBoxControlWidth = 1002;
         int settingsConrolHeight = 75;
@@ -93,11 +93,32 @@ namespace projectUas
         }
         #endregion
 
+        #region Homepage
+        public void Picture_click(object sender, EventArgs e)
+        {
+            PictureBox pictureBox = (PictureBox)sender;
+            if (pictureBox == pictureBoxHomepageGassRide)
+            {
+                tabControlPage.SelectedTab = tabPageGassRide;
+            }
+            else if (pictureBox == pictureBoxHomepageGassKan)
+            {
+                tabControlPage.SelectedTab = tabPageGassKan;
+            }
+            else if (pictureBox == pictureBoxHomepageGassMon)
+            {
+                tabControlPage.SelectedTab = tabPageGassMon;
+            }
+        }
+        #endregion
 
+        #region Gass-Ride
         private void button3_Click(object sender, EventArgs e)
         {
             FormMapSelector map = new FormMapSelector();
             map.ShowDialog();
         }
+        #endregion
+
     }
 }

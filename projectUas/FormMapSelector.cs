@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectUas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,6 +7,9 @@ using System.Drawing;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+//Tambahkan kedua library dibawah ini untuk dapat mengakases web view 
+using Microsoft.AspNetCore.Components.WebView.WindowsForms;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace projectUas
 {
@@ -18,9 +22,11 @@ namespace projectUas
 
         private void FormMapSelector_Load(object sender, EventArgs e)
         {
-            Assembly ass = Assembly.GetExecutingAssembly();
-            Stream path = ass.GetManifestResourceStream("http://google.com");
-            mapSelector.DocumentStream = path;
+            ServiceCollection serviceView = new ServiceCollection();
+            serviceView.AddWindowsFormsBlazorWebView();
+
+            blazorWebViewMapSelector.HostPage = "wwwroot/maps.html";
+            blazorWebViewMapSelector.Services = serviceView.BuildServiceProvider();
         }
     }
 }

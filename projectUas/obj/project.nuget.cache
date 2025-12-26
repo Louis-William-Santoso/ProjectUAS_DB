@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "NS3zx0Z6Cqk=",
+  "dgSpecHash": "CfWMckmQzOg=",
   "success": true,
   "projectFilePath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\louis\\.nuget\\packages\\microsoft.aspnetcore.components.web\\10.0.1\\microsoft.aspnetcore.components.web.10.0.1.nupkg.sha512",
+    "C:\\Users\\louis\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\microsoft.aspnetcore.components.webview.10.0.0.nupkg.sha512",
+    "C:\\Users\\louis\\.nuget\\packages\\microsoft.aspnetcore.components.webview.windowsforms\\10.0.20\\microsoft.aspnetcore.components.webview.windowsforms.10.0.20.nupkg.sha512",
+    "C:\\Users\\louis\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\10.0.0\\microsoft.extensions.fileproviders.embedded.10.0.0.nupkg.sha512",
+    "C:\\Users\\louis\\.nuget\\packages\\microsoft.web.webview2\\1.0.3179.45\\microsoft.web.webview2.1.0.3179.45.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Components.Web will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
+      "libraryId": "Microsoft.AspNetCore.Components.Web",
+      "targetGraphs": [
+        "net10.0-windows7.0"
+      ]
+    }
+  ]
 }

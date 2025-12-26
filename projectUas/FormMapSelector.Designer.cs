@@ -1,4 +1,6 @@
-﻿namespace projectUas
+﻿using Microsoft.AspNetCore.Components.WebView.WindowsForms;
+
+namespace projectUas
 {
     partial class FormMapSelector
     {
@@ -28,17 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            mapSelector = new WebBrowser();
             labelHomepageNama = new Label();
-            textBox1 = new TextBox();
+            blazorWebViewMapSelector = new BlazorWebView();
+            comboBox1 = new ComboBox();
+            button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
-            // 
-            // mapSelector
-            // 
-            mapSelector.Location = new Point(28, 170);
-            mapSelector.Name = "mapSelector";
-            mapSelector.Size = new Size(402, 295);
-            mapSelector.TabIndex = 0;
             // 
             // labelHomepageNama
             // 
@@ -51,22 +48,51 @@
             labelHomepageNama.TabIndex = 3;
             labelHomepageNama.Text = "Select Address";
             // 
-            // textBox1
+            // blazorWebViewMapSelector
             // 
-            textBox1.Location = new Point(28, 108);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(307, 23);
-            textBox1.TabIndex = 4;
+            blazorWebViewMapSelector.Location = new Point(38, 158);
+            blazorWebViewMapSelector.Name = "blazorWebViewMapSelector";
+            blazorWebViewMapSelector.Size = new Size(544, 306);
+            blazorWebViewMapSelector.TabIndex = 5;
+            blazorWebViewMapSelector.Text = "blazorWebView1";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(39, 95);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(351, 23);
+            comboBox1.TabIndex = 6;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(434, 86);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 38);
+            button1.TabIndex = 7;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(434, 509);
+            button2.Name = "button2";
+            button2.Size = new Size(123, 38);
+            button2.TabIndex = 8;
+            button2.Text = "Save";
+            button2.UseVisualStyleBackColor = true;
             // 
             // FormMapSelector
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
-            ClientSize = new Size(462, 547);
-            Controls.Add(textBox1);
+            ClientSize = new Size(617, 580);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(comboBox1);
+            Controls.Add(blazorWebViewMapSelector);
             Controls.Add(labelHomepageNama);
-            Controls.Add(mapSelector);
             Name = "FormMapSelector";
             Text = "FormMapSelector";
             Load += FormMapSelector_Load;
@@ -75,8 +101,11 @@
         }
 
         #endregion
-        private WebBrowser mapSelector;
+
         private Label labelHomepageNama;
-        private TextBox textBox1;
+        private BlazorWebView blazorWebViewMapSelector;
+        private ComboBox comboBox1;
+        private Button button1;
+        private Button button2;
     }
 }
