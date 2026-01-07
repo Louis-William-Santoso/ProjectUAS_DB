@@ -72,6 +72,9 @@
             pictureBoxSettingPP = new PictureBox();
             labelSettingUsername = new Label();
             tabPageHistory = new TabPage();
+            panel3 = new Panel();
+            radioButton4 = new RadioButton();
+            radioButton3 = new RadioButton();
             label3 = new Label();
             dataGridView2 = new DataGridView();
             tabPageGassRide = new TabPage();
@@ -145,13 +148,22 @@
             label53 = new Label();
             button8 = new Button();
             tabPageGassMon = new TabPage();
+            label49 = new Label();
+            label50 = new Label();
+            pictureBox10 = new PictureBox();
+            pictureBox11 = new PictureBox();
+            label45 = new Label();
+            label46 = new Label();
+            pictureBox6 = new PictureBox();
+            tabPageTenant = new TabPage();
             panelControl = new Panel();
             labelHistoryButton = new Label();
             labelAccountButton = new Label();
             labelHomepageButton = new Label();
             buttonMenu = new PictureBox();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
+            pictureBox12 = new PictureBox();
+            label51 = new Label();
+            label54 = new Label();
             tabControlPage.SuspendLayout();
             tabPageHomepage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassMon).BeginInit();
@@ -170,6 +182,7 @@
             panelSettingsButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSettingPP).BeginInit();
             tabPageHistory.SuspendLayout();
+            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             tabPageGassRide.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -191,8 +204,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            tabPageGassMon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            tabPageTenant.SuspendLayout();
             panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SuspendLayout();
             // 
             // tabControlPage
@@ -204,6 +223,7 @@
             tabControlPage.Controls.Add(tabPageGassRide);
             tabControlPage.Controls.Add(tabPageGassKan);
             tabControlPage.Controls.Add(tabPageGassMon);
+            tabControlPage.Controls.Add(tabPageTenant);
             tabControlPage.Location = new Point(61, -4);
             tabControlPage.Multiline = true;
             tabControlPage.Name = "tabControlPage";
@@ -743,8 +763,7 @@
             // tabPageHistory
             // 
             tabPageHistory.BackColor = Color.FromArgb(25, 25, 25);
-            tabPageHistory.Controls.Add(radioButton4);
-            tabPageHistory.Controls.Add(radioButton3);
+            tabPageHistory.Controls.Add(panel3);
             tabPageHistory.Controls.Add(label3);
             tabPageHistory.Controls.Add(dataGridView2);
             tabPageHistory.Location = new Point(4, 4);
@@ -753,6 +772,40 @@
             tabPageHistory.Size = new Size(1181, 624);
             tabPageHistory.TabIndex = 2;
             tabPageHistory.Text = "History";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(radioButton4);
+            panel3.Controls.Add(radioButton3);
+            panel3.Location = new Point(27, 119);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(237, 36);
+            panel3.TabIndex = 7;
+            panel3.Visible = false;
+            // 
+            // radioButton4
+            // 
+            radioButton4.AutoSize = true;
+            radioButton4.ForeColor = Color.White;
+            radioButton4.Location = new Point(108, 10);
+            radioButton4.Name = "radioButton4";
+            radioButton4.Size = new Size(115, 19);
+            radioButton4.TabIndex = 6;
+            radioButton4.TabStop = true;
+            radioButton4.Text = "Users transaction";
+            radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.ForeColor = Color.White;
+            radioButton3.Location = new Point(12, 10);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(80, 19);
+            radioButton3.TabIndex = 5;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "My Orders";
+            radioButton3.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -763,7 +816,7 @@
             label3.ForeColor = Color.White;
             label3.Image = Properties.Resources.history;
             label3.ImageAlign = ContentAlignment.MiddleLeft;
-            label3.Location = new Point(27, 60);
+            label3.Location = new Point(27, 61);
             label3.Name = "label3";
             label3.Size = new Size(193, 52);
             label3.TabIndex = 4;
@@ -1215,6 +1268,7 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(37, 37, 37);
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;
             button2.Image = Properties.Resources.add_location;
@@ -1308,6 +1362,7 @@
             // buttonGassRideMyLocationSearch
             // 
             buttonGassRideMyLocationSearch.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassRideMyLocationSearch.FlatStyle = FlatStyle.Flat;
             buttonGassRideMyLocationSearch.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             buttonGassRideMyLocationSearch.ForeColor = Color.White;
             buttonGassRideMyLocationSearch.Image = Properties.Resources.add_location;
@@ -1724,12 +1779,106 @@
             // tabPageGassMon
             // 
             tabPageGassMon.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageGassMon.Controls.Add(label49);
+            tabPageGassMon.Controls.Add(label50);
+            tabPageGassMon.Controls.Add(pictureBox10);
+            tabPageGassMon.Controls.Add(pictureBox11);
+            tabPageGassMon.Controls.Add(label45);
+            tabPageGassMon.Controls.Add(label46);
+            tabPageGassMon.Controls.Add(pictureBox6);
             tabPageGassMon.Location = new Point(4, 4);
             tabPageGassMon.Name = "tabPageGassMon";
             tabPageGassMon.Padding = new Padding(3);
             tabPageGassMon.Size = new Size(1181, 624);
             tabPageGassMon.TabIndex = 5;
             tabPageGassMon.Text = "GassMon";
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label49.ForeColor = Color.White;
+            label49.Location = new Point(210, 280);
+            label49.Name = "label49";
+            label49.Size = new Size(94, 27);
+            label49.TabIndex = 12;
+            label49.Text = "Transfer";
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label50.ForeColor = Color.White;
+            label50.Location = new Point(65, 280);
+            label50.Name = "label50";
+            label50.Size = new Size(77, 27);
+            label50.TabIndex = 11;
+            label50.Text = "Top-up";
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackgroundImage = Properties.Resources.transfer;
+            pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox10.Location = new Point(223, 211);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(66, 66);
+            pictureBox10.TabIndex = 10;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.BackgroundImage = Properties.Resources.top_up;
+            pictureBox11.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox11.Location = new Point(70, 211);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(66, 66);
+            pictureBox11.TabIndex = 9;
+            pictureBox11.TabStop = false;
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label45.ForeColor = Color.White;
+            label45.Location = new Point(165, 75);
+            label45.Name = "label45";
+            label45.Size = new Size(86, 20);
+            label45.TabIndex = 6;
+            label45.Text = "#IDGamon";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.ForeColor = Color.White;
+            label46.Location = new Point(159, 86);
+            label46.Name = "label46";
+            label46.Size = new Size(177, 45);
+            label46.TabIndex = 5;
+            label46.Text = "Rp. XXXX";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.BackgroundImage = Properties.Resources.dompet;
+            pictureBox6.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox6.Location = new Point(43, 47);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(110, 103);
+            pictureBox6.TabIndex = 4;
+            pictureBox6.TabStop = false;
+            // 
+            // tabPageTenant
+            // 
+            tabPageTenant.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageTenant.Controls.Add(label51);
+            tabPageTenant.Controls.Add(label54);
+            tabPageTenant.Controls.Add(pictureBox12);
+            tabPageTenant.Location = new Point(4, 4);
+            tabPageTenant.Name = "tabPageTenant";
+            tabPageTenant.Padding = new Padding(3);
+            tabPageTenant.Size = new Size(1181, 624);
+            tabPageTenant.TabIndex = 6;
+            tabPageTenant.Text = "Tenant";
             // 
             // panelControl
             // 
@@ -1804,36 +1953,44 @@
             buttonMenu.TabStop = false;
             buttonMenu.Click += buttonMenu_Click;
             // 
-            // radioButton3
+            // pictureBox12
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.ForeColor = Color.White;
-            radioButton3.Location = new Point(44, 121);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(80, 19);
-            radioButton3.TabIndex = 5;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "My Orders";
-            radioButton3.UseVisualStyleBackColor = true;
+            pictureBox12.BackgroundImage = Properties.Resources.shop;
+            pictureBox12.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox12.Location = new Point(43, 47);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(110, 103);
+            pictureBox12.TabIndex = 5;
+            pictureBox12.TabStop = false;
             // 
-            // radioButton4
+            // label51
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.ForeColor = Color.White;
-            radioButton4.Location = new Point(140, 121);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(115, 19);
-            radioButton4.TabIndex = 6;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Users transaction";
-            radioButton4.UseVisualStyleBackColor = true;
+            label51.AutoSize = true;
+            label51.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label51.ForeColor = Color.White;
+            label51.Location = new Point(165, 71);
+            label51.Name = "label51";
+            label51.Size = new Size(75, 20);
+            label51.TabIndex = 8;
+            label51.Text = "#IDShop";
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label54.ForeColor = Color.White;
+            label54.Location = new Point(159, 82);
+            label54.Name = "label54";
+            label54.Size = new Size(154, 45);
+            label54.TabIndex = 7;
+            label54.Text = "My Shop";
             // 
             // FormUtama
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
-            ClientSize = new Size(1245, 643);
+            ClientSize = new Size(1245, 648);
             Controls.Add(panelControl);
             Controls.Add(tabControlPage);
             Name = "FormUtama";
@@ -1865,6 +2022,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxSettingPP).EndInit();
             tabPageHistory.ResumeLayout(false);
             tabPageHistory.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             tabPageGassRide.ResumeLayout(false);
             tabPageGassRide.PerformLayout();
@@ -1896,9 +2055,17 @@
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            tabPageGassMon.ResumeLayout(false);
+            tabPageGassMon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            tabPageTenant.ResumeLayout(false);
+            tabPageTenant.PerformLayout();
             panelControl.ResumeLayout(false);
             panelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ResumeLayout(false);
         }
 
@@ -2028,5 +2195,17 @@
         private Label label48;
         private RadioButton radioButton3;
         private RadioButton radioButton4;
+        private Panel panel3;
+        private Label label45;
+        private Label label46;
+        private PictureBox pictureBox6;
+        private Label label49;
+        private Label label50;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox11;
+        private TabPage tabPageTenant;
+        private PictureBox pictureBox12;
+        private Label label51;
+        private Label label54;
     }
 }

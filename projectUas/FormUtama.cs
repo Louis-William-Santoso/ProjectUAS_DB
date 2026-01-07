@@ -2,7 +2,7 @@ using System.IO;
 using System;
 using System.Text;
 using System.Reflection;
-
+using Class_Gass_livery;
 namespace projectUas
 {
     public partial class FormUtama : Form
@@ -21,7 +21,13 @@ namespace projectUas
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
+            try
+            {
+                ConnectDB Connection = new ConnectDB(server.Default.DbServer, server.Default.DbName, server.Default.DbUsername, server.Default.DbPassword);
 
+                FormLogin login = new FormLogin();
+                login.ShowDialog();
+            }catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
 

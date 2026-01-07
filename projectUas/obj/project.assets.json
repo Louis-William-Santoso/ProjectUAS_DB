@@ -99,6 +99,16 @@
             "rid": "win-x86"
           }
         }
+      },
+      "Class_Gass-livery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Class_Gass-livery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Class_Gass-livery.dll": {}
+        }
       }
     }
   },
@@ -277,10 +287,16 @@
         "tools/wv2winrt/zh-Hans/System.CommandLine.resources.dll",
         "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
       ]
+    },
+    "Class_Gass-livery/1.0.0": {
+      "type": "project",
+      "path": "../Class_Gass-livery/Class_Gass-livery.csproj",
+      "msbuildProject": "../Class_Gass-livery/Class_Gass-livery.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0-windows7.0": [
+      "Class_Gass-livery >= 1.0.0",
       "Microsoft.AspNetCore.Components.Web >= 10.0.1",
       "Microsoft.AspNetCore.Components.WebView.WindowsForms >= 10.0.20"
     ]
@@ -316,7 +332,11 @@
       "frameworks": {
         "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj": {
+              "projectPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
