@@ -21,7 +21,7 @@
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (0,'Admin','3b612c75a7b5048a435fb6ec81e52ff92d6d795a8b5a9c17070f6a63c97a53b2','admin@gmail.com','Admin Ganteng',3,NULL,1,0,'2025-12-01 00:00:00'),(25122701,'louthod','f1a99fcc22ca7c538e37d3055237039feba3bf1a4c54b6703ec475e5cb07ac1a','louiswilli_san@outlook.com','Louis William',0,NULL,19,0,'2006-09-19 00:00:00'),(25122702,'ElvinGanteng','240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9','tess@gmail.com','Elvin GokGokGok',2,NULL,19,0,'2006-09-15 00:00:00'),(25122703,'MJ','240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9','tess1@gmail.com','Michael Jos',1,NULL,19,0,'2006-01-01 00:00:00'),(25122704,'Artchie','240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9','tess3@gmail.com','Artchie L',1,NULL,19,0,'2006-01-01 00:00:00');
+INSERT INTO `users` VALUES (1,'cff','ddf','gfc','rdgtfchtgfch',1,'bcb',2,6789,'2023-12-03 00:00:00','sdfghjk'),(2,'qwert','dfghj','fg','rg',3,'4567jk',12,4567,'2021-02-05 00:00:00','cvbn'),(3,'erfv','ijh','efb','ertyhjm',1,'fgbn',54,0,'1990-01-03 00:00:00','dfv');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -34,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-06 18:47:25
+-- Dump completed on 2026-01-08 16:15:38

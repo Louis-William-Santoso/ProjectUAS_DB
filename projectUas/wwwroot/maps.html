@@ -1,32 +1,25 @@
 ﻿<html>
-<head>
-    <base href="/" />
-    <script src="_framework/blazor.webview.js"></script>
-    <!--Style-->
-    <link rel="stylesheet" href="../leaflet/leaflet.css">
-    <style>
-        #map {
-            margin: 0;
-            height: 100%;
-            width: 100%;
-        }
-    </style>
-
-</head>
+    <head>
+        <base href="/" />
+        <script src="_framework/blazor.webview.js"></script>
+        <!--Style-->
+        <link rel="stylesheet" href="../leaflet/leaflet.css" />
+        <style>
+            #map {
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+        </style>
+    </head>
     <body>
-        <div id="map"></div>
+        <div id="app">
+            <div id="map"></div>
+        </div>
 
         <!--Aksara Jawa :v-->
         <script src="_framework/blazor.webview.js"></script>
         <script src="leaflet/leaflet.js"></script>
-        <script>
-            let mapView = L.map("map").setView([0, 0], 1); //set view layer
-
-            //tambahkan tileLayer yang didalamnya terdapat api peta dari openstreetmap
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(mapView);
-
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>

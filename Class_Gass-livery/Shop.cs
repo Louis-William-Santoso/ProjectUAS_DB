@@ -9,17 +9,17 @@ namespace Class_Gass_livery
     public class Shop
     {
         private int idTenant;
-        private int idUser;
+        private User user;
         private string namaToko;
         private string alamat;
         private string photo;
         private float rating;
         private List<Menu> menuList;
 
-        public Shop(int idTenant, int idUser, string name, string alamat, List<Menu> menuList, string photo="")
+        public Shop(int idTenant, User user, string name, string alamat, List<Menu> menuList, string photo="")
         {
             IdTenant = idTenant;
-            IdUser = idUser;
+            User = user;
             NamaToko = name;
             Alamat = alamat;
             Photo = photo;
@@ -27,7 +27,7 @@ namespace Class_Gass_livery
         }
 
         public int IdTenant { get => idTenant; set => idTenant = value; }
-        public int IdUser { get => idUser; set => idUser = value; }
+        public User User { get => user; set => user = value; }
         public string NamaToko { get => namaToko; set => namaToko = value; }
         public string Alamat { get => alamat; set => alamat = value; }
         public string Photo { get => photo; set => photo = value; }
@@ -42,10 +42,10 @@ namespace Class_Gass_livery
 
             while (data.Read() == true)
             {
-                string menu = "select m.id_menu, m.id_tenant, nama_menu, stock, harga, m.rating, m.photo, description" +
-                    "from tenant t inner join menu m" +
-                    "on t.id_tenant=m.id_tenant" +
-                    $"where m.id_tenant={data["id_tenant"]}" +
+                string menu = "select m.id_menu, m.id_tenant, nama_menu, stock, harga, m.rating, m.photo, description " +
+                    "from tenant t inner join menu m " +
+                    "on t.id_tenant=m.id_tenant " +
+                    $"where m.id_tenant={data["id_tenant"]} " +
                     "group by m.id_menu;";
                 MySqlDataReader dataMenu = ConnectDB.Select(menu);
                 List<Menu> listMenu = new List<Menu>();
@@ -64,9 +64,11 @@ namespace Class_Gass_livery
                     listMenu.Add(tempMenu);
                 }
 
+                string selectUser = $"select * from users where id_users={data["id_users"]};";
+                User dataUser = User.Bacadata(selectUser)[0];
                 Shop temp = new Shop(
                     (int)data["id_tenant"],
-                    (int)data["id_user"],
+                    dataUser,
                     (string)data["nama_tenant"],
                     (string)data["alamat"],
                     listMenu,
@@ -106,9 +108,11 @@ namespace Class_Gass_livery
                     listMenu.Add(tempMenu);
                 }
 
+                string selectUser = $"select * from users where id_users={data["id_users"]};";
+                User dataUser = User.Bacadata(selectUser)[0];
                 Shop temp = new Shop(
                     (int)data["id_tenant"],
-                    (int)data["id_user"],
+                    dataUser,
                     (string)data["nama_tenant"],
                     (string)data["alamat"],
                     listMenu,
@@ -117,6 +121,13 @@ namespace Class_Gass_livery
                 list.Add(temp);
             }
             return list;
+        }
+
+        public static void MasukData(Shop data)
+        {
+            string perintah = $"INSERT INTO `tenant` (`id_tenant`, `id_users`, `nama_tenant`, `alamat`, `rating`, `photo`) " +
+                              $"VALUES ('{data.IdTenant}', '{data.User}', '{data.NamaToko}', '{data.alamat}', '{data.Rating}', '{data.Photo}');";
+            ConnectDB.InputData(perintah);
         }
     }
 }

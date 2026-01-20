@@ -39,6 +39,9 @@
             textBoxLoginUsername = new TextBox();
             pictureBox1 = new PictureBox();
             tabPageSignUp = new TabPage();
+            label20 = new Label();
+            dateTimePickerBirthday = new DateTimePicker();
+            labelUserID = new Label();
             labelSignUpAdress = new Label();
             buttonSignUpAddress = new Button();
             label19 = new Label();
@@ -65,29 +68,33 @@
             tabPageSelectRole = new TabPage();
             buttonSelectRoleBack = new Button();
             buttonSelectRoleNext = new Button();
-            checkBox1 = new CheckBox();
+            checkBoxSelectRoleMerchant = new CheckBox();
             checkBoxSelectRoleDriver = new CheckBox();
             label13 = new Label();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             label8 = new Label();
             tabPageDriverSetup = new TabPage();
-            button2 = new Button();
-            button3 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            numericUpDownNoPlatTengah = new NumericUpDown();
+            comboBoxNoPlatDepan = new ComboBox();
+            comboBoxVehicleType = new ComboBox();
+            label15 = new Label();
+            buttonCreateDriverBack = new Button();
+            buttonCreateDriverNext = new Button();
+            dateTimePickerYearProduce = new DateTimePicker();
             label17 = new Label();
             label16 = new Label();
-            textBox8 = new TextBox();
+            textBoxNoPlatBlakang = new TextBox();
             label14 = new Label();
             tabPageMerchant = new TabPage();
             button7 = new Button();
             label21 = new Label();
             label22 = new Label();
             textBox9 = new TextBox();
-            button6 = new Button();
-            pictureBox4 = new PictureBox();
-            button4 = new Button();
-            button5 = new Button();
+            buttonSetShopProfile = new Button();
+            pictureBoxShopProfile = new PictureBox();
+            buttonAddShopBack = new Button();
+            buttonAddShopNext = new Button();
             label18 = new Label();
             tabPageFinishSetup = new TabPage();
             buttonFinishSetup = new Button();
@@ -104,8 +111,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             tabPageDriverSetup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownNoPlatTengah).BeginInit();
             tabPageMerchant.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxShopProfile).BeginInit();
             tabPageFinishSetup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -245,6 +253,9 @@
             // tabPageSignUp
             // 
             tabPageSignUp.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageSignUp.Controls.Add(label20);
+            tabPageSignUp.Controls.Add(dateTimePickerBirthday);
+            tabPageSignUp.Controls.Add(labelUserID);
             tabPageSignUp.Controls.Add(labelSignUpAdress);
             tabPageSignUp.Controls.Add(buttonSignUpAddress);
             tabPageSignUp.Controls.Add(label19);
@@ -271,6 +282,42 @@
             tabPageSignUp.Size = new Size(664, 531);
             tabPageSignUp.TabIndex = 1;
             tabPageSignUp.Text = "SignUp";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(43, 426);
+            label20.Name = "label20";
+            label20.RightToLeft = RightToLeft.No;
+            label20.Size = new Size(106, 20);
+            label20.TabIndex = 49;
+            label20.Text = "Your Birthday";
+            label20.TextAlign = ContentAlignment.TopRight;
+            // 
+            // dateTimePickerBirthday
+            // 
+            dateTimePickerBirthday.CustomFormat = "";
+            dateTimePickerBirthday.Format = DateTimePickerFormat.Short;
+            dateTimePickerBirthday.Location = new Point(42, 451);
+            dateTimePickerBirthday.Name = "dateTimePickerBirthday";
+            dateTimePickerBirthday.Size = new Size(250, 23);
+            dateTimePickerBirthday.TabIndex = 48;
+            // 
+            // labelUserID
+            // 
+            labelUserID.AutoSize = true;
+            labelUserID.BackColor = Color.FromArgb(25, 25, 25);
+            labelUserID.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelUserID.ForeColor = Color.Gray;
+            labelUserID.Location = new Point(44, 56);
+            labelUserID.Name = "labelUserID";
+            labelUserID.RightToLeft = RightToLeft.No;
+            labelUserID.Size = new Size(31, 20);
+            labelUserID.TabIndex = 47;
+            labelUserID.Text = "#...";
+            labelUserID.TextAlign = ContentAlignment.TopRight;
             // 
             // labelSignUpAdress
             // 
@@ -300,6 +347,7 @@
             buttonSignUpAddress.Text = "Browse";
             buttonSignUpAddress.TextAlign = ContentAlignment.MiddleRight;
             buttonSignUpAddress.UseVisualStyleBackColor = false;
+            buttonSignUpAddress.Click += buttonSignUpAddress_Click;
             // 
             // label19
             // 
@@ -349,7 +397,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(43, 399);
+            label11.Location = new Point(43, 373);
             label11.Name = "label11";
             label11.RightToLeft = RightToLeft.No;
             label11.Size = new Size(36, 20);
@@ -362,7 +410,7 @@
             groupBox2.Controls.Add(radioButtonSignUpIDunno);
             groupBox2.Controls.Add(radioButtonSignUpMale);
             groupBox2.Controls.Add(radioButtonSignUpFemale);
-            groupBox2.Location = new Point(43, 413);
+            groupBox2.Location = new Point(43, 387);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(250, 37);
             groupBox2.TabIndex = 41;
@@ -426,7 +474,7 @@
             label10.BackColor = Color.FromArgb(25, 25, 25);
             label10.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(43, 221);
+            label10.Location = new Point(43, 195);
             label10.Name = "label10";
             label10.RightToLeft = RightToLeft.No;
             label10.Size = new Size(51, 20);
@@ -439,7 +487,7 @@
             textBoxSignUpEmail.BackColor = Color.FromArgb(25, 25, 25);
             textBoxSignUpEmail.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSignUpEmail.ForeColor = Color.White;
-            textBoxSignUpEmail.Location = new Point(43, 244);
+            textBoxSignUpEmail.Location = new Point(43, 218);
             textBoxSignUpEmail.Name = "textBoxSignUpEmail";
             textBoxSignUpEmail.Size = new Size(250, 34);
             textBoxSignUpEmail.TabIndex = 35;
@@ -453,7 +501,7 @@
             label9.BackColor = Color.FromArgb(25, 25, 25);
             label9.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(43, 163);
+            label9.Location = new Point(43, 137);
             label9.Name = "label9";
             label9.RightToLeft = RightToLeft.No;
             label9.Size = new Size(77, 20);
@@ -466,7 +514,7 @@
             textBoxSignUpFullname.BackColor = Color.FromArgb(25, 25, 25);
             textBoxSignUpFullname.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSignUpFullname.ForeColor = Color.White;
-            textBoxSignUpFullname.Location = new Point(43, 186);
+            textBoxSignUpFullname.Location = new Point(43, 160);
             textBoxSignUpFullname.Name = "textBoxSignUpFullname";
             textBoxSignUpFullname.Size = new Size(250, 34);
             textBoxSignUpFullname.TabIndex = 33;
@@ -480,7 +528,7 @@
             label7.BackColor = Color.FromArgb(25, 25, 25);
             label7.Font = new Font("Comic Sans MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(43, 39);
+            label7.Location = new Point(43, 17);
             label7.Name = "label7";
             label7.RightToLeft = RightToLeft.No;
             label7.Size = new Size(118, 38);
@@ -493,7 +541,7 @@
             textBoxSignUpValidatePassword.BackColor = Color.FromArgb(25, 25, 25);
             textBoxSignUpValidatePassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSignUpValidatePassword.ForeColor = Color.White;
-            textBoxSignUpValidatePassword.Location = new Point(43, 363);
+            textBoxSignUpValidatePassword.Location = new Point(43, 337);
             textBoxSignUpValidatePassword.Name = "textBoxSignUpValidatePassword";
             textBoxSignUpValidatePassword.Size = new Size(250, 33);
             textBoxSignUpValidatePassword.TabIndex = 28;
@@ -505,7 +553,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(43, 340);
+            label6.Location = new Point(43, 314);
             label6.Name = "label6";
             label6.RightToLeft = RightToLeft.No;
             label6.Size = new Size(132, 20);
@@ -518,7 +566,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(43, 281);
+            label4.Location = new Point(43, 255);
             label4.Name = "label4";
             label4.RightToLeft = RightToLeft.No;
             label4.Size = new Size(74, 20);
@@ -532,7 +580,7 @@
             label5.BackColor = Color.FromArgb(25, 25, 25);
             label5.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(43, 99);
+            label5.Location = new Point(43, 77);
             label5.Name = "label5";
             label5.RightToLeft = RightToLeft.No;
             label5.Size = new Size(77, 20);
@@ -545,7 +593,7 @@
             textBoxSignUpPassword.BackColor = Color.FromArgb(25, 25, 25);
             textBoxSignUpPassword.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSignUpPassword.ForeColor = Color.White;
-            textBoxSignUpPassword.Location = new Point(43, 304);
+            textBoxSignUpPassword.Location = new Point(43, 278);
             textBoxSignUpPassword.Name = "textBoxSignUpPassword";
             textBoxSignUpPassword.Size = new Size(250, 33);
             textBoxSignUpPassword.TabIndex = 24;
@@ -557,7 +605,7 @@
             textBoxSignUpUsername.BackColor = Color.FromArgb(25, 25, 25);
             textBoxSignUpUsername.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSignUpUsername.ForeColor = Color.White;
-            textBoxSignUpUsername.Location = new Point(43, 122);
+            textBoxSignUpUsername.Location = new Point(43, 100);
             textBoxSignUpUsername.Name = "textBoxSignUpUsername";
             textBoxSignUpUsername.Size = new Size(250, 34);
             textBoxSignUpUsername.TabIndex = 23;
@@ -570,7 +618,7 @@
             tabPageSelectRole.BackColor = Color.FromArgb(25, 25, 25);
             tabPageSelectRole.Controls.Add(buttonSelectRoleBack);
             tabPageSelectRole.Controls.Add(buttonSelectRoleNext);
-            tabPageSelectRole.Controls.Add(checkBox1);
+            tabPageSelectRole.Controls.Add(checkBoxSelectRoleMerchant);
             tabPageSelectRole.Controls.Add(checkBoxSelectRoleDriver);
             tabPageSelectRole.Controls.Add(label13);
             tabPageSelectRole.Controls.Add(pictureBox6);
@@ -596,6 +644,7 @@
             buttonSelectRoleBack.Text = "Back";
             buttonSelectRoleBack.TextAlign = ContentAlignment.MiddleRight;
             buttonSelectRoleBack.UseVisualStyleBackColor = false;
+            buttonSelectRoleBack.Click += buttonAnotherSignUpBack_Click;
             // 
             // buttonSelectRoleNext
             // 
@@ -611,23 +660,23 @@
             buttonSelectRoleNext.UseVisualStyleBackColor = false;
             buttonSelectRoleNext.Click += buttonSelectRoleNext_Click;
             // 
-            // checkBox1
+            // checkBoxSelectRoleMerchant
             // 
-            checkBox1.CheckAlign = ContentAlignment.BottomCenter;
-            checkBox1.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(391, 255);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(121, 52);
-            checkBox1.TabIndex = 45;
-            checkBox1.Text = "Merchant";
-            checkBox1.TextAlign = ContentAlignment.TopCenter;
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxSelectRoleMerchant.CheckAlign = ContentAlignment.BottomCenter;
+            checkBoxSelectRoleMerchant.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxSelectRoleMerchant.Location = new Point(418, 270);
+            checkBoxSelectRoleMerchant.Name = "checkBoxSelectRoleMerchant";
+            checkBoxSelectRoleMerchant.Size = new Size(121, 52);
+            checkBoxSelectRoleMerchant.TabIndex = 45;
+            checkBoxSelectRoleMerchant.Text = "Merchant";
+            checkBoxSelectRoleMerchant.TextAlign = ContentAlignment.TopCenter;
+            checkBoxSelectRoleMerchant.UseVisualStyleBackColor = true;
             // 
             // checkBoxSelectRoleDriver
             // 
             checkBoxSelectRoleDriver.CheckAlign = ContentAlignment.BottomCenter;
             checkBoxSelectRoleDriver.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBoxSelectRoleDriver.Location = new Point(116, 255);
+            checkBoxSelectRoleDriver.Location = new Point(133, 270);
             checkBoxSelectRoleDriver.Name = "checkBoxSelectRoleDriver";
             checkBoxSelectRoleDriver.Size = new Size(89, 52);
             checkBoxSelectRoleDriver.TabIndex = 44;
@@ -640,19 +689,19 @@
             label13.BackColor = Color.FromArgb(25, 25, 25);
             label13.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label13.ForeColor = Color.Gray;
-            label13.Location = new Point(199, 93);
+            label13.Location = new Point(188, 98);
             label13.Name = "label13";
             label13.RightToLeft = RightToLeft.No;
-            label13.Size = new Size(235, 38);
+            label13.Size = new Size(290, 59);
             label13.TabIndex = 41;
-            label13.Text = "You can skip this page if you just wanna be a regullar user";
+            label13.Text = "You can skip this page if you just wanna be a regullar user, or you can add your role later in the Settings menu\r\n";
             label13.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox6
             // 
             pictureBox6.BackgroundImage = Properties.Resources.shop;
             pictureBox6.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox6.Location = new Point(402, 152);
+            pictureBox6.Location = new Point(429, 167);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(100, 100);
             pictureBox6.TabIndex = 40;
@@ -662,7 +711,7 @@
             // 
             pictureBox5.BackgroundImage = Properties.Resources.bike;
             pictureBox5.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox5.Location = new Point(110, 152);
+            pictureBox5.Location = new Point(127, 167);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(100, 100);
             pictureBox5.TabIndex = 39;
@@ -674,7 +723,7 @@
             label8.BackColor = Color.FromArgb(25, 25, 25);
             label8.Font = new Font("Comic Sans MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(199, 60);
+            label8.Location = new Point(209, 60);
             label8.Name = "label8";
             label8.RightToLeft = RightToLeft.No;
             label8.Size = new Size(235, 38);
@@ -685,12 +734,16 @@
             // tabPageDriverSetup
             // 
             tabPageDriverSetup.BackColor = Color.FromArgb(25, 25, 25);
-            tabPageDriverSetup.Controls.Add(button2);
-            tabPageDriverSetup.Controls.Add(button3);
-            tabPageDriverSetup.Controls.Add(dateTimePicker1);
+            tabPageDriverSetup.Controls.Add(numericUpDownNoPlatTengah);
+            tabPageDriverSetup.Controls.Add(comboBoxNoPlatDepan);
+            tabPageDriverSetup.Controls.Add(comboBoxVehicleType);
+            tabPageDriverSetup.Controls.Add(label15);
+            tabPageDriverSetup.Controls.Add(buttonCreateDriverBack);
+            tabPageDriverSetup.Controls.Add(buttonCreateDriverNext);
+            tabPageDriverSetup.Controls.Add(dateTimePickerYearProduce);
             tabPageDriverSetup.Controls.Add(label17);
             tabPageDriverSetup.Controls.Add(label16);
-            tabPageDriverSetup.Controls.Add(textBox8);
+            tabPageDriverSetup.Controls.Add(textBoxNoPlatBlakang);
             tabPageDriverSetup.Controls.Add(label14);
             tabPageDriverSetup.Location = new Point(4, 4);
             tabPageDriverSetup.Name = "tabPageDriverSetup";
@@ -699,41 +752,87 @@
             tabPageDriverSetup.TabIndex = 2;
             tabPageDriverSetup.Text = "Driver";
             // 
-            // button2
+            // numericUpDownNoPlatTengah
             // 
-            button2.BackColor = Color.FromArgb(25, 25, 25);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = Properties.Resources.alt_arrow_left;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(52, 453);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 42);
-            button2.TabIndex = 49;
-            button2.Text = "Back";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = false;
+            numericUpDownNoPlatTengah.Location = new Point(269, 122);
+            numericUpDownNoPlatTengah.Maximum = new decimal(new int[] { 999, 0, 0, 0 });
+            numericUpDownNoPlatTengah.Name = "numericUpDownNoPlatTengah";
+            numericUpDownNoPlatTengah.Size = new Size(63, 23);
+            numericUpDownNoPlatTengah.TabIndex = 53;
             // 
-            // button3
+            // comboBoxNoPlatDepan
             // 
-            button3.BackColor = Color.FromArgb(38, 38, 38);
-            button3.Image = Properties.Resources.alt_arrow_right;
-            button3.ImageAlign = ContentAlignment.MiddleRight;
-            button3.Location = new Point(514, 453);
-            button3.Name = "button3";
-            button3.Size = new Size(98, 42);
-            button3.TabIndex = 48;
-            button3.Text = "Next";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
+            comboBoxNoPlatDepan.BackColor = Color.White;
+            comboBoxNoPlatDepan.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxNoPlatDepan.FormattingEnabled = true;
+            comboBoxNoPlatDepan.Items.AddRange(new object[] { "A", "B", "D", "E", "F", "T", "Z", "G", "H", "K", "R", "AA", "AD", "AB", "L", "M", "N", "P", "S", "W", "AE", "AG", "DK", "DR", "EA", "DH", "EB", "ED", "KB", "DA", "KH", "KT", "KU", "BL", "BB", "BK", "BA", "BM", "BH", "BD", "BP", "BG", "BN", "BE", "DB", "DL", "DM", "DN", "DT", "DD", "DP", "DW", "DC", "DE", "DG", "PA", "PB" });
+            comboBoxNoPlatDepan.Location = new Point(202, 122);
+            comboBoxNoPlatDepan.Name = "comboBoxNoPlatDepan";
+            comboBoxNoPlatDepan.Size = new Size(56, 23);
+            comboBoxNoPlatDepan.TabIndex = 52;
             // 
-            // dateTimePicker1
+            // comboBoxVehicleType
             // 
-            dateTimePicker1.CustomFormat = "";
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(202, 162);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(124, 23);
-            dateTimePicker1.TabIndex = 37;
+            comboBoxVehicleType.BackColor = Color.White;
+            comboBoxVehicleType.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxVehicleType.FormattingEnabled = true;
+            comboBoxVehicleType.Items.AddRange(new object[] { "Car", "Motorcycle" });
+            comboBoxVehicleType.Location = new Point(202, 205);
+            comboBoxVehicleType.Name = "comboBoxVehicleType";
+            comboBoxVehicleType.Size = new Size(124, 23);
+            comboBoxVehicleType.TabIndex = 51;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.FromArgb(25, 25, 25);
+            label15.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.White;
+            label15.Location = new Point(45, 199);
+            label15.Name = "label15";
+            label15.RightToLeft = RightToLeft.No;
+            label15.Size = new Size(144, 29);
+            label15.TabIndex = 50;
+            label15.Text = "Vehicle type :";
+            label15.TextAlign = ContentAlignment.TopRight;
+            // 
+            // buttonCreateDriverBack
+            // 
+            buttonCreateDriverBack.BackColor = Color.FromArgb(25, 25, 25);
+            buttonCreateDriverBack.FlatStyle = FlatStyle.Flat;
+            buttonCreateDriverBack.Image = Properties.Resources.alt_arrow_left;
+            buttonCreateDriverBack.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonCreateDriverBack.Location = new Point(52, 453);
+            buttonCreateDriverBack.Name = "buttonCreateDriverBack";
+            buttonCreateDriverBack.Size = new Size(100, 42);
+            buttonCreateDriverBack.TabIndex = 49;
+            buttonCreateDriverBack.Text = "Back";
+            buttonCreateDriverBack.TextAlign = ContentAlignment.MiddleRight;
+            buttonCreateDriverBack.UseVisualStyleBackColor = false;
+            buttonCreateDriverBack.Click += buttonAnotherSignUpBack_Click;
+            // 
+            // buttonCreateDriverNext
+            // 
+            buttonCreateDriverNext.BackColor = Color.FromArgb(38, 38, 38);
+            buttonCreateDriverNext.Image = Properties.Resources.alt_arrow_right;
+            buttonCreateDriverNext.ImageAlign = ContentAlignment.MiddleRight;
+            buttonCreateDriverNext.Location = new Point(514, 453);
+            buttonCreateDriverNext.Name = "buttonCreateDriverNext";
+            buttonCreateDriverNext.Size = new Size(98, 42);
+            buttonCreateDriverNext.TabIndex = 48;
+            buttonCreateDriverNext.Text = "Next";
+            buttonCreateDriverNext.TextAlign = ContentAlignment.MiddleLeft;
+            buttonCreateDriverNext.UseVisualStyleBackColor = false;
+            buttonCreateDriverNext.Click += buttonCreateDriverNext_Click;
+            // 
+            // dateTimePickerYearProduce
+            // 
+            dateTimePickerYearProduce.CustomFormat = "";
+            dateTimePickerYearProduce.Format = DateTimePickerFormat.Short;
+            dateTimePickerYearProduce.Location = new Point(202, 164);
+            dateTimePickerYearProduce.Name = "dateTimePickerYearProduce";
+            dateTimePickerYearProduce.Size = new Size(124, 23);
+            dateTimePickerYearProduce.TabIndex = 37;
             // 
             // label17
             // 
@@ -741,7 +840,7 @@
             label17.BackColor = Color.FromArgb(25, 25, 25);
             label17.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.White;
-            label17.Location = new Point(37, 155);
+            label17.Location = new Point(37, 157);
             label17.Name = "label17";
             label17.RightToLeft = RightToLeft.No;
             label17.Size = new Size(154, 29);
@@ -755,7 +854,7 @@
             label16.BackColor = Color.FromArgb(25, 25, 25);
             label16.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
-            label16.Location = new Point(37, 106);
+            label16.Location = new Point(37, 117);
             label16.Name = "label16";
             label16.RightToLeft = RightToLeft.No;
             label16.Size = new Size(152, 29);
@@ -763,14 +862,14 @@
             label16.Text = "License plate :";
             label16.TextAlign = ContentAlignment.TopRight;
             // 
-            // textBox8
+            // textBoxNoPlatBlakang
             // 
-            textBox8.BackColor = Color.FromArgb(25, 25, 25);
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(202, 113);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(222, 23);
-            textBox8.TabIndex = 34;
+            textBoxNoPlatBlakang.BackColor = Color.FromArgb(25, 25, 25);
+            textBoxNoPlatBlakang.BorderStyle = BorderStyle.FixedSingle;
+            textBoxNoPlatBlakang.Location = new Point(341, 123);
+            textBoxNoPlatBlakang.Name = "textBoxNoPlatBlakang";
+            textBoxNoPlatBlakang.Size = new Size(50, 23);
+            textBoxNoPlatBlakang.TabIndex = 34;
             // 
             // label14
             // 
@@ -793,10 +892,10 @@
             tabPageMerchant.Controls.Add(label21);
             tabPageMerchant.Controls.Add(label22);
             tabPageMerchant.Controls.Add(textBox9);
-            tabPageMerchant.Controls.Add(button6);
-            tabPageMerchant.Controls.Add(pictureBox4);
-            tabPageMerchant.Controls.Add(button4);
-            tabPageMerchant.Controls.Add(button5);
+            tabPageMerchant.Controls.Add(buttonSetShopProfile);
+            tabPageMerchant.Controls.Add(pictureBoxShopProfile);
+            tabPageMerchant.Controls.Add(buttonAddShopBack);
+            tabPageMerchant.Controls.Add(buttonAddShopNext);
             tabPageMerchant.Controls.Add(label18);
             tabPageMerchant.Location = new Point(4, 4);
             tabPageMerchant.Name = "tabPageMerchant";
@@ -862,52 +961,55 @@
             textBox9.TextAlign = HorizontalAlignment.Center;
             textBox9.WordWrap = false;
             // 
-            // button6
+            // buttonSetShopProfile
             // 
-            button6.BackColor = Color.FromArgb(38, 38, 38);
-            button6.Location = new Point(42, 212);
-            button6.Name = "button6";
-            button6.Size = new Size(123, 30);
-            button6.TabIndex = 53;
-            button6.Text = "Select Profile picture";
-            button6.UseVisualStyleBackColor = false;
+            buttonSetShopProfile.BackColor = Color.FromArgb(38, 38, 38);
+            buttonSetShopProfile.Location = new Point(42, 212);
+            buttonSetShopProfile.Name = "buttonSetShopProfile";
+            buttonSetShopProfile.Size = new Size(123, 30);
+            buttonSetShopProfile.TabIndex = 53;
+            buttonSetShopProfile.Text = "Select Profile picture";
+            buttonSetShopProfile.UseVisualStyleBackColor = false;
+            buttonSetShopProfile.Click += buttonSetShopProfile_Click;
             // 
-            // pictureBox4
+            // pictureBoxShopProfile
             // 
-            pictureBox4.BackgroundImage = Properties.Resources.account;
-            pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox4.Location = new Point(53, 106);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(100, 100);
-            pictureBox4.TabIndex = 52;
-            pictureBox4.TabStop = false;
+            pictureBoxShopProfile.BackgroundImage = Properties.Resources.account;
+            pictureBoxShopProfile.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBoxShopProfile.Location = new Point(53, 106);
+            pictureBoxShopProfile.Name = "pictureBoxShopProfile";
+            pictureBoxShopProfile.Size = new Size(100, 100);
+            pictureBoxShopProfile.TabIndex = 52;
+            pictureBoxShopProfile.TabStop = false;
             // 
-            // button4
+            // buttonAddShopBack
             // 
-            button4.BackColor = Color.FromArgb(25, 25, 25);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Image = Properties.Resources.alt_arrow_left;
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(52, 453);
-            button4.Name = "button4";
-            button4.Size = new Size(100, 42);
-            button4.TabIndex = 51;
-            button4.Text = "Back";
-            button4.TextAlign = ContentAlignment.MiddleRight;
-            button4.UseVisualStyleBackColor = false;
+            buttonAddShopBack.BackColor = Color.FromArgb(25, 25, 25);
+            buttonAddShopBack.FlatStyle = FlatStyle.Flat;
+            buttonAddShopBack.Image = Properties.Resources.alt_arrow_left;
+            buttonAddShopBack.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonAddShopBack.Location = new Point(52, 453);
+            buttonAddShopBack.Name = "buttonAddShopBack";
+            buttonAddShopBack.Size = new Size(100, 42);
+            buttonAddShopBack.TabIndex = 51;
+            buttonAddShopBack.Text = "Back";
+            buttonAddShopBack.TextAlign = ContentAlignment.MiddleRight;
+            buttonAddShopBack.UseVisualStyleBackColor = false;
+            buttonAddShopBack.Click += buttonAnotherSignUpBack_Click;
             // 
-            // button5
+            // buttonAddShopNext
             // 
-            button5.BackColor = Color.FromArgb(38, 38, 38);
-            button5.Image = Properties.Resources.alt_arrow_right;
-            button5.ImageAlign = ContentAlignment.MiddleRight;
-            button5.Location = new Point(514, 453);
-            button5.Name = "button5";
-            button5.Size = new Size(98, 42);
-            button5.TabIndex = 50;
-            button5.Text = "Next";
-            button5.TextAlign = ContentAlignment.MiddleLeft;
-            button5.UseVisualStyleBackColor = false;
+            buttonAddShopNext.BackColor = Color.FromArgb(38, 38, 38);
+            buttonAddShopNext.Image = Properties.Resources.alt_arrow_right;
+            buttonAddShopNext.ImageAlign = ContentAlignment.MiddleRight;
+            buttonAddShopNext.Location = new Point(514, 453);
+            buttonAddShopNext.Name = "buttonAddShopNext";
+            buttonAddShopNext.Size = new Size(98, 42);
+            buttonAddShopNext.TabIndex = 50;
+            buttonAddShopNext.Text = "Next";
+            buttonAddShopNext.TextAlign = ContentAlignment.MiddleLeft;
+            buttonAddShopNext.UseVisualStyleBackColor = false;
+            buttonAddShopNext.Click += buttonAddShopNext_Click;
             // 
             // label18
             // 
@@ -960,7 +1062,7 @@
             buttonFinishBack.Text = "Back";
             buttonFinishBack.TextAlign = ContentAlignment.MiddleRight;
             buttonFinishBack.UseVisualStyleBackColor = false;
-            buttonFinishBack.Click += buttonFinishBack_Click;
+            buttonFinishBack.Click += buttonAnotherSignUpBack_Click;
             // 
             // pictureBox3
             // 
@@ -992,7 +1094,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(25, 25, 25);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(662, 558);
+            ClientSize = new Size(662, 530);
             Controls.Add(tabControlLogin);
             DoubleBuffered = true;
             ForeColor = Color.White;
@@ -1016,9 +1118,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             tabPageDriverSetup.ResumeLayout(false);
             tabPageDriverSetup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownNoPlatTengah).EndInit();
             tabPageMerchant.ResumeLayout(false);
             tabPageMerchant.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxShopProfile).EndInit();
             tabPageFinishSetup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
@@ -1069,28 +1172,35 @@
         private PictureBox pictureBox5;
         private Label label13;
         private CheckBox checkBoxSelectRoleDriver;
-        private CheckBox checkBox1;
+        private CheckBox checkBoxSelectRoleMerchant;
         private Button buttonSelectRoleBack;
         private Button buttonSelectRoleNext;
         private Label label14;
         private Label label16;
-        private TextBox textBox8;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePickerYearProduce;
         private Label label17;
-        private Button button2;
-        private Button button3;
+        private Button buttonCreateDriverBack;
+        private Button buttonCreateDriverNext;
         private TabPage tabPageMerchant;
         private Label label18;
         private Label label19;
         private Button buttonSignUpAddress;
         private Label labelSignUpAdress;
-        private Button button4;
-        private Button button5;
+        private Button buttonAddShopBack;
+        private Button buttonAddShopNext;
         private Button button7;
         private Label label21;
         private Label label22;
         private TextBox textBox9;
-        private Button button6;
-        private PictureBox pictureBox4;
+        private Button buttonSetShopProfile;
+        private PictureBox pictureBoxShopProfile;
+        private Label label15;
+        private ComboBox comboBoxVehicleType;
+        private NumericUpDown numericUpDownNoPlatTengah;
+        private ComboBox comboBoxNoPlatDepan;
+        private TextBox textBoxNoPlatBlakang;
+        private Label labelUserID;
+        private Label label20;
+        private DateTimePicker dateTimePickerBirthday;
     }
 }

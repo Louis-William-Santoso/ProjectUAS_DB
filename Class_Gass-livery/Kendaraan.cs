@@ -7,24 +7,21 @@ namespace Class_Gass_livery
 {
     public class Kendaraan
     {
-        private int idKendaraan;
+        private string idKendaraan;
         private int idDriver;
-        private string noPlat;
         private DateTime tahunProduksi;
         private string jenis;
 
-        public Kendaraan(int idKendaraan, int idDriver, string noPlat, DateTime tahunProduksi, string jenis)
+        public Kendaraan(string idKendaraan, int idDriver, DateTime tahunProduksi, string jenis)
         {
             IdKendaraan = idKendaraan;
             IdDriver = idDriver;
-            NoPlat = noPlat;
             TahunProduksi = tahunProduksi;
             Jenis = jenis;
         }
 
-        public int IdKendaraan { get => idKendaraan; set => idKendaraan = value; }
+        public string IdKendaraan { get => idKendaraan; set => idKendaraan = value; }
         public int IdDriver { get => idDriver; set => idDriver = value; }
-        public string NoPlat { get => noPlat; set => noPlat = value; }
         public DateTime TahunProduksi { get => tahunProduksi; set => tahunProduksi = value; }
         public string Jenis { get => jenis; set => jenis = value; }
 
@@ -37,9 +34,8 @@ namespace Class_Gass_livery
             while (kendaraan.Read()) 
             {
                 Kendaraan temp = new Kendaraan(
-                    (int)kendaraan["id_kendaraan"],
+                    kendaraan["id_kendaraan"].ToString(),
                     (int)kendaraan["id_driver"],
-                    (string)kendaraan["no_plat"],
                     (DateTime)kendaraan["tahun_produksi"],
                     (string)kendaraan["jenis"]);
                 listData.Add(temp);
@@ -56,9 +52,8 @@ namespace Class_Gass_livery
             while (kendaraan.Read())
             {
                 Kendaraan temp = new Kendaraan(
-                    (int)kendaraan["id_kendaraan"],
+                    kendaraan["id_kendaraan"].ToString(),
                     (int)kendaraan["id_driver"],
-                    (string)kendaraan["no_plat"],
                     (DateTime)kendaraan["tahun_produksi"],
                     (string)kendaraan["jenis"]);
                 listData.Add(temp);

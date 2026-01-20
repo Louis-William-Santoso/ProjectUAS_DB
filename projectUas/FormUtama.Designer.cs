@@ -40,18 +40,30 @@
             labelHomepageNama = new Label();
             pictureBoxHomepageProfile = new PictureBox();
             tabPageSettings = new TabPage();
+            labelSettingUsername = new Label();
             labelSettingsIDUserProfile = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             panelSettingAdress = new Panel();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
+            labelSettingSaveAddress = new Label();
+            buttonSettingsChangeAddress = new Button();
+            buttonSettingSaveAddress = new Button();
             pictureBox4 = new PictureBox();
             labelSettingPanelAdress = new Label();
             panelSettingSecurityAndSignin = new Panel();
+            buttonSettingsSettingsSecurityAndSignDeleteAccount = new Button();
+            groupBoxResetPassword = new GroupBox();
+            buttonSettingsSecurityAndSigninResetPassword = new Button();
+            label57 = new Label();
+            textBox4 = new TextBox();
+            label56 = new Label();
+            textBox3 = new TextBox();
+            label55 = new Label();
+            textBox2 = new TextBox();
             pictureBox5 = new PictureBox();
             labelSettingsPanelSecurityAndSignin = new Label();
             panelSettingProfile = new Panel();
             textBox1 = new TextBox();
+            buttonSettingProfileSave = new Button();
             label19 = new Label();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
@@ -65,12 +77,14 @@
             label5 = new Label();
             pictureBoxAccountUsernameSettingArrow = new PictureBox();
             labelSettingPanelProfile = new Label();
-            panelSettingsButton = new Panel();
-            buttonSettingCancel = new Button();
-            buttonSettingSave = new Button();
+            panelSettingGassLiveryPartnership = new Panel();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            buttonSettingGassLiveryAddRemoveShop = new Button();
+            buttonSettingsGassLiveryDriver = new Button();
+            pictureBox13 = new PictureBox();
+            label58 = new Label();
             labelSettingFullName = new Label();
             pictureBoxSettingPP = new PictureBox();
-            labelSettingUsername = new Label();
             tabPageHistory = new TabPage();
             panel3 = new Panel();
             radioButton4 = new RadioButton();
@@ -118,6 +132,7 @@
             label10 = new Label();
             buttonGassRideMyLocationSearch = new Button();
             tabPageGassKan = new TabPage();
+            tableLayoutPanel3 = new TableLayoutPanel();
             groupBox2 = new GroupBox();
             label33 = new Label();
             label34 = new Label();
@@ -156,14 +171,14 @@
             label46 = new Label();
             pictureBox6 = new PictureBox();
             tabPageTenant = new TabPage();
+            label51 = new Label();
+            label54 = new Label();
+            pictureBox12 = new PictureBox();
             panelControl = new Panel();
             labelHistoryButton = new Label();
             labelAccountButton = new Label();
             labelHomepageButton = new Label();
             buttonMenu = new PictureBox();
-            pictureBox12 = new PictureBox();
-            label51 = new Label();
-            label54 = new Label();
             tabControlPage.SuspendLayout();
             tabPageHomepage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassMon).BeginInit();
@@ -173,13 +188,15 @@
             tabPageSettings.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panelSettingAdress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panelSettingSecurityAndSignin.SuspendLayout();
+            groupBoxResetPassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panelSettingProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAccountUsernameSettingArrow).BeginInit();
-            panelSettingsButton.SuspendLayout();
+            panelSettingGassLiveryPartnership.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSettingPP).BeginInit();
             tabPageHistory.SuspendLayout();
             panel3.SuspendLayout();
@@ -209,9 +226,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             tabPageTenant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             SuspendLayout();
             // 
             // tabControlPage
@@ -228,7 +245,7 @@
             tabControlPage.Multiline = true;
             tabControlPage.Name = "tabControlPage";
             tabControlPage.SelectedIndex = 0;
-            tabControlPage.Size = new Size(1189, 652);
+            tabControlPage.Size = new Size(1189, 653);
             tabControlPage.TabIndex = 0;
             // 
             // tabPageHomepage
@@ -246,7 +263,7 @@
             tabPageHomepage.Location = new Point(4, 4);
             tabPageHomepage.Name = "tabPageHomepage";
             tabPageHomepage.Padding = new Padding(3);
-            tabPageHomepage.Size = new Size(1181, 624);
+            tabPageHomepage.Size = new Size(1181, 625);
             tabPageHomepage.TabIndex = 0;
             tabPageHomepage.Text = "Homepage";
             // 
@@ -353,24 +370,34 @@
             tabPageSettings.AccessibleRole = AccessibleRole.ScrollBar;
             tabPageSettings.AutoScroll = true;
             tabPageSettings.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageSettings.Controls.Add(labelSettingUsername);
             tabPageSettings.Controls.Add(labelSettingsIDUserProfile);
             tabPageSettings.Controls.Add(tableLayoutPanel1);
             tabPageSettings.Controls.Add(labelSettingFullName);
             tabPageSettings.Controls.Add(pictureBoxSettingPP);
-            tabPageSettings.Controls.Add(labelSettingUsername);
             tabPageSettings.Location = new Point(4, 4);
             tabPageSettings.Name = "tabPageSettings";
             tabPageSettings.Padding = new Padding(3);
-            tabPageSettings.Size = new Size(1181, 624);
+            tabPageSettings.Size = new Size(1181, 625);
             tabPageSettings.TabIndex = 1;
             tabPageSettings.Text = "Settings";
             // 
+            // labelSettingUsername
+            // 
+            labelSettingUsername.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSettingUsername.ForeColor = Color.White;
+            labelSettingUsername.Location = new Point(684, 54);
+            labelSettingUsername.Name = "labelSettingUsername";
+            labelSettingUsername.Size = new Size(278, 48);
+            labelSettingUsername.TabIndex = 21;
+            labelSettingUsername.Text = "username";
+            labelSettingUsername.TextAlign = ContentAlignment.TopRight;
+            // 
             // labelSettingsIDUserProfile
             // 
-            labelSettingsIDUserProfile.AutoSize = true;
             labelSettingsIDUserProfile.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelSettingsIDUserProfile.ForeColor = Color.Gray;
-            labelSettingsIDUserProfile.Location = new Point(888, 50);
+            labelSettingsIDUserProfile.Location = new Point(888, 34);
             labelSettingsIDUserProfile.Name = "labelSettingsIDUserProfile";
             labelSettingsIDUserProfile.RightToLeft = RightToLeft.No;
             labelSettingsIDUserProfile.Size = new Size(74, 20);
@@ -387,7 +414,7 @@
             tableLayoutPanel1.Controls.Add(panelSettingAdress, 0, 2);
             tableLayoutPanel1.Controls.Add(panelSettingSecurityAndSignin, 0, 1);
             tableLayoutPanel1.Controls.Add(panelSettingProfile, 0, 0);
-            tableLayoutPanel1.Controls.Add(panelSettingsButton, 0, 3);
+            tableLayoutPanel1.Controls.Add(panelSettingGassLiveryPartnership, 0, 3);
             tableLayoutPanel1.Location = new Point(57, 173);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
@@ -395,14 +422,15 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(1006, 449);
+            tableLayoutPanel1.Size = new Size(1006, 324);
             tableLayoutPanel1.TabIndex = 19;
             // 
             // panelSettingAdress
             // 
             panelSettingAdress.BackColor = Color.FromArgb(37, 37, 37);
-            panelSettingAdress.Controls.Add(button1);
-            panelSettingAdress.Controls.Add(dataGridView1);
+            panelSettingAdress.Controls.Add(labelSettingSaveAddress);
+            panelSettingAdress.Controls.Add(buttonSettingsChangeAddress);
+            panelSettingAdress.Controls.Add(buttonSettingSaveAddress);
             panelSettingAdress.Controls.Add(pictureBox4);
             panelSettingAdress.Controls.Add(labelSettingPanelAdress);
             panelSettingAdress.Dock = DockStyle.Fill;
@@ -412,23 +440,47 @@
             panelSettingAdress.TabIndex = 19;
             panelSettingAdress.Click += PanelSetting_Click;
             // 
-            // button1
+            // labelSettingSaveAddress
             // 
-            button1.Location = new Point(877, 264);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 15;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            labelSettingSaveAddress.AutoSize = true;
+            labelSettingSaveAddress.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSettingSaveAddress.ForeColor = Color.White;
+            labelSettingSaveAddress.Location = new Point(251, 96);
+            labelSettingSaveAddress.Name = "labelSettingSaveAddress";
+            labelSettingSaveAddress.RightToLeft = RightToLeft.Yes;
+            labelSettingSaveAddress.Size = new Size(154, 30);
+            labelSettingSaveAddress.TabIndex = 17;
+            labelSettingSaveAddress.Text = "User_Address";
+            labelSettingSaveAddress.TextAlign = ContentAlignment.TopRight;
             // 
-            // dataGridView1
+            // buttonSettingsChangeAddress
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.GridColor = SystemColors.InactiveCaption;
-            dataGridView1.Location = new Point(41, 80);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(911, 178);
-            dataGridView1.TabIndex = 14;
+            buttonSettingsChangeAddress.BackColor = Color.FromArgb(37, 37, 37);
+            buttonSettingsChangeAddress.FlatStyle = FlatStyle.Flat;
+            buttonSettingsChangeAddress.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSettingsChangeAddress.ForeColor = Color.White;
+            buttonSettingsChangeAddress.Image = Properties.Resources.add_location;
+            buttonSettingsChangeAddress.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonSettingsChangeAddress.Location = new Point(41, 85);
+            buttonSettingsChangeAddress.Name = "buttonSettingsChangeAddress";
+            buttonSettingsChangeAddress.Size = new Size(176, 53);
+            buttonSettingsChangeAddress.TabIndex = 16;
+            buttonSettingsChangeAddress.Text = "Change Address";
+            buttonSettingsChangeAddress.TextAlign = ContentAlignment.MiddleRight;
+            buttonSettingsChangeAddress.UseVisualStyleBackColor = false;
+            // 
+            // buttonSettingSaveAddress
+            // 
+            buttonSettingSaveAddress.BackColor = Color.FromArgb(25, 25, 25);
+            buttonSettingSaveAddress.FlatStyle = FlatStyle.Flat;
+            buttonSettingSaveAddress.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSettingSaveAddress.ForeColor = Color.White;
+            buttonSettingSaveAddress.Location = new Point(828, 144);
+            buttonSettingSaveAddress.Name = "buttonSettingSaveAddress";
+            buttonSettingSaveAddress.Size = new Size(146, 36);
+            buttonSettingSaveAddress.TabIndex = 15;
+            buttonSettingSaveAddress.Text = "Save Address";
+            buttonSettingSaveAddress.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -458,6 +510,8 @@
             // panelSettingSecurityAndSignin
             // 
             panelSettingSecurityAndSignin.BackColor = Color.FromArgb(37, 37, 37);
+            panelSettingSecurityAndSignin.Controls.Add(buttonSettingsSettingsSecurityAndSignDeleteAccount);
+            panelSettingSecurityAndSignin.Controls.Add(groupBoxResetPassword);
             panelSettingSecurityAndSignin.Controls.Add(pictureBox5);
             panelSettingSecurityAndSignin.Controls.Add(labelSettingsPanelSecurityAndSignin);
             panelSettingSecurityAndSignin.Dock = DockStyle.Fill;
@@ -466,6 +520,115 @@
             panelSettingSecurityAndSignin.Size = new Size(1000, 75);
             panelSettingSecurityAndSignin.TabIndex = 18;
             panelSettingSecurityAndSignin.Click += PanelSetting_Click;
+            // 
+            // buttonSettingsSettingsSecurityAndSignDeleteAccount
+            // 
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.BackColor = Color.FromArgb(25, 25, 25);
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.FlatStyle = FlatStyle.Flat;
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.ForeColor = Color.FromArgb(255, 128, 128);
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.Location = new Point(41, 242);
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.Name = "buttonSettingsSettingsSecurityAndSignDeleteAccount";
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.Size = new Size(123, 31);
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.TabIndex = 27;
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.Text = "Delete Account";
+            buttonSettingsSettingsSecurityAndSignDeleteAccount.UseVisualStyleBackColor = false;
+            // 
+            // groupBoxResetPassword
+            // 
+            groupBoxResetPassword.Controls.Add(buttonSettingsSecurityAndSigninResetPassword);
+            groupBoxResetPassword.Controls.Add(label57);
+            groupBoxResetPassword.Controls.Add(textBox4);
+            groupBoxResetPassword.Controls.Add(label56);
+            groupBoxResetPassword.Controls.Add(textBox3);
+            groupBoxResetPassword.Controls.Add(label55);
+            groupBoxResetPassword.Controls.Add(textBox2);
+            groupBoxResetPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBoxResetPassword.ForeColor = Color.White;
+            groupBoxResetPassword.Location = new Point(41, 76);
+            groupBoxResetPassword.Name = "groupBoxResetPassword";
+            groupBoxResetPassword.Size = new Size(791, 151);
+            groupBoxResetPassword.TabIndex = 22;
+            groupBoxResetPassword.TabStop = false;
+            groupBoxResetPassword.Text = "Reset Password";
+            // 
+            // buttonSettingsSecurityAndSigninResetPassword
+            // 
+            buttonSettingsSecurityAndSigninResetPassword.BackColor = Color.FromArgb(25, 25, 25);
+            buttonSettingsSecurityAndSigninResetPassword.FlatStyle = FlatStyle.Flat;
+            buttonSettingsSecurityAndSigninResetPassword.Font = new Font("Comic Sans MS", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSettingsSecurityAndSigninResetPassword.Location = new Point(659, 110);
+            buttonSettingsSecurityAndSigninResetPassword.Name = "buttonSettingsSecurityAndSigninResetPassword";
+            buttonSettingsSecurityAndSigninResetPassword.Size = new Size(123, 31);
+            buttonSettingsSecurityAndSigninResetPassword.TabIndex = 26;
+            buttonSettingsSecurityAndSigninResetPassword.Text = "Save Password";
+            buttonSettingsSecurityAndSigninResetPassword.UseVisualStyleBackColor = false;
+            // 
+            // label57
+            // 
+            label57.AutoSize = true;
+            label57.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label57.ForeColor = Color.White;
+            label57.Location = new Point(18, 104);
+            label57.Name = "label57";
+            label57.RightToLeft = RightToLeft.Yes;
+            label57.Size = new Size(158, 20);
+            label57.TabIndex = 25;
+            label57.Text = "Verify New Password";
+            label57.TextAlign = ContentAlignment.TopRight;
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.FromArgb(25, 25, 25);
+            textBox4.BorderStyle = BorderStyle.FixedSingle;
+            textBox4.Location = new Point(197, 100);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(376, 27);
+            textBox4.TabIndex = 24;
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label56.ForeColor = Color.White;
+            label56.Location = new Point(18, 68);
+            label56.Name = "label56";
+            label56.RightToLeft = RightToLeft.Yes;
+            label56.Size = new Size(109, 20);
+            label56.TabIndex = 23;
+            label56.Text = "New Password";
+            label56.TextAlign = ContentAlignment.TopRight;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.FromArgb(25, 25, 25);
+            textBox3.BorderStyle = BorderStyle.FixedSingle;
+            textBox3.Location = new Point(197, 64);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(376, 27);
+            textBox3.TabIndex = 22;
+            // 
+            // label55
+            // 
+            label55.AutoSize = true;
+            label55.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label55.ForeColor = Color.White;
+            label55.Location = new Point(18, 35);
+            label55.Name = "label55";
+            label55.RightToLeft = RightToLeft.Yes;
+            label55.Size = new Size(103, 20);
+            label55.TabIndex = 21;
+            label55.Text = "Old Password";
+            label55.TextAlign = ContentAlignment.TopRight;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.FromArgb(25, 25, 25);
+            textBox2.BorderStyle = BorderStyle.FixedSingle;
+            textBox2.Location = new Point(197, 31);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(376, 27);
+            textBox2.TabIndex = 14;
             // 
             // pictureBox5
             // 
@@ -497,6 +660,7 @@
             panelSettingProfile.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelSettingProfile.BackColor = Color.FromArgb(37, 37, 37);
             panelSettingProfile.Controls.Add(textBox1);
+            panelSettingProfile.Controls.Add(buttonSettingProfileSave);
             panelSettingProfile.Controls.Add(label19);
             panelSettingProfile.Controls.Add(radioButton2);
             panelSettingProfile.Controls.Add(radioButton1);
@@ -528,6 +692,19 @@
             textBox1.TabIndex = 27;
             textBox1.Text = "Type New Name";
             textBox1.TextAlign = HorizontalAlignment.Center;
+            // 
+            // buttonSettingProfileSave
+            // 
+            buttonSettingProfileSave.BackColor = Color.FromArgb(37, 37, 37);
+            buttonSettingProfileSave.FlatStyle = FlatStyle.Flat;
+            buttonSettingProfileSave.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSettingProfileSave.ForeColor = Color.White;
+            buttonSettingProfileSave.Location = new Point(849, 247);
+            buttonSettingProfileSave.Name = "buttonSettingProfileSave";
+            buttonSettingProfileSave.Size = new Size(125, 37);
+            buttonSettingProfileSave.TabIndex = 0;
+            buttonSettingProfileSave.Text = "Save";
+            buttonSettingProfileSave.UseVisualStyleBackColor = false;
             // 
             // label19
             // 
@@ -690,46 +867,95 @@
             labelSettingPanelProfile.TextAlign = ContentAlignment.TopRight;
             labelSettingPanelProfile.Click += PanelSetting_Click;
             // 
-            // panelSettingsButton
+            // panelSettingGassLiveryPartnership
             // 
-            panelSettingsButton.Controls.Add(buttonSettingCancel);
-            panelSettingsButton.Controls.Add(buttonSettingSave);
-            panelSettingsButton.Dock = DockStyle.Fill;
-            panelSettingsButton.Location = new Point(3, 246);
-            panelSettingsButton.Name = "panelSettingsButton";
-            panelSettingsButton.Size = new Size(1000, 200);
-            panelSettingsButton.TabIndex = 20;
+            panelSettingGassLiveryPartnership.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panelSettingGassLiveryPartnership.BackColor = Color.FromArgb(37, 37, 37);
+            panelSettingGassLiveryPartnership.Controls.Add(tableLayoutPanel4);
+            panelSettingGassLiveryPartnership.Controls.Add(pictureBox13);
+            panelSettingGassLiveryPartnership.Controls.Add(label58);
+            panelSettingGassLiveryPartnership.Dock = DockStyle.Fill;
+            panelSettingGassLiveryPartnership.Location = new Point(3, 246);
+            panelSettingGassLiveryPartnership.Name = "panelSettingGassLiveryPartnership";
+            panelSettingGassLiveryPartnership.Size = new Size(1000, 75);
+            panelSettingGassLiveryPartnership.TabIndex = 20;
+            panelSettingGassLiveryPartnership.Click += PanelSetting_Click;
             // 
-            // buttonSettingCancel
+            // tableLayoutPanel4
             // 
-            buttonSettingCancel.BackColor = Color.FromArgb(37, 37, 37);
-            buttonSettingCancel.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonSettingCancel.ForeColor = Color.White;
-            buttonSettingCancel.Location = new Point(653, 132);
-            buttonSettingCancel.Name = "buttonSettingCancel";
-            buttonSettingCancel.Size = new Size(136, 45);
-            buttonSettingCancel.TabIndex = 1;
-            buttonSettingCancel.Text = "Cancel";
-            buttonSettingCancel.UseVisualStyleBackColor = false;
+            tableLayoutPanel4.AutoSize = true;
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel4.Controls.Add(buttonSettingGassLiveryAddRemoveShop, 0, 0);
+            tableLayoutPanel4.Controls.Add(buttonSettingsGassLiveryDriver, 0, 1);
+            tableLayoutPanel4.Location = new Point(42, 93);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 2;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.RowStyles.Add(new RowStyle());
+            tableLayoutPanel4.Size = new Size(921, 162);
+            tableLayoutPanel4.TabIndex = 20;
             // 
-            // buttonSettingSave
+            // buttonSettingGassLiveryAddRemoveShop
             // 
-            buttonSettingSave.BackColor = Color.FromArgb(37, 37, 37);
-            buttonSettingSave.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonSettingSave.ForeColor = Color.White;
-            buttonSettingSave.Location = new Point(828, 132);
-            buttonSettingSave.Name = "buttonSettingSave";
-            buttonSettingSave.Size = new Size(136, 45);
-            buttonSettingSave.TabIndex = 0;
-            buttonSettingSave.Text = "Save";
-            buttonSettingSave.UseVisualStyleBackColor = false;
+            buttonSettingGassLiveryAddRemoveShop.BackColor = Color.FromArgb(37, 37, 37);
+            buttonSettingGassLiveryAddRemoveShop.Dock = DockStyle.Fill;
+            buttonSettingGassLiveryAddRemoveShop.FlatStyle = FlatStyle.Flat;
+            buttonSettingGassLiveryAddRemoveShop.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSettingGassLiveryAddRemoveShop.ForeColor = Color.White;
+            buttonSettingGassLiveryAddRemoveShop.Location = new Point(3, 3);
+            buttonSettingGassLiveryAddRemoveShop.Name = "buttonSettingGassLiveryAddRemoveShop";
+            buttonSettingGassLiveryAddRemoveShop.Padding = new Padding(25, 0, 0, 0);
+            buttonSettingGassLiveryAddRemoveShop.Size = new Size(915, 75);
+            buttonSettingGassLiveryAddRemoveShop.TabIndex = 21;
+            buttonSettingGassLiveryAddRemoveShop.Text = "Add OR Remove Shop";
+            buttonSettingGassLiveryAddRemoveShop.TextAlign = ContentAlignment.MiddleLeft;
+            buttonSettingGassLiveryAddRemoveShop.UseVisualStyleBackColor = false;
+            // 
+            // buttonSettingsGassLiveryDriver
+            // 
+            buttonSettingsGassLiveryDriver.BackColor = Color.FromArgb(37, 37, 37);
+            buttonSettingsGassLiveryDriver.Dock = DockStyle.Fill;
+            buttonSettingsGassLiveryDriver.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSettingsGassLiveryDriver.ForeColor = Color.White;
+            buttonSettingsGassLiveryDriver.Location = new Point(3, 84);
+            buttonSettingsGassLiveryDriver.Name = "buttonSettingsGassLiveryDriver";
+            buttonSettingsGassLiveryDriver.Padding = new Padding(25, 0, 0, 0);
+            buttonSettingsGassLiveryDriver.Size = new Size(915, 75);
+            buttonSettingsGassLiveryDriver.TabIndex = 22;
+            buttonSettingsGassLiveryDriver.Text = "Become A Driver";
+            buttonSettingsGassLiveryDriver.TextAlign = ContentAlignment.MiddleLeft;
+            buttonSettingsGassLiveryDriver.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox13
+            // 
+            pictureBox13.BackgroundImage = Properties.Resources.arrow;
+            pictureBox13.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox13.Location = new Point(430, 23);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(30, 28);
+            pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox13.TabIndex = 19;
+            pictureBox13.TabStop = false;
+            // 
+            // label58
+            // 
+            label58.AutoSize = true;
+            label58.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label58.ForeColor = Color.White;
+            label58.Location = new Point(41, 13);
+            label58.Name = "label58";
+            label58.RightToLeft = RightToLeft.Yes;
+            label58.Size = new Size(375, 45);
+            label58.TabIndex = 18;
+            label58.Text = "GassLivery Partnership";
+            label58.TextAlign = ContentAlignment.TopRight;
             // 
             // labelSettingFullName
             // 
-            labelSettingFullName.AutoSize = true;
             labelSettingFullName.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelSettingFullName.ForeColor = Color.White;
-            labelSettingFullName.Location = new Point(888, 104);
+            labelSettingFullName.Location = new Point(890, 102);
             labelSettingFullName.Name = "labelSettingFullName";
             labelSettingFullName.RightToLeft = RightToLeft.Yes;
             labelSettingFullName.Size = new Size(72, 20);
@@ -747,19 +973,6 @@
             pictureBoxSettingPP.TabIndex = 4;
             pictureBoxSettingPP.TabStop = false;
             // 
-            // labelSettingUsername
-            // 
-            labelSettingUsername.AutoSize = true;
-            labelSettingUsername.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelSettingUsername.ForeColor = Color.White;
-            labelSettingUsername.Location = new Point(801, 59);
-            labelSettingUsername.Name = "labelSettingUsername";
-            labelSettingUsername.RightToLeft = RightToLeft.Yes;
-            labelSettingUsername.Size = new Size(171, 45);
-            labelSettingUsername.TabIndex = 3;
-            labelSettingUsername.Text = "Username";
-            labelSettingUsername.TextAlign = ContentAlignment.TopRight;
-            // 
             // tabPageHistory
             // 
             tabPageHistory.BackColor = Color.FromArgb(25, 25, 25);
@@ -769,7 +982,7 @@
             tabPageHistory.Location = new Point(4, 4);
             tabPageHistory.Name = "tabPageHistory";
             tabPageHistory.Padding = new Padding(3);
-            tabPageHistory.Size = new Size(1181, 624);
+            tabPageHistory.Size = new Size(1181, 625);
             tabPageHistory.TabIndex = 2;
             tabPageHistory.Text = "History";
             // 
@@ -840,7 +1053,7 @@
             tabPageGassRide.Location = new Point(4, 4);
             tabPageGassRide.Name = "tabPageGassRide";
             tabPageGassRide.Padding = new Padding(3);
-            tabPageGassRide.Size = new Size(1181, 624);
+            tabPageGassRide.Size = new Size(1181, 625);
             tabPageGassRide.TabIndex = 3;
             tabPageGassRide.Text = "GassRide";
             // 
@@ -1379,14 +1592,30 @@
             // tabPageGassKan
             // 
             tabPageGassKan.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageGassKan.Controls.Add(tableLayoutPanel3);
             tabPageGassKan.Controls.Add(groupBox2);
             tabPageGassKan.Controls.Add(tableLayoutPanel2);
             tabPageGassKan.Location = new Point(4, 4);
             tabPageGassKan.Name = "tabPageGassKan";
             tabPageGassKan.Padding = new Padding(3);
-            tabPageGassKan.Size = new Size(1181, 624);
+            tabPageGassKan.Size = new Size(1181, 625);
             tabPageGassKan.TabIndex = 4;
             tabPageGassKan.Text = "GassKan";
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 4;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.82081F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.17919F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 146F));
+            tableLayoutPanel3.Location = new Point(15, 214);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 2;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 46.6926079F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 53.3073921F));
+            tableLayoutPanel3.Size = new Size(675, 257);
+            tableLayoutPanel3.TabIndex = 25;
             // 
             // groupBox2
             // 
@@ -1789,7 +2018,7 @@
             tabPageGassMon.Location = new Point(4, 4);
             tabPageGassMon.Name = "tabPageGassMon";
             tabPageGassMon.Padding = new Padding(3);
-            tabPageGassMon.Size = new Size(1181, 624);
+            tabPageGassMon.Size = new Size(1181, 625);
             tabPageGassMon.TabIndex = 5;
             tabPageGassMon.Text = "GassMon";
             // 
@@ -1876,9 +2105,41 @@
             tabPageTenant.Location = new Point(4, 4);
             tabPageTenant.Name = "tabPageTenant";
             tabPageTenant.Padding = new Padding(3);
-            tabPageTenant.Size = new Size(1181, 624);
+            tabPageTenant.Size = new Size(1181, 625);
             tabPageTenant.TabIndex = 6;
             tabPageTenant.Text = "Tenant";
+            // 
+            // label51
+            // 
+            label51.AutoSize = true;
+            label51.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label51.ForeColor = Color.White;
+            label51.Location = new Point(165, 71);
+            label51.Name = "label51";
+            label51.Size = new Size(75, 20);
+            label51.TabIndex = 8;
+            label51.Text = "#IDShop";
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label54.ForeColor = Color.White;
+            label54.Location = new Point(159, 82);
+            label54.Name = "label54";
+            label54.Size = new Size(154, 45);
+            label54.TabIndex = 7;
+            label54.Text = "My Shop";
+            // 
+            // pictureBox12
+            // 
+            pictureBox12.BackgroundImage = Properties.Resources.shop;
+            pictureBox12.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox12.Location = new Point(43, 47);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(110, 103);
+            pictureBox12.TabIndex = 5;
+            pictureBox12.TabStop = false;
             // 
             // panelControl
             // 
@@ -1953,44 +2214,12 @@
             buttonMenu.TabStop = false;
             buttonMenu.Click += buttonMenu_Click;
             // 
-            // pictureBox12
-            // 
-            pictureBox12.BackgroundImage = Properties.Resources.shop;
-            pictureBox12.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox12.Location = new Point(43, 47);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(110, 103);
-            pictureBox12.TabIndex = 5;
-            pictureBox12.TabStop = false;
-            // 
-            // label51
-            // 
-            label51.AutoSize = true;
-            label51.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label51.ForeColor = Color.White;
-            label51.Location = new Point(165, 71);
-            label51.Name = "label51";
-            label51.Size = new Size(75, 20);
-            label51.TabIndex = 8;
-            label51.Text = "#IDShop";
-            // 
-            // label54
-            // 
-            label54.AutoSize = true;
-            label54.Font = new Font("Comic Sans MS", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label54.ForeColor = Color.White;
-            label54.Location = new Point(159, 82);
-            label54.Name = "label54";
-            label54.Size = new Size(154, 45);
-            label54.TabIndex = 7;
-            label54.Text = "My Shop";
-            // 
             // FormUtama
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
-            ClientSize = new Size(1245, 648);
+            ClientSize = new Size(1245, 656);
             Controls.Add(panelControl);
             Controls.Add(tabControlPage);
             Name = "FormUtama";
@@ -2010,15 +2239,19 @@
             tableLayoutPanel1.ResumeLayout(false);
             panelSettingAdress.ResumeLayout(false);
             panelSettingAdress.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panelSettingSecurityAndSignin.ResumeLayout(false);
             panelSettingSecurityAndSignin.PerformLayout();
+            groupBoxResetPassword.ResumeLayout(false);
+            groupBoxResetPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panelSettingProfile.ResumeLayout(false);
             panelSettingProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxAccountUsernameSettingArrow).EndInit();
-            panelSettingsButton.ResumeLayout(false);
+            panelSettingGassLiveryPartnership.ResumeLayout(false);
+            panelSettingGassLiveryPartnership.PerformLayout();
+            tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSettingPP).EndInit();
             tabPageHistory.ResumeLayout(false);
             tabPageHistory.PerformLayout();
@@ -2062,10 +2295,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             tabPageTenant.ResumeLayout(false);
             tabPageTenant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             panelControl.ResumeLayout(false);
             panelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ResumeLayout(false);
         }
 
@@ -2073,7 +2306,6 @@
 
         private TabControl tabControlPage;
         private TabPage tabPageHomepage;
-        private TabPage tabPageSettings;
         private Panel panelControl;
         private PictureBox buttonMenu;
         private Label labelHomepageButton;
@@ -2090,38 +2322,7 @@
         private TabPage tabPageGassRide;
         private TabPage tabPageGassKan;
         private TabPage tabPageGassMon;
-        private Label labelSettingUsername;
-        private PictureBox pictureBoxSettingPP;
-        private Label labelSettingFullName;
-        private Panel panelSettingProfile;
-        private Label label6;
-        private TextBox textBoxSettingChangeUsername;
-        private Label label5;
-        private PictureBox pictureBoxAccountUsernameSettingArrow;
-        private Label labelSettingPanelProfile;
-        private TextBox textBoxSettingFullName;
-        private Panel panelSettingSecurityAndSignin;
-        private PictureBox pictureBox5;
-        private Label labelSettingsPanelSecurityAndSignin;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Panel panelSettingAdress;
-        private PictureBox pictureBox4;
-        private Label labelSettingPanelAdress;
-        private Label label17;
-        private Button buttonSettingProfilePicture;
-        private Label label16;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
-        private Label label18;
-        private Label labelSettingsIDUserProfile;
-        private Label label19;
-        private TextBox textBox1;
-        private DataGridView dataGridView1;
-        private Button button1;
-        private Button buttonSettingSave;
-        private Panel panelSettingsButton;
         private Button buttonGassRideMyLocationSearch;
-        private Button buttonSettingCancel;
         private DataGridView dataGridView2;
         private Label label3;
         private TableLayoutPanel tableLayoutPanelGassRide;
@@ -2207,5 +2408,52 @@
         private PictureBox pictureBox12;
         private Label label51;
         private Label label54;
+        private TableLayoutPanel tableLayoutPanel3;
+        private TabPage tabPageSettings;
+        private Label labelSettingsIDUserProfile;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Panel panelSettingAdress;
+        private Button buttonSettingSaveAddress;
+        private PictureBox pictureBox4;
+        private Label labelSettingPanelAdress;
+        private Panel panelSettingSecurityAndSignin;
+        private Button buttonSettingsSettingsSecurityAndSignDeleteAccount;
+        private GroupBox groupBoxResetPassword;
+        private Button buttonSettingsSecurityAndSigninResetPassword;
+        private Label label57;
+        private TextBox textBox4;
+        private Label label56;
+        private TextBox textBox3;
+        private Label label55;
+        private TextBox textBox2;
+        private PictureBox pictureBox5;
+        private Label labelSettingsPanelSecurityAndSignin;
+        private Panel panelSettingProfile;
+        private TextBox textBox1;
+        private Label label19;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private Label label18;
+        private Label label17;
+        private Button buttonSettingProfilePicture;
+        private Label label16;
+        private TextBox textBoxSettingFullName;
+        private Label label6;
+        private TextBox textBoxSettingChangeUsername;
+        private Label label5;
+        private PictureBox pictureBoxAccountUsernameSettingArrow;
+        private Label labelSettingPanelProfile;
+        private Panel panelSettingGassLiveryPartnership;
+        private Button buttonSettingProfileSave;
+        private Label labelSettingFullName;
+        private PictureBox pictureBoxSettingPP;
+        private Label labelSettingUsername;
+        private Label labelSettingSaveAddress;
+        private Button buttonSettingsChangeAddress;
+        private Label label58;
+        private PictureBox pictureBox13;
+        private TableLayoutPanel tableLayoutPanel4;
+        private Button buttonSettingGassLiveryAddRemoveShop;
+        private Button buttonSettingsGassLiveryDriver;
     }
 }

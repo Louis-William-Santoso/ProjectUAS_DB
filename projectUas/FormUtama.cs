@@ -12,12 +12,15 @@ namespace projectUas
             InitializeComponent();
         }
 
-        //Declaration
+        #region Declaration
+        public User loginUser;
         int controlPanelWidthNormal = 67;
         int controlPanelWidthExpanded = 350;
         int groupBoxControlHeight = 514;
         int groupBoxControlWidth = 1002;
         int settingsConrolHeight = 75;
+        #endregion
+
 
         private void FormUtama_Load(object sender, EventArgs e)
         {
@@ -25,9 +28,26 @@ namespace projectUas
             {
                 ConnectDB Connection = new ConnectDB(server.Default.DbServer, server.Default.DbName, server.Default.DbUsername, server.Default.DbPassword);
 
-                FormLogin login = new FormLogin();
-                login.ShowDialog();
-            }catch (Exception ex) { MessageBox.Show(ex.Message); }
+                if (ConnectDB.ConnectionStatus(Connection))
+                {
+                    FormLogin login = new FormLogin();
+                    login.Owner = this;
+                    login.ShowDialog();
+
+                    if (loginUser == null) throw new Exception("data user kosong");
+
+                    labelHomepageNama.Text = $"Hi {loginUser.Username}";
+                }
+                else
+                {
+                    MessageBox.Show("Server connection is broken");
+                    Application.Exit();
+                }
+            }
+            catch (Exception ex) { 
+                MessageBox.Show(ex.Message);
+                Application.Exit();
+            }
         }
 
 
@@ -58,6 +78,11 @@ namespace projectUas
 
         private void labelSettingsButton_Click(object sender, EventArgs e)
         {
+            //ui elements
+            labelSettingUsername.Text = loginUser.Username;
+            labelSettingFullName.Text = loginUser.FullName;
+            labelSettingsIDUserProfile.Text = $"#{loginUser.ID_user}";
+
             tabControlPage.SelectedTab = tabPageSettings;
             panelControl.Size = new Size(controlPanelWidthNormal, this.Size.Height - 35);
         }
@@ -82,14 +107,27 @@ namespace projectUas
                 Label lab = (Label)sender;
                 temp = (Panel)lab.Parent;
             }
-
-            if (temp.Size.Height > settingsConrolHeight)
+            if (temp.Name == "labelSettingPanelAdress" || temp.Name == "panelSettingAdress")
             {
-                temp.Size = new Size(panelWidth, settingsConrolHeight);
+                if (temp.Size.Height > settingsConrolHeight)
+                {
+                    temp.Size = new Size(panelWidth, settingsConrolHeight);
+                }
+                else
+                {
+                    temp.Size = new Size(panelWidth, 200);
+                }
             }
             else
             {
-                temp.Size = new Size(panelWidth, 300);
+                if (temp.Size.Height > settingsConrolHeight)
+                {
+                    temp.Size = new Size(panelWidth, settingsConrolHeight);
+                }
+                else
+                {
+                    temp.Size = new Size(panelWidth, 300);
+                }
             }
         }
 
@@ -125,6 +163,5 @@ namespace projectUas
             map.ShowDialog();
         }
         #endregion
-
     }
 }

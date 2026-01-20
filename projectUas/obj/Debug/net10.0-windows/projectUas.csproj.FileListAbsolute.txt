@@ -69,3 +69,5 @@ D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\projectUas.dll.conf
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\Class_Gass-livery.dll
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\MySql.Data.dll
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\Class_Gass-livery.pdb
+D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\script.js
+D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\package.json

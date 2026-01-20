@@ -22,9 +22,12 @@ namespace projectUas
 
         private void FormMapSelector_Load(object sender, EventArgs e)
         {
-            ServiceCollection serviceView = new ServiceCollection();
+            IServiceCollection serviceView = new ServiceCollection();
             serviceView.AddWindowsFormsBlazorWebView();
 
+            serviceView.AddBlazorWebViewDeveloperTools();
+            blazorWebViewMapSelector.Services = serviceView.BuildServiceProvider();
+ 
             blazorWebViewMapSelector.HostPage = "wwwroot/maps.html";
             blazorWebViewMapSelector.Services = serviceView.BuildServiceProvider();
         }

@@ -6,31 +6,41 @@ using System.Text;
 
 namespace Class_Gass_livery
 {
-    public class Driver
+    public class Driver : User
     {
-        private string idDriver;
-        private string idUser;
+        private int idDriver;
         private int pendapatan;
         private float rating;
         private string description;
+        private string status;
         private List<Kendaraan> listKendaraan;
 
-        public Driver(string idDriver, string idUser, int pendapatan, List<Kendaraan> listKendaraan, string description="")
+        public Driver(User user, int idDriver, int pendapatan, List<Kendaraan> listKendaraan, string description="", string status="active")
+                    : base (user)
         {
             IdDriver = idDriver;
-            IdUser = idUser;
             Pendapatan = pendapatan;
             Description = description;
             ListKendaraan = listKendaraan;
+            Status = status;
         }
 
-        public string IdDriver { get => idDriver; set => idDriver=value; }
-        public string IdUser { get => idUser; set => idUser = value; }
+        public Driver(User user, Driver driver):base(user)
+        {
+            IdDriver = driver.IdDriver;
+            Pendapatan = driver.Pendapatan;
+            Description = driver.Description;
+            ListKendaraan = driver.listKendaraan;
+            Status = driver.Status;
+        }
+
+        public int IdDriver { get => idDriver; set => idDriver=value; }
         public int Pendapatan { get => pendapatan; set => pendapatan = value; }
         public float Rating { get => rating; }
         public List<Kendaraan> ListKendaraan { get => listKendaraan; set => listKendaraan = value; }
         public string Description { get => description; set => description = value; }
-        
+        public string Status { get => status; set => status = value; }
+
         public static List<Driver> BacaData() 
         {
             string select = "select * from driver;";
@@ -39,14 +49,60 @@ namespace Class_Gass_livery
 
             while (data.Read())
             {
-                List<Kendaraan> listKendaraan = Kendaraan.BacaData("select * from kendaraan;");
-                /*Driver temp = new Driver(
+                string selectKendaraan = $"SELECT * FROM kendaraan where id_driver={data["id_driver"]};";
+                List<Kendaraan> listKendaraan = Kendaraan.BacaData(selectKendaraan);
+
+                string selectUser = $"SELECT * FROM users where id_users={data["id_user"]};";
+                User user = (User.Bacadata(selectUser))[0];
+
+                Driver temp = new Driver(
+                    user,
                     (int)data["id_driver"],
-                    (int)data["id_users"],
-                    (int)data["pendapatan"]
-                    );*/
+                    (int)data["pendapatan"],
+                    listKendaraan,
+                    (string)data["description"],
+                    (string)data["status"]
+                    );
+                listDriver.Add(temp);
             }
             return listDriver;
+        }
+
+        public static List<Driver> BacaData(string perintah)
+        {
+            MySqlDataReader data = ConnectDB.Select(perintah);
+            List<Driver> listDriver = new List<Driver>();
+
+            while (data.Read())
+            {
+                string selectKendaraan = $"SELECT * FROM kendaraan where id_driver={data["id_driver"]};";
+                List<Kendaraan> listKendaraan = Kendaraan.BacaData(selectKendaraan);
+
+                string selectUser = $"SELECT * FROM users where id_users={data["id_user"]};";
+                User user = (User.Bacadata(selectUser))[0];
+
+                Driver temp = new Driver(
+                    user,
+                    (int)data["id_driver"],
+                    (int)data["pendapatan"],
+                    listKendaraan,
+                    (string)data["description"],
+                    (string)data["status"]
+                    );
+                listDriver.Add(temp);
+            }
+            return listDriver;
+        }
+
+        public static void Masukdata(Driver data)
+        {
+            string perintah = $"INSERT INTO `driver` " +
+                              $"(`id_driver`, `id_user`, `pendapatan`, `review`, `description`, `status`) " +
+                              $"VALUES ('{data.IdDriver}', '{data.ID_user}', '{data.Pendapatan}', '{data.Rating}', '{data.Description}', '{data.status}');";
+            User dataUser = (User)data;
+
+            User.MasukData(dataUser);
+            ConnectDB.InputData(perintah);
         }
     }
 }

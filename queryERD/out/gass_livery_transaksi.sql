@@ -21,6 +21,7 @@
 
 LOCK TABLES `transaksi` WRITE;
 /*!40000 ALTER TABLE `transaksi` DISABLE KEYS */;
+INSERT INTO `transaksi` VALUES ('1',2,1,'2026-07-12 00:00:00',4,'dxfcgvhbn','rdfghbjn',3,'Yes'),('2',3,1,'2025-04-08 00:00:00',4,'dxfgh','dfgh',2,'Yes'),('3',2,1,'2025-04-09 00:00:00',3,'qwert','asdfgh',567,'Yes');
 /*!40000 ALTER TABLE `transaksi` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -33,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-06 18:47:27
+-- Dump completed on 2026-01-08 16:15:38

@@ -21,6 +21,7 @@
 
 LOCK TABLES `menu` WRITE;
 /*!40000 ALTER TABLE `menu` DISABLE KEYS */;
+INSERT INTO `menu` VALUES (1,1,'dcdcdc',3,5,5,'vvrv','dcvefvce'),(2,1,'scsdccc',3,7,1,'dffvef','cfeffer'),(3,1,'wewfwef',7,5,2,'6','ghv'),(4,2,'fxd',2,7,3,'hbjhjh','vjvbjb');
 /*!40000 ALTER TABLE `menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -33,4 +34,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-01-06 18:47:26
+-- Dump completed on 2026-01-08 16:15:38

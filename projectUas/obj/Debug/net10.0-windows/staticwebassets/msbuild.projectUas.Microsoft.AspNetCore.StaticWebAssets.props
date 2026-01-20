@@ -272,13 +272,53 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>t5jhjbkdab</Fingerprint>
-      <Integrity>QfokatMBq3owuNWvHAIhZQq5r7nJ/O10JZtWi7H/7qY=</Integrity>
+      <Fingerprint>l05hsia67s</Fingerprint>
+      <Integrity>pXdsW9FTQJBhkpxhHS1cJKxL9Nos4xhWHZxIQfSbb9I=</Integrity>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>963</FileLength>
-      <LastWriteTime>Sun, 04 Jan 2026 06:18:11 GMT</LastWriteTime>
+      <FileLength>644</FileLength>
+      <LastWriteTime>Tue, 20 Jan 2026 02:19:53 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\maps.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\package.json'))">
+      <SourceType>Package</SourceType>
+      <SourceId>projectUas</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>/</BasePath>
+      <RelativePath>package.json</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>t7ox2b6fq4</Fingerprint>
+      <Integrity>2Wbai3PeNSwm7o6zqepPYnrAx/gBI3HcRVNJvw0GMHA=</Integrity>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>224</FileLength>
+      <LastWriteTime>Tue, 20 Jan 2026 01:59:47 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\package.json'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>projectUas</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>/</BasePath>
+      <RelativePath>script.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>59jihezo8h</Fingerprint>
+      <Integrity>B/VYFm/5Ldjzkm3sOwKdZWzdrTIwElvzqZBv49aRYbs=</Integrity>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <FileLength>814</FileLength>
+      <LastWriteTime>Mon, 19 Jan 2026 19:22:30 GMT</LastWriteTime>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script.js'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\_framework\blazor.modules.json'))">
       <SourceType>Package</SourceType>

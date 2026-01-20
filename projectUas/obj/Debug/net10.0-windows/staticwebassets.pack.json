@@ -65,6 +65,14 @@
       "PackagePath": "staticwebassets\\maps.html"
     },
     {
+      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\package.json",
+      "PackagePath": "staticwebassets\\package.json"
+    },
+    {
+      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\script.js",
+      "PackagePath": "staticwebassets\\script.js"
+    },
+    {
       "Id": "obj\\Debug\\net10.0-windows\\staticwebassets\\msbuild.build.projectUas.props",
       "PackagePath": "build\\projectUas.props"
     },
