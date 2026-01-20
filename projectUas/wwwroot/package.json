@@ -1,0 +1,12 @@
+{
+  "name": "maps",
+  "version": "1.0.0",
+  "description": "buat maps biar bisa tampil di form",
+  "license": "ISC",
+  "author": "louthod",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "run"
+  }
+}
