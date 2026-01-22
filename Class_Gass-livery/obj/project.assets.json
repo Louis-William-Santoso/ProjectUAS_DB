@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\louis\\.nuget\\packages\\": {},
+    "C:\\Users\\Ire\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj",
+      "projectUniqueName": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj",
       "projectName": "Class_Gass-livery",
-      "projectPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj",
-      "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
-      "outputPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\obj\\",
+      "projectPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj",
+      "packagesPath": "C:\\Users\\Ire\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ire\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -1,71 +1,71 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\louis\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.modules.json",
+      "Id": "C:\\Users\\Ire\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.modules.json",
       "PackagePath": "staticwebassets\\_framework\\blazor.modules.json"
     },
     {
-      "Id": "C:\\Users\\louis\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.webview.js",
+      "Id": "C:\\Users\\Ire\\.nuget\\packages\\microsoft.aspnetcore.components.webview\\10.0.0\\staticwebassets\\blazor.webview.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webview.js"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\jatim.geojson",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\jatim.geojson",
       "PackagePath": "staticwebassets\\jatim.geojson"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\images\\layers-2x.png",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\images\\layers-2x.png",
       "PackagePath": "staticwebassets\\leaflet\\images\\layers-2x.png"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\images\\layers.png",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\images\\layers.png",
       "PackagePath": "staticwebassets\\leaflet\\images\\layers.png"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\images\\marker-icon-2x.png",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\images\\marker-icon-2x.png",
       "PackagePath": "staticwebassets\\leaflet\\images\\marker-icon-2x.png"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\images\\marker-icon.png",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\images\\marker-icon.png",
       "PackagePath": "staticwebassets\\leaflet\\images\\marker-icon.png"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\images\\marker-shadow.png",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\images\\marker-shadow.png",
       "PackagePath": "staticwebassets\\leaflet\\images\\marker-shadow.png"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet-src.esm.js",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet-src.esm.js",
       "PackagePath": "staticwebassets\\leaflet\\leaflet-src.esm.js"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet-src.esm.js.map",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet-src.esm.js.map",
       "PackagePath": "staticwebassets\\leaflet\\leaflet-src.esm.js.map"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet-src.js",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet-src.js",
       "PackagePath": "staticwebassets\\leaflet\\leaflet-src.js"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet-src.js.map",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet-src.js.map",
       "PackagePath": "staticwebassets\\leaflet\\leaflet-src.js.map"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet.css",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet.css",
       "PackagePath": "staticwebassets\\leaflet\\leaflet.css"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet.js",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet.js",
       "PackagePath": "staticwebassets\\leaflet\\leaflet.js"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\leaflet\\leaflet.js.map",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\leaflet\\leaflet.js.map",
       "PackagePath": "staticwebassets\\leaflet\\leaflet.js.map"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\maps.html",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\maps.html",
       "PackagePath": "staticwebassets\\maps.html"
     },
     {
-      "Id": "D:\\(=^.^=)\\database\\UAS\\projectUas\\wwwroot\\script.js",
+      "Id": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\wwwroot\\script.js",
       "PackagePath": "staticwebassets\\script.js"
     },
     {
