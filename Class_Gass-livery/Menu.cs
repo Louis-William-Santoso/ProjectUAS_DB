@@ -79,5 +79,15 @@ namespace Class_Gass_livery
             }
             return list;
         }
+        public static void TambahMenu(Menu menuBaru)
+        {
+            
+            string sql = $"INSERT INTO menu (id_tenant, nama_menu, stock, harga, rating, photo, description) " +
+                         $"VALUES ({menuBaru.IdTenant}, '{menuBaru.Name}', {menuBaru.Stock}, {menuBaru.Harga}, " +
+                         $"{menuBaru.Rating}, '{menuBaru.Photo.Replace("\\", "\\\\")}', '{menuBaru.Description}')";
+
+           
+            ConnectDB.InputData(sql);
+        }
     }
 }

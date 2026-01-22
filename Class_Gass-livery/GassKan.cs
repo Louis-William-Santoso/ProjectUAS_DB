@@ -7,6 +7,11 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Class_Gass_livery
 {
+    public class ItemKeranjang
+    {
+        public Menu MenuDipilih { get; set; }
+        public int Jumlah { get; set; }
+    }
     public class GassKan : Transaksi
     {
         private List<Shop> tenant = new List<Shop>();
@@ -28,7 +33,59 @@ namespace Class_Gass_livery
         public float Rating_menu { get => rating_menu; set => rating_menu = value; }
         public List<Shop> Tenant { get => tenant; set => tenant = value; }
         public List<Menu> Menus { get => menus; set => menus = value; }
+        public static string Checkout(User pembeli, Shop toko, List<ItemKeranjang> keranjang)
+        {
+            try
+            {
+                
+                string sqlCariDriver = "SELECT id_driver FROM driver WHERE status='active' LIMIT 1";
+                MySqlDataReader dataDriver = ConnectDB.Select(sqlCariDriver);
+                
+                int idDriver = 0;
+                if (dataDriver.Read()) 
+                {
+                    idDriver = (int)dataDriver["id_driver"];
+                }
+                else
+                {
+                   
+                    return "Maaf, tidak ada driver yang tersedia saat ini.";
+                }
 
+                
+                string idTransaksi = $"TRX-{DateTime.Now.ToString("yyyyMMdd-HHmmss")}";
+
+               
+                string sqlTransaksi = $"INSERT INTO transaksi " +
+                                      $"(id_transaksi, id_users, id_driver, tanggal, titik_jemput, titik_antar, jarak, verifikasi) " +
+                                      $"VALUES " +
+                                      $"('{idTransaksi}', {pembeli.ID_user}, {idDriver}, NOW(), '{toko.Alamat}', '{pembeli.Address}', 5, 'No');";
+                
+                ConnectDB.InputData(sqlTransaksi);
+
+                
+                foreach (var item in keranjang)
+                {
+                    
+                    int idGasskan = new Random().Next(100000, 999999);
+
+                    string sqlDetail = $"INSERT INTO gass_kan " +
+                                       $"(id_gasskan, id_menu, id_tenant, id_transaksi, jumlah) " +
+                                       $"VALUES " +
+                                       $"({idGasskan}, {item.MenuDipilih.IdMenu}, {toko.IdTenant}, '{idTransaksi}', {item.Jumlah});";
+                    
+                    ConnectDB.InputData(sqlDetail);
+
+                   
+                }
+
+                return "Berhasil";
+            }
+            catch (Exception ex)
+            {
+                return "Gagal: " + ex.Message; 
+            }
+        }
         /*public static List<GassKan> BacaData()
         {
             string select = "SELECT * FROM gass_kan;";

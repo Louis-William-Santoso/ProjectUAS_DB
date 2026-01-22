@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj": {}
+    "J:\\Artchie\\ProjectUAS_DB\\projectUas\\projectUas.csproj": {}
   },
   "projects": {
-    "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj": {
+    "J:\\Artchie\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj",
+        "projectUniqueName": "J:\\Artchie\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj",
         "projectName": "Class_Gass-livery",
-        "projectPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj",
-        "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
-        "outputPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\obj\\",
+        "projectPath": "J:\\Artchie\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj",
+        "packagesPath": "C:\\Users\\Artchie\\.nuget\\packages\\",
+        "outputPath": "J:\\Artchie\\ProjectUAS_DB\\Class_Gass-livery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Artchie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.6.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -343,20 +349,20 @@
         }
       }
     },
-    "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj": {
+    "J:\\Artchie\\ProjectUAS_DB\\projectUas\\projectUas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
+        "projectUniqueName": "J:\\Artchie\\ProjectUAS_DB\\projectUas\\projectUas.csproj",
         "projectName": "projectUas",
-        "projectPath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
-        "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
-        "outputPath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\obj\\",
+        "projectPath": "J:\\Artchie\\ProjectUAS_DB\\projectUas\\projectUas.csproj",
+        "packagesPath": "C:\\Users\\Artchie\\.nuget\\packages\\",
+        "outputPath": "J:\\Artchie\\ProjectUAS_DB\\projectUas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Artchie\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -371,8 +377,8 @@
           "net10.0-windows7.0": {
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj": {
-                "projectPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj"
+              "J:\\Artchie\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj": {
+                "projectPath": "J:\\Artchie\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj"
               }
             }
           }
@@ -400,6 +406,10 @@
             "Microsoft.AspNetCore.Components.WebView.WindowsForms": {
               "target": "Package",
               "version": "[10.0.20, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.6.0, )"
             }
           },
           "imports": [
@@ -424,7 +434,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

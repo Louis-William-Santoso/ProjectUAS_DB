@@ -132,9 +132,13 @@
             label10 = new Label();
             buttonGassRideMyLocationSearch = new Button();
             tabPageGassKan = new TabPage();
-            tableLayoutPanel3 = new TableLayoutPanel();
+            numJumlah = new NumericUpDown();
+            buttonTambah = new Button();
+            tableGaleriMenu = new TableLayoutPanel();
+            dataGridView1 = new DataGridView();
             groupBox2 = new GroupBox();
             label33 = new Label();
+            labelTotal = new Label();
             label34 = new Label();
             label35 = new Label();
             label36 = new Label();
@@ -146,13 +150,13 @@
             label42 = new Label();
             label43 = new Label();
             comboBox2 = new ComboBox();
-            button3 = new Button();
+            buttonSave = new Button();
             button4 = new Button();
             label44 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel4 = new Panel();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
+            comboPilihMenu = new ComboBox();
+            comboPilihTenant = new ComboBox();
             pictureBox9 = new PictureBox();
             label48 = new Label();
             pictureBox7 = new PictureBox();
@@ -171,6 +175,18 @@
             label46 = new Label();
             pictureBox6 = new PictureBox();
             tabPageTenant = new TabPage();
+            gridMenuSaya = new DataGridView();
+            label62 = new Label();
+            label61 = new Label();
+            label60 = new Label();
+            label59 = new Label();
+            numStokMenu = new NumericUpDown();
+            txtDeskripsiMenu = new TextBox();
+            numHargaMenu = new NumericUpDown();
+            txtNamaMenu = new TextBox();
+            btnSimpanMenu = new Button();
+            btnBrowseFoto = new Button();
+            picFotoMenu = new PictureBox();
             label51 = new Label();
             label54 = new Label();
             pictureBox12 = new PictureBox();
@@ -214,6 +230,9 @@
             panelGassRideMyLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabPageGassKan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numJumlah).BeginInit();
+            tableGaleriMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox2.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -226,6 +245,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             tabPageTenant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)gridMenuSaya).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numStokMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numHargaMenu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picFotoMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).BeginInit();
@@ -684,11 +707,11 @@
             // textBox1
             // 
             textBox1.BackColor = Color.FromArgb(25, 25, 25);
-            textBox1.Font = new Font("Poppins ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.White;
             textBox1.Location = new Point(203, 223);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(352, 30);
+            textBox1.Size = new Size(352, 24);
             textBox1.TabIndex = 27;
             textBox1.Text = "Type New Name";
             textBox1.TextAlign = HorizontalAlignment.Center;
@@ -795,11 +818,11 @@
             // textBoxSettingFullName
             // 
             textBoxSettingFullName.BackColor = Color.FromArgb(25, 25, 25);
-            textBoxSettingFullName.Font = new Font("Poppins ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxSettingFullName.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBoxSettingFullName.ForeColor = Color.White;
             textBoxSettingFullName.Location = new Point(251, 119);
             textBoxSettingFullName.Name = "textBoxSettingFullName";
-            textBoxSettingFullName.Size = new Size(352, 30);
+            textBoxSettingFullName.Size = new Size(352, 24);
             textBoxSettingFullName.TabIndex = 17;
             textBoxSettingFullName.Text = "Type New Name";
             textBoxSettingFullName.TextAlign = HorizontalAlignment.Center;
@@ -820,11 +843,11 @@
             // textBoxSettingChangeUsername
             // 
             textBoxSettingChangeUsername.BackColor = Color.FromArgb(25, 25, 25);
-            textBoxSettingChangeUsername.Font = new Font("Poppins ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxSettingChangeUsername.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBoxSettingChangeUsername.ForeColor = Color.White;
             textBoxSettingChangeUsername.Location = new Point(251, 80);
             textBoxSettingChangeUsername.Name = "textBoxSettingChangeUsername";
-            textBoxSettingChangeUsername.Size = new Size(352, 30);
+            textBoxSettingChangeUsername.Size = new Size(352, 24);
             textBoxSettingChangeUsername.TabIndex = 15;
             textBoxSettingChangeUsername.Text = "Type New Username";
             textBoxSettingChangeUsername.TextAlign = HorizontalAlignment.Center;
@@ -1592,7 +1615,10 @@
             // tabPageGassKan
             // 
             tabPageGassKan.BackColor = Color.FromArgb(25, 25, 25);
-            tabPageGassKan.Controls.Add(tableLayoutPanel3);
+            tabPageGassKan.Controls.Add(numJumlah);
+            tabPageGassKan.Controls.Add(labelTotal);
+            tabPageGassKan.Controls.Add(buttonTambah);
+            tabPageGassKan.Controls.Add(tableGaleriMenu);
             tabPageGassKan.Controls.Add(groupBox2);
             tabPageGassKan.Controls.Add(tableLayoutPanel2);
             tabPageGassKan.Location = new Point(4, 4);
@@ -1602,20 +1628,46 @@
             tabPageGassKan.TabIndex = 4;
             tabPageGassKan.Text = "GassKan";
             // 
-            // tableLayoutPanel3
+            // numJumlah
             // 
-            tableLayoutPanel3.ColumnCount = 4;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.82081F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.17919F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 146F));
-            tableLayoutPanel3.Location = new Point(15, 214);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 46.6926079F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 53.3073921F));
-            tableLayoutPanel3.Size = new Size(675, 257);
-            tableLayoutPanel3.TabIndex = 25;
+            numJumlah.Location = new Point(188, 506);
+            numJumlah.Name = "numJumlah";
+            numJumlah.Size = new Size(116, 23);
+            numJumlah.TabIndex = 27;
+            // 
+            // buttonTambah
+            // 
+            buttonTambah.Location = new Point(48, 504);
+            buttonTambah.Name = "buttonTambah";
+            buttonTambah.Size = new Size(75, 23);
+            buttonTambah.TabIndex = 26;
+            buttonTambah.Text = "Tambah";
+            buttonTambah.UseVisualStyleBackColor = true;
+            buttonTambah.Click += buttonTambah_Click;
+            // 
+            // tableGaleriMenu
+            // 
+            tableGaleriMenu.ColumnCount = 4;
+            tableGaleriMenu.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.82081F));
+            tableGaleriMenu.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.17919F));
+            tableGaleriMenu.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
+            tableGaleriMenu.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 146F));
+            tableGaleriMenu.Controls.Add(dataGridView1, 0, 0);
+            tableGaleriMenu.Location = new Point(15, 214);
+            tableGaleriMenu.Name = "tableGaleriMenu";
+            tableGaleriMenu.RowCount = 2;
+            tableGaleriMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 46.6926079F));
+            tableGaleriMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 53.3073921F));
+            tableGaleriMenu.Size = new Size(675, 257);
+            tableGaleriMenu.TabIndex = 25;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(3, 3);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(156, 114);
+            dataGridView1.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -1631,7 +1683,7 @@
             groupBox2.Controls.Add(label42);
             groupBox2.Controls.Add(label43);
             groupBox2.Controls.Add(comboBox2);
-            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(buttonSave);
             groupBox2.Controls.Add(button4);
             groupBox2.Controls.Add(label44);
             groupBox2.Location = new Point(713, 18);
@@ -1653,6 +1705,17 @@
             label33.Size = new Size(106, 33);
             label33.TabIndex = 35;
             label33.Text = "Ongkir :";
+            // 
+            // labelTotal
+            // 
+            labelTotal.AutoSize = true;
+            labelTotal.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelTotal.ForeColor = Color.SeaShell;
+            labelTotal.Location = new Point(374, 497);
+            labelTotal.Name = "labelTotal";
+            labelTotal.Size = new Size(187, 32);
+            labelTotal.TabIndex = 28;
+            labelTotal.Text = "Harga Makanan:";
             // 
             // label34
             // 
@@ -1801,17 +1864,18 @@
             comboBox2.Size = new Size(161, 23);
             comboBox2.TabIndex = 22;
             // 
-            // button3
+            // buttonSave
             // 
-            button3.BackColor = Color.FromArgb(37, 37, 37);
-            button3.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(299, 521);
-            button3.Name = "button3";
-            button3.Size = new Size(136, 45);
-            button3.TabIndex = 0;
-            button3.Text = "Save";
-            button3.UseVisualStyleBackColor = false;
+            buttonSave.BackColor = Color.FromArgb(37, 37, 37);
+            buttonSave.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSave.ForeColor = Color.White;
+            buttonSave.Location = new Point(299, 521);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(136, 45);
+            buttonSave.TabIndex = 0;
+            buttonSave.Text = "Save";
+            buttonSave.UseVisualStyleBackColor = false;
+            buttonSave.Click += buttonSave_Click;
             // 
             // button4
             // 
@@ -1863,8 +1927,8 @@
             // 
             panel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel4.BackColor = Color.FromArgb(37, 37, 37);
-            panel4.Controls.Add(comboBox4);
-            panel4.Controls.Add(comboBox3);
+            panel4.Controls.Add(comboPilihMenu);
+            panel4.Controls.Add(comboPilihTenant);
             panel4.Controls.Add(pictureBox9);
             panel4.Controls.Add(label48);
             panel4.Controls.Add(pictureBox7);
@@ -1875,21 +1939,22 @@
             panel4.Size = new Size(669, 100);
             panel4.TabIndex = 19;
             // 
-            // comboBox4
+            // comboPilihMenu
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(411, 55);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(248, 23);
-            comboBox4.TabIndex = 36;
+            comboPilihMenu.FormattingEnabled = true;
+            comboPilihMenu.Location = new Point(411, 55);
+            comboPilihMenu.Name = "comboPilihMenu";
+            comboPilihMenu.Size = new Size(248, 23);
+            comboPilihMenu.TabIndex = 36;
             // 
-            // comboBox3
+            // comboPilihTenant
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(411, 15);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(248, 23);
-            comboBox3.TabIndex = 36;
+            comboPilihTenant.FormattingEnabled = true;
+            comboPilihTenant.Location = new Point(411, 15);
+            comboPilihTenant.Name = "comboPilihTenant";
+            comboPilihTenant.Size = new Size(248, 23);
+            comboPilihTenant.TabIndex = 36;
+            comboPilihTenant.SelectedIndexChanged += comboPilihTenant_SelectedIndexChanged;
             // 
             // pictureBox9
             // 
@@ -2099,6 +2164,18 @@
             // tabPageTenant
             // 
             tabPageTenant.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageTenant.Controls.Add(gridMenuSaya);
+            tabPageTenant.Controls.Add(label62);
+            tabPageTenant.Controls.Add(label61);
+            tabPageTenant.Controls.Add(label60);
+            tabPageTenant.Controls.Add(label59);
+            tabPageTenant.Controls.Add(numStokMenu);
+            tabPageTenant.Controls.Add(txtDeskripsiMenu);
+            tabPageTenant.Controls.Add(numHargaMenu);
+            tabPageTenant.Controls.Add(txtNamaMenu);
+            tabPageTenant.Controls.Add(btnSimpanMenu);
+            tabPageTenant.Controls.Add(btnBrowseFoto);
+            tabPageTenant.Controls.Add(picFotoMenu);
             tabPageTenant.Controls.Add(label51);
             tabPageTenant.Controls.Add(label54);
             tabPageTenant.Controls.Add(pictureBox12);
@@ -2108,6 +2185,115 @@
             tabPageTenant.Size = new Size(1181, 625);
             tabPageTenant.TabIndex = 6;
             tabPageTenant.Text = "Tenant";
+            // 
+            // gridMenuSaya
+            // 
+            gridMenuSaya.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridMenuSaya.Location = new Point(39, 358);
+            gridMenuSaya.Name = "gridMenuSaya";
+            gridMenuSaya.Size = new Size(240, 150);
+            gridMenuSaya.TabIndex = 20;
+            // 
+            // label62
+            // 
+            label62.AutoSize = true;
+            label62.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label62.ForeColor = SystemColors.ButtonHighlight;
+            label62.Location = new Point(182, 306);
+            label62.Name = "label62";
+            label62.Size = new Size(65, 25);
+            label62.TabIndex = 19;
+            label62.Text = "Stock :";
+            // 
+            // label61
+            // 
+            label61.AutoSize = true;
+            label61.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label61.ForeColor = SystemColors.ButtonHighlight;
+            label61.Location = new Point(182, 268);
+            label61.Name = "label61";
+            label61.Size = new Size(72, 25);
+            label61.TabIndex = 18;
+            label61.Text = "Harga :";
+            // 
+            // label60
+            // 
+            label60.AutoSize = true;
+            label60.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label60.ForeColor = SystemColors.ButtonHighlight;
+            label60.Location = new Point(182, 227);
+            label60.Name = "label60";
+            label60.Size = new Size(97, 25);
+            label60.TabIndex = 17;
+            label60.Text = "Deskripsi :";
+            // 
+            // label59
+            // 
+            label59.AutoSize = true;
+            label59.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label59.ForeColor = SystemColors.ButtonHighlight;
+            label59.Location = new Point(182, 188);
+            label59.Name = "label59";
+            label59.Size = new Size(71, 25);
+            label59.TabIndex = 16;
+            label59.Text = "Nama :";
+            // 
+            // numStokMenu
+            // 
+            numStokMenu.Location = new Point(282, 310);
+            numStokMenu.Name = "numStokMenu";
+            numStokMenu.Size = new Size(120, 23);
+            numStokMenu.TabIndex = 15;
+            // 
+            // txtDeskripsiMenu
+            // 
+            txtDeskripsiMenu.Location = new Point(282, 227);
+            txtDeskripsiMenu.Name = "txtDeskripsiMenu";
+            txtDeskripsiMenu.Size = new Size(100, 23);
+            txtDeskripsiMenu.TabIndex = 14;
+            // 
+            // numHargaMenu
+            // 
+            numHargaMenu.Location = new Point(282, 270);
+            numHargaMenu.Name = "numHargaMenu";
+            numHargaMenu.Size = new Size(120, 23);
+            numHargaMenu.TabIndex = 13;
+            // 
+            // txtNamaMenu
+            // 
+            txtNamaMenu.Location = new Point(282, 188);
+            txtNamaMenu.Name = "txtNamaMenu";
+            txtNamaMenu.Size = new Size(100, 23);
+            txtNamaMenu.TabIndex = 12;
+            // 
+            // btnSimpanMenu
+            // 
+            btnSimpanMenu.Location = new Point(465, 496);
+            btnSimpanMenu.Name = "btnSimpanMenu";
+            btnSimpanMenu.Size = new Size(100, 23);
+            btnSimpanMenu.TabIndex = 11;
+            btnSimpanMenu.Text = "Simpan Menu";
+            btnSimpanMenu.UseVisualStyleBackColor = true;
+            btnSimpanMenu.Click += btnSimpanMenu_Click;
+            // 
+            // btnBrowseFoto
+            // 
+            btnBrowseFoto.Location = new Point(43, 310);
+            btnBrowseFoto.Name = "btnBrowseFoto";
+            btnBrowseFoto.Size = new Size(100, 23);
+            btnBrowseFoto.TabIndex = 10;
+            btnBrowseFoto.Text = "Tambah Foto";
+            btnBrowseFoto.UseVisualStyleBackColor = true;
+            btnBrowseFoto.Click += btnBrowseFoto_Click;
+            // 
+            // picFotoMenu
+            // 
+            picFotoMenu.Location = new Point(43, 197);
+            picFotoMenu.Name = "picFotoMenu";
+            picFotoMenu.Size = new Size(100, 96);
+            picFotoMenu.SizeMode = PictureBoxSizeMode.Zoom;
+            picFotoMenu.TabIndex = 9;
+            picFotoMenu.TabStop = false;
             // 
             // label51
             // 
@@ -2278,6 +2464,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabPageGassKan.ResumeLayout(false);
             tabPageGassKan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numJumlah).EndInit();
+            tableGaleriMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -2295,6 +2484,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             tabPageTenant.ResumeLayout(false);
             tabPageTenant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)gridMenuSaya).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numStokMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numHargaMenu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFotoMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             panelControl.ResumeLayout(false);
             panelControl.PerformLayout();
@@ -2378,7 +2571,7 @@
         private Label label42;
         private Label label43;
         private ComboBox comboBox2;
-        private Button button3;
+        private Button buttonSave;
         private Button button4;
         private Label label44;
         private TableLayoutPanel tableLayoutPanel2;
@@ -2390,8 +2583,8 @@
         private Button button8;
         private Label label47;
         private PictureBox pictureBox7;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
+        private ComboBox comboPilihMenu;
+        private ComboBox comboPilihTenant;
         private PictureBox pictureBox9;
         private Label label48;
         private RadioButton radioButton3;
@@ -2408,7 +2601,6 @@
         private PictureBox pictureBox12;
         private Label label51;
         private Label label54;
-        private TableLayoutPanel tableLayoutPanel3;
         private TabPage tabPageSettings;
         private Label labelSettingsIDUserProfile;
         private TableLayoutPanel tableLayoutPanel1;
@@ -2455,5 +2647,22 @@
         private TableLayoutPanel tableLayoutPanel4;
         private Button buttonSettingGassLiveryAddRemoveShop;
         private Button buttonSettingsGassLiveryDriver;
+        private Button buttonTambah;
+        private NumericUpDown numJumlah;
+        private TableLayoutPanel tableGaleriMenu;
+        private DataGridView dataGridView1;
+        private Label labelTotal;
+        private Button btnBrowseFoto;
+        private PictureBox picFotoMenu;
+        private Button btnSimpanMenu;
+        private Label label62;
+        private Label label61;
+        private Label label60;
+        private Label label59;
+        private NumericUpDown numStokMenu;
+        private TextBox txtDeskripsiMenu;
+        private NumericUpDown numHargaMenu;
+        private TextBox txtNamaMenu;
+        private DataGridView gridMenuSaya;
     }
 }
