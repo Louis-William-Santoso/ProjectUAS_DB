@@ -92,7 +92,14 @@
             label3 = new Label();
             dataGridView2 = new DataGridView();
             tabPageGassRide = new TabPage();
+            label8 = new Label();
             groupBox1 = new GroupBox();
+            labelGassRideTotalBayar = new Label();
+            labelGassRideExtra = new Label();
+            labelGassRideOngkir = new Label();
+            labelGassRideNotaTitikAsal = new Label();
+            labelGassRideNotaTujuan = new Label();
+            labelGassRideJarak = new Label();
             label32 = new Label();
             label31 = new Label();
             label30 = new Label();
@@ -100,13 +107,13 @@
             label29 = new Label();
             label25 = new Label();
             label24 = new Label();
-            label23 = new Label();
+            labelGassRideUsername = new Label();
             label22 = new Label();
             label21 = new Label();
-            label20 = new Label();
-            comboBox1 = new ComboBox();
-            button6 = new Button();
-            button5 = new Button();
+            labelGassRideIdTransaksi = new Label();
+            comboBoxGassRideDriver = new ComboBox();
+            buttonGassRideSave = new Button();
+            buttonGassRideCancel = new Button();
             label12 = new Label();
             tableLayoutPanelGassRide = new TableLayoutPanel();
             panel2 = new Panel();
@@ -118,17 +125,17 @@
             panel1 = new Panel();
             label15 = new Label();
             label14 = new Label();
-            checkBox1 = new CheckBox();
+            checkBoxGassRideMotorBaru = new CheckBox();
             label7 = new Label();
             checkBoxGassRideRequestDriver = new CheckBox();
             panelGassRideTargetLocation = new Panel();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
-            label9 = new Label();
+            buttonGassRideTargetLocationSearch = new Button();
+            labelGassRideTargetLocation = new Label();
             label11 = new Label();
             panelGassRideMyLocation = new Panel();
             pictureBox1 = new PictureBox();
-            label8 = new Label();
+            labelGassRideMyLocation = new Label();
             label10 = new Label();
             buttonGassRideMyLocationSearch = new Button();
             tabPageGassKan = new TabPage();
@@ -1048,6 +1055,7 @@
             // 
             tabPageGassRide.AutoScroll = true;
             tabPageGassRide.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageGassRide.Controls.Add(label8);
             tabPageGassRide.Controls.Add(groupBox1);
             tabPageGassRide.Controls.Add(tableLayoutPanelGassRide);
             tabPageGassRide.Location = new Point(4, 4);
@@ -1057,8 +1065,26 @@
             tabPageGassRide.TabIndex = 3;
             tabPageGassRide.Text = "GassRide";
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Gray;
+            label8.Location = new Point(20, 384);
+            label8.Name = "label8";
+            label8.RightToLeft = RightToLeft.No;
+            label8.Size = new Size(287, 60);
+            label8.TabIndex = 30;
+            label8.Text = "*Jam Ongkir\r\n 00:00-05.59 & 08.01-16.00 : Rp.1.000/KM\r\n 06.00-08.00 &  16.00-18.00 : Rp2.000/KM";
+            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(labelGassRideTotalBayar);
+            groupBox1.Controls.Add(labelGassRideExtra);
+            groupBox1.Controls.Add(labelGassRideOngkir);
+            groupBox1.Controls.Add(labelGassRideNotaTitikAsal);
+            groupBox1.Controls.Add(labelGassRideNotaTujuan);
+            groupBox1.Controls.Add(labelGassRideJarak);
             groupBox1.Controls.Add(label32);
             groupBox1.Controls.Add(label31);
             groupBox1.Controls.Add(label30);
@@ -1066,19 +1092,104 @@
             groupBox1.Controls.Add(label29);
             groupBox1.Controls.Add(label25);
             groupBox1.Controls.Add(label24);
-            groupBox1.Controls.Add(label23);
+            groupBox1.Controls.Add(labelGassRideUsername);
             groupBox1.Controls.Add(label22);
             groupBox1.Controls.Add(label21);
-            groupBox1.Controls.Add(label20);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(button6);
-            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(labelGassRideIdTransaksi);
+            groupBox1.Controls.Add(comboBoxGassRideDriver);
+            groupBox1.Controls.Add(buttonGassRideSave);
+            groupBox1.Controls.Add(buttonGassRideCancel);
             groupBox1.Controls.Add(label12);
             groupBox1.Location = new Point(715, 12);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(453, 588);
             groupBox1.TabIndex = 22;
             groupBox1.TabStop = false;
+            // 
+            // labelGassRideTotalBayar
+            // 
+            labelGassRideTotalBayar.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideTotalBayar.Cursor = Cursors.Hand;
+            labelGassRideTotalBayar.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideTotalBayar.ForeColor = Color.White;
+            labelGassRideTotalBayar.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideTotalBayar.Location = new Point(173, 383);
+            labelGassRideTotalBayar.Name = "labelGassRideTotalBayar";
+            labelGassRideTotalBayar.Size = new Size(262, 33);
+            labelGassRideTotalBayar.TabIndex = 41;
+            labelGassRideTotalBayar.Text = "Rp.0";
+            labelGassRideTotalBayar.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassRideExtra
+            // 
+            labelGassRideExtra.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideExtra.Cursor = Cursors.Hand;
+            labelGassRideExtra.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideExtra.ForeColor = Color.White;
+            labelGassRideExtra.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideExtra.Location = new Point(173, 341);
+            labelGassRideExtra.Name = "labelGassRideExtra";
+            labelGassRideExtra.Size = new Size(262, 33);
+            labelGassRideExtra.TabIndex = 40;
+            labelGassRideExtra.Text = "Rp.0";
+            labelGassRideExtra.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassRideOngkir
+            // 
+            labelGassRideOngkir.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideOngkir.Cursor = Cursors.Hand;
+            labelGassRideOngkir.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideOngkir.ForeColor = Color.White;
+            labelGassRideOngkir.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideOngkir.Location = new Point(173, 308);
+            labelGassRideOngkir.Name = "labelGassRideOngkir";
+            labelGassRideOngkir.Size = new Size(262, 33);
+            labelGassRideOngkir.TabIndex = 39;
+            labelGassRideOngkir.Text = "Rp.0";
+            labelGassRideOngkir.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassRideNotaTitikAsal
+            // 
+            labelGassRideNotaTitikAsal.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideNotaTitikAsal.Cursor = Cursors.Hand;
+            labelGassRideNotaTitikAsal.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideNotaTitikAsal.ForeColor = Color.White;
+            labelGassRideNotaTitikAsal.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideNotaTitikAsal.Location = new Point(173, 174);
+            labelGassRideNotaTitikAsal.Name = "labelGassRideNotaTitikAsal";
+            labelGassRideNotaTitikAsal.Size = new Size(262, 33);
+            labelGassRideNotaTitikAsal.TabIndex = 38;
+            labelGassRideNotaTitikAsal.Text = "<Asal>";
+            labelGassRideNotaTitikAsal.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassRideNotaTujuan
+            // 
+            labelGassRideNotaTujuan.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideNotaTujuan.Cursor = Cursors.Hand;
+            labelGassRideNotaTujuan.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideNotaTujuan.ForeColor = Color.White;
+            labelGassRideNotaTujuan.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideNotaTujuan.Location = new Point(173, 205);
+            labelGassRideNotaTujuan.Name = "labelGassRideNotaTujuan";
+            labelGassRideNotaTujuan.Size = new Size(262, 33);
+            labelGassRideNotaTujuan.TabIndex = 37;
+            labelGassRideNotaTujuan.Text = "<Tujuan>";
+            labelGassRideNotaTujuan.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassRideJarak
+            // 
+            labelGassRideJarak.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideJarak.Cursor = Cursors.Hand;
+            labelGassRideJarak.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideJarak.ForeColor = Color.White;
+            labelGassRideJarak.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideJarak.Location = new Point(173, 238);
+            labelGassRideJarak.Name = "labelGassRideJarak";
+            labelGassRideJarak.Size = new Size(262, 33);
+            labelGassRideJarak.TabIndex = 36;
+            labelGassRideJarak.Text = "0 KM";
+            labelGassRideJarak.TextAlign = ContentAlignment.TopRight;
+            labelGassRideJarak.TextChanged += HitungTotalGassRide;
             // 
             // label32
             // 
@@ -1178,19 +1289,19 @@
             label24.TabIndex = 29;
             label24.Text = "Asal :";
             // 
-            // label23
+            // labelGassRideUsername
             // 
-            label23.AutoSize = true;
-            label23.BackColor = Color.FromArgb(25, 25, 25);
-            label23.Cursor = Cursors.Hand;
-            label23.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label23.ForeColor = Color.White;
-            label23.ImageAlign = ContentAlignment.MiddleLeft;
-            label23.Location = new Point(291, 141);
-            label23.Name = "label23";
-            label23.Size = new Size(144, 33);
-            label23.TabIndex = 28;
-            label23.Text = "<Username>";
+            labelGassRideUsername.AutoSize = true;
+            labelGassRideUsername.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassRideUsername.Cursor = Cursors.Hand;
+            labelGassRideUsername.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideUsername.ForeColor = Color.White;
+            labelGassRideUsername.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassRideUsername.Location = new Point(291, 141);
+            labelGassRideUsername.Name = "labelGassRideUsername";
+            labelGassRideUsername.Size = new Size(144, 33);
+            labelGassRideUsername.TabIndex = 28;
+            labelGassRideUsername.Text = "<Username>";
             // 
             // label22
             // 
@@ -1220,50 +1331,53 @@
             label21.TabIndex = 26;
             label21.Text = "Driver :";
             // 
-            // label20
+            // labelGassRideIdTransaksi
             // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.ForeColor = Color.Gray;
-            label20.Location = new Point(173, 71);
-            label20.Name = "label20";
-            label20.RightToLeft = RightToLeft.No;
-            label20.Size = new Size(109, 20);
-            label20.TabIndex = 23;
-            label20.Text = "#IDTransaksi";
-            label20.TextAlign = ContentAlignment.TopRight;
+            labelGassRideIdTransaksi.AutoSize = true;
+            labelGassRideIdTransaksi.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideIdTransaksi.ForeColor = Color.Gray;
+            labelGassRideIdTransaksi.Location = new Point(173, 71);
+            labelGassRideIdTransaksi.Name = "labelGassRideIdTransaksi";
+            labelGassRideIdTransaksi.RightToLeft = RightToLeft.No;
+            labelGassRideIdTransaksi.Size = new Size(109, 20);
+            labelGassRideIdTransaksi.TabIndex = 23;
+            labelGassRideIdTransaksi.Text = "#IDTransaksi";
+            labelGassRideIdTransaksi.TextAlign = ContentAlignment.TopRight;
             // 
-            // comboBox1
+            // comboBoxGassRideDriver
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(274, 113);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(161, 23);
-            comboBox1.TabIndex = 22;
+            comboBoxGassRideDriver.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxGassRideDriver.FormattingEnabled = true;
+            comboBoxGassRideDriver.Location = new Point(274, 113);
+            comboBoxGassRideDriver.Name = "comboBoxGassRideDriver";
+            comboBoxGassRideDriver.Size = new Size(161, 23);
+            comboBoxGassRideDriver.TabIndex = 22;
             // 
-            // button6
+            // buttonGassRideSave
             // 
-            button6.BackColor = Color.FromArgb(37, 37, 37);
-            button6.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(299, 521);
-            button6.Name = "button6";
-            button6.Size = new Size(136, 45);
-            button6.TabIndex = 0;
-            button6.Text = "Save";
-            button6.UseVisualStyleBackColor = false;
+            buttonGassRideSave.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassRideSave.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonGassRideSave.ForeColor = Color.White;
+            buttonGassRideSave.Location = new Point(299, 521);
+            buttonGassRideSave.Name = "buttonGassRideSave";
+            buttonGassRideSave.Size = new Size(136, 45);
+            buttonGassRideSave.TabIndex = 0;
+            buttonGassRideSave.Text = "Save";
+            buttonGassRideSave.UseVisualStyleBackColor = false;
+            buttonGassRideSave.Click += buttonGassRideSave_Click;
             // 
-            // button5
+            // buttonGassRideCancel
             // 
-            button5.BackColor = Color.FromArgb(37, 37, 37);
-            button5.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(23, 521);
-            button5.Name = "button5";
-            button5.Size = new Size(136, 45);
-            button5.TabIndex = 1;
-            button5.Text = "Cancel";
-            button5.UseVisualStyleBackColor = false;
+            buttonGassRideCancel.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassRideCancel.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonGassRideCancel.ForeColor = Color.White;
+            buttonGassRideCancel.Location = new Point(23, 521);
+            buttonGassRideCancel.Name = "buttonGassRideCancel";
+            buttonGassRideCancel.Size = new Size(136, 45);
+            buttonGassRideCancel.TabIndex = 1;
+            buttonGassRideCancel.Text = "Cancel";
+            buttonGassRideCancel.UseVisualStyleBackColor = false;
+            buttonGassRideCancel.Click += buttonGassRideCancel_Click;
             // 
             // label12
             // 
@@ -1350,6 +1464,7 @@
             numericUpDownGassRideHour.Name = "numericUpDownGassRideHour";
             numericUpDownGassRideHour.Size = new Size(49, 41);
             numericUpDownGassRideHour.TabIndex = 27;
+            numericUpDownGassRideHour.ValueChanged += HitungTotalGassRide;
             // 
             // pictureBox3
             // 
@@ -1381,7 +1496,7 @@
             panel1.BackColor = Color.FromArgb(37, 37, 37);
             panel1.Controls.Add(label15);
             panel1.Controls.Add(label14);
-            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(checkBoxGassRideMotorBaru);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(checkBoxGassRideRequestDriver);
             panel1.Dock = DockStyle.Fill;
@@ -1417,17 +1532,18 @@
             label14.Text = "+ RP. 1,500";
             label14.TextAlign = ContentAlignment.TopRight;
             // 
-            // checkBox1
+            // checkBoxGassRideMotorBaru
             // 
-            checkBox1.CheckAlign = ContentAlignment.MiddleRight;
-            checkBox1.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(14, 47);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(645, 37);
-            checkBox1.TabIndex = 29;
-            checkBox1.Text = "Motor Baru";
-            checkBox1.UseVisualStyleBackColor = true;
+            checkBoxGassRideMotorBaru.CheckAlign = ContentAlignment.MiddleRight;
+            checkBoxGassRideMotorBaru.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxGassRideMotorBaru.ForeColor = SystemColors.ControlLightLight;
+            checkBoxGassRideMotorBaru.Location = new Point(14, 47);
+            checkBoxGassRideMotorBaru.Name = "checkBoxGassRideMotorBaru";
+            checkBoxGassRideMotorBaru.Size = new Size(645, 37);
+            checkBoxGassRideMotorBaru.TabIndex = 29;
+            checkBoxGassRideMotorBaru.Text = "Motor Baru";
+            checkBoxGassRideMotorBaru.UseVisualStyleBackColor = true;
+            checkBoxGassRideMotorBaru.CheckedChanged += HitungTotalGassRide;
             // 
             // label7
             // 
@@ -1453,14 +1569,15 @@
             checkBoxGassRideRequestDriver.TabIndex = 27;
             checkBoxGassRideRequestDriver.Text = "Driver Wanita";
             checkBoxGassRideRequestDriver.UseVisualStyleBackColor = true;
+            checkBoxGassRideRequestDriver.CheckedChanged += HitungTotalGassRide;
             // 
             // panelGassRideTargetLocation
             // 
             panelGassRideTargetLocation.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelGassRideTargetLocation.BackColor = Color.FromArgb(37, 37, 37);
             panelGassRideTargetLocation.Controls.Add(pictureBox2);
-            panelGassRideTargetLocation.Controls.Add(button2);
-            panelGassRideTargetLocation.Controls.Add(label9);
+            panelGassRideTargetLocation.Controls.Add(buttonGassRideTargetLocationSearch);
+            panelGassRideTargetLocation.Controls.Add(labelGassRideTargetLocation);
             panelGassRideTargetLocation.Controls.Add(label11);
             panelGassRideTargetLocation.Dock = DockStyle.Fill;
             panelGassRideTargetLocation.Location = new Point(3, 69);
@@ -1478,34 +1595,34 @@
             pictureBox2.TabIndex = 23;
             pictureBox2.TabStop = false;
             // 
-            // button2
+            // buttonGassRideTargetLocationSearch
             // 
-            button2.BackColor = Color.FromArgb(37, 37, 37);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = Properties.Resources.add_location;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(549, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(110, 53);
-            button2.TabIndex = 23;
-            button2.Text = "Browse";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = false;
+            buttonGassRideTargetLocationSearch.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassRideTargetLocationSearch.FlatStyle = FlatStyle.Flat;
+            buttonGassRideTargetLocationSearch.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonGassRideTargetLocationSearch.ForeColor = Color.White;
+            buttonGassRideTargetLocationSearch.Image = Properties.Resources.add_location;
+            buttonGassRideTargetLocationSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonGassRideTargetLocationSearch.Location = new Point(549, 4);
+            buttonGassRideTargetLocationSearch.Name = "buttonGassRideTargetLocationSearch";
+            buttonGassRideTargetLocationSearch.Size = new Size(110, 53);
+            buttonGassRideTargetLocationSearch.TabIndex = 23;
+            buttonGassRideTargetLocationSearch.Text = "Browse";
+            buttonGassRideTargetLocationSearch.TextAlign = ContentAlignment.MiddleRight;
+            buttonGassRideTargetLocationSearch.UseVisualStyleBackColor = false;
+            buttonGassRideTargetLocationSearch.Click += buttonGassRideTargetLocationSearch_Click;
             // 
-            // label9
+            // labelGassRideTargetLocation
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Gray;
-            label9.Location = new Point(411, 33);
-            label9.Name = "label9";
-            label9.RightToLeft = RightToLeft.No;
-            label9.Size = new Size(27, 20);
-            label9.TabIndex = 25;
-            label9.Text = "......";
-            label9.TextAlign = ContentAlignment.TopRight;
+            labelGassRideTargetLocation.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideTargetLocation.ForeColor = Color.Gray;
+            labelGassRideTargetLocation.Location = new Point(257, 21);
+            labelGassRideTargetLocation.Name = "labelGassRideTargetLocation";
+            labelGassRideTargetLocation.RightToLeft = RightToLeft.No;
+            labelGassRideTargetLocation.Size = new Size(286, 20);
+            labelGassRideTargetLocation.TabIndex = 25;
+            labelGassRideTargetLocation.Text = "......";
+            labelGassRideTargetLocation.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -1526,7 +1643,7 @@
             panelGassRideMyLocation.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelGassRideMyLocation.BackColor = Color.FromArgb(37, 37, 37);
             panelGassRideMyLocation.Controls.Add(pictureBox1);
-            panelGassRideMyLocation.Controls.Add(label8);
+            panelGassRideMyLocation.Controls.Add(labelGassRideMyLocation);
             panelGassRideMyLocation.Controls.Add(label10);
             panelGassRideMyLocation.Controls.Add(buttonGassRideMyLocationSearch);
             panelGassRideMyLocation.Dock = DockStyle.Fill;
@@ -1545,18 +1662,17 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // label8
+            // labelGassRideMyLocation
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Gray;
-            label8.Location = new Point(411, 32);
-            label8.Name = "label8";
-            label8.RightToLeft = RightToLeft.No;
-            label8.Size = new Size(27, 20);
-            label8.TabIndex = 22;
-            label8.Text = "......";
-            label8.TextAlign = ContentAlignment.TopRight;
+            labelGassRideMyLocation.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassRideMyLocation.ForeColor = Color.Gray;
+            labelGassRideMyLocation.Location = new Point(257, 24);
+            labelGassRideMyLocation.Name = "labelGassRideMyLocation";
+            labelGassRideMyLocation.RightToLeft = RightToLeft.No;
+            labelGassRideMyLocation.Size = new Size(286, 20);
+            labelGassRideMyLocation.TabIndex = 22;
+            labelGassRideMyLocation.Text = "......";
+            labelGassRideMyLocation.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -1587,7 +1703,7 @@
             buttonGassRideMyLocationSearch.Text = "Browse";
             buttonGassRideMyLocationSearch.TextAlign = ContentAlignment.MiddleRight;
             buttonGassRideMyLocationSearch.UseVisualStyleBackColor = false;
-            buttonGassRideMyLocationSearch.Click += button3_Click;
+            buttonGassRideMyLocationSearch.Click += buttonGassRideMyLocationSearch_Click;
             // 
             // tabPageGassKan
             // 
@@ -2329,13 +2445,13 @@
         private Panel panel1;
         private Panel panelGassRideTargetLocation;
         private Panel panelGassRideMyLocation;
-        private Button button5;
-        private Button button6;
+        private Button buttonGassRideCancel;
+        private Button buttonGassRideSave;
         private Label label10;
-        private Label label9;
+        private Label labelGassRideTargetLocation;
         private Label label11;
-        private Label label8;
-        private Button button2;
+        private Label labelGassRideMyLocation;
+        private Button buttonGassRideTargetLocationSearch;
         private Label label12;
         private GroupBox groupBox1;
         private Label label13;
@@ -2344,15 +2460,15 @@
         private PictureBox pictureBox2;
         private CheckBox checkBoxGassRideRequestDriver;
         private Label label7;
-        private ComboBox comboBox1;
+        private ComboBox comboBoxGassRideDriver;
         private Label label15;
         private Label label14;
-        private CheckBox checkBox1;
-        private Label label20;
+        private CheckBox checkBoxGassRideMotorBaru;
+        private Label labelGassRideIdTransaksi;
         private Label label26;
         private Label label25;
         private Label label24;
-        private Label label23;
+        private Label labelGassRideUsername;
         private Label label22;
         private Label label21;
         private Panel panel2;
@@ -2455,5 +2571,12 @@
         private TableLayoutPanel tableLayoutPanel4;
         private Button buttonSettingGassLiveryAddRemoveShop;
         private Button buttonSettingsGassLiveryDriver;
+        private Label labelGassRideJarak;
+        private Label labelGassRideNotaTitikAsal;
+        private Label labelGassRideNotaTujuan;
+        private Label labelGassRideTotalBayar;
+        private Label labelGassRideExtra;
+        private Label labelGassRideOngkir;
+        private Label label8;
     }
 }

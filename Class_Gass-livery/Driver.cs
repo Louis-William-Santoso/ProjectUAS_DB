@@ -9,13 +9,13 @@ namespace Class_Gass_livery
     public class Driver : User
     {
         private int idDriver;
-        private int pendapatan;
+        private long pendapatan;
         private float rating;
         private string description;
         private string status;
         private List<Kendaraan> listKendaraan;
 
-        public Driver(User user, int idDriver, int pendapatan, List<Kendaraan> listKendaraan, string description="", string status="active")
+        public Driver(User user, int idDriver, long pendapatan, List<Kendaraan> listKendaraan, string description="", string status="active")
                     : base (user)
         {
             IdDriver = idDriver;
@@ -35,7 +35,7 @@ namespace Class_Gass_livery
         }
 
         public int IdDriver { get => idDriver; set => idDriver=value; }
-        public int Pendapatan { get => pendapatan; set => pendapatan = value; }
+        public long Pendapatan { get => pendapatan; set => pendapatan = value; }
         public float Rating { get => rating; }
         public List<Kendaraan> ListKendaraan { get => listKendaraan; set => listKendaraan = value; }
         public string Description { get => description; set => description = value; }
@@ -58,7 +58,7 @@ namespace Class_Gass_livery
                 Driver temp = new Driver(
                     user,
                     (int)data["id_driver"],
-                    (int)data["pendapatan"],
+                    (long)data["pendapatan"],
                     listKendaraan,
                     (string)data["description"],
                     (string)data["status"]
@@ -84,7 +84,7 @@ namespace Class_Gass_livery
                 Driver temp = new Driver(
                     user,
                     (int)data["id_driver"],
-                    (int)data["pendapatan"],
+                    (long)data["pendapatan"],
                     listKendaraan,
                     (string)data["description"],
                     (string)data["status"]

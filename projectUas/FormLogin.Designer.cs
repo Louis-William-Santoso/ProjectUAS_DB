@@ -1096,7 +1096,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(25, 25, 25);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(662, 568);
+            ClientSize = new Size(662, 530);
             Controls.Add(tabControlLogin);
             DoubleBuffered = true;
             ForeColor = Color.White;

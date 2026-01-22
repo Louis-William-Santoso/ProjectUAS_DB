@@ -234,9 +234,10 @@ namespace projectUas
 
         private void buttonSetShopProfile_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog openFile = new OpenFileDialog();
-            //openFile.Filter = "Image Files (*.PNG; *.JPG; *.WEBP)|*.PNG; *.JPG; *.WEBP";
-            //if (openFile.ShowDialog() == DialogResult.OK) {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Image Files (*.PNG; *.JPG; *.WEBP)|*.PNG; *.JPG; *.WEBP";
+            //if (openFile.ShowDialog() == DialogResult.OK)
+            //{
             //    FileStream stream = new FileStream("photo/shop/", FileMode.Create, FileAccess.Write);
             //    stream.Write(openFile.)
             //}

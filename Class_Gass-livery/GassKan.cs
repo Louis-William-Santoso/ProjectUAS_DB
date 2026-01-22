@@ -11,12 +11,21 @@ namespace Class_Gass_livery
     {
         private List<Shop> tenant = new List<Shop>();
         private List<Menu> menus = new List<Menu>();
+        private int id_gasskan;
         private int jumlah;
         private float rating_menu;
 
-        public GassKan(int id_transaksi, User user, Driver driver, DateTime tanggal, float rating_driver, string titik_jemput, string titik_antar, int jarak,
+        public GassKan(Transaksi transaksi, User user, Driver driver,
                        int jumlah, float rating_menu, List<Shop> tenant, List<Menu> menus) 
-               : base (id_transaksi, user, driver, tanggal, rating_driver, titik_jemput, titik_antar, jarak)
+               : base (transaksi, user,driver)
+        {
+            Jumlah = jumlah;
+            Rating_menu = rating_menu;
+            Tenant = tenant;
+            Menus = menus;
+        }
+
+        public GassKan(Transaksi transaksi, User user, Driver driver, GassKan gassKan) : base(transaksi, user, driver)
         {
             Jumlah = jumlah;
             Rating_menu = rating_menu;
@@ -29,31 +38,25 @@ namespace Class_Gass_livery
         public List<Shop> Tenant { get => tenant; set => tenant = value; }
         public List<Menu> Menus { get => menus; set => menus = value; }
 
-        /*public static List<GassKan> BacaData()
-        {
-            string select = "SELECT * FROM gass_kan;";
-            List<GassKan> gassKan = new List<GassKan>();
-            MySqlDataReader data = ConnectDB.Select(select);
+        //public static List<GassKan> BacaData()
+        //{
+        //    string select = "SELECT * FROM gass_kan;";
+        //    List<GassKan> gassKan = new List<GassKan>();
+        //    MySqlDataReader data = ConnectDB.Select(select);
 
-            while (data.Read())
-            {
-                User dataUser = User.Bacadata($"select * from users where id_users = {data["id_users"]};")[0];
-                Driver dataDriver = Driver.BacaData($"select * from driver where id_driver={data["id_driver"]};")[0];
-                List<Shop> listShops = new List<Shop>();
-                List<Menu> listMenu = new List<Menu>();
+        //    while (data.Read())
+        //    {
+        //        Transaksi transaksi = (Transaksi.BacaData($"SELECT * FROM transaksi where id_transaksi={data["id_transaksi"]};"))[0];
+        //        User dataUser = User.Bacadata($"select * from users where id_users = {data["id_users"]};")[0];
+        //        Driver dataDriver = Driver.BacaData($"select * from driver where id_driver={data["id_driver"]};")[0];
+                
 
-                string selectShop = $"SELECT * FROM tenant where id_tenant={data["id_tenant"]};";
-                string selectMenu = $"select* from menu where id_menu={data["id_menu"]};";
-
-                MySqlDataReader dataShops = ConnectDB.Select(selectShop);
-                MySqlDataReader dataMenu = ConnectDB.Select(selectMenu);
-
-                GassKan gk = new GassKan(
+        //        GassKan gk = new GassKan(
                     
-                );
+        //        );
 
-                gassKan.Add( gk );
-            }
-        }*/
+        //        gassKan.Add( gk );
+        //    }
+        //}
     }
 }

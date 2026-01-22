@@ -16,5 +16,11 @@ namespace Class_Gass_livery
             this.Latitude = latitude;
             this.Longitude = longitude;
         }
+
+        public static string GetStringAddress(Address addr)
+        {
+            string str = $"Lat:{Math.Round(addr.Latitude,3)},Long:{Math.Round(addr.Longitude,3)}";
+            return str;
+        }
     }
 }
