@@ -126,7 +126,7 @@ namespace Class_Gass_livery
         public static void MasukData(Shop data)
         {
             string perintah = $"INSERT INTO `gass_livery`.`tenant` (`id_tenant`, `id_users`, `nama_tenant`, `alamat`, `rating`, `photo`) " +
-                              $"VALUES ('{data.IdTenant}', '{data.User}', '{data.NamaToko}', '{data.Alamat}', '{data.Rating}', '{data.Photo}');";
+                              $"VALUES ('{data.IdTenant}', '{data.User.ID_user}', '{data.NamaToko}', '{data.Alamat}', '{data.Rating}', '{data.Photo}');";
             ConnectDB.InputData(perintah);
         }
 
