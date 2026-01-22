@@ -139,8 +139,16 @@
             label10 = new Label();
             buttonGassRideMyLocationSearch = new Button();
             tabPageGassKan = new TabPage();
-            tableLayoutPanel3 = new TableLayoutPanel();
+            labelJamOngkir = new Label();
+            label9 = new Label();
+            checkBoxMenuHalal = new CheckBox();
             groupBox2 = new GroupBox();
+            labelGassKanBiaya = new Label();
+            labelGassKanExtra = new Label();
+            labelGassKanOngkir = new Label();
+            labelGassKanNotaAsal = new Label();
+            labelGassKanNotaTujuan = new Label();
+            labelGassKanJarak = new Label();
             label33 = new Label();
             label34 = new Label();
             label35 = new Label();
@@ -148,18 +156,18 @@
             label37 = new Label();
             label38 = new Label();
             label39 = new Label();
-            label40 = new Label();
+            labelGassKanUsername = new Label();
             label41 = new Label();
             label42 = new Label();
             label43 = new Label();
-            comboBox2 = new ComboBox();
-            button3 = new Button();
-            button4 = new Button();
+            comboBoxGassKanDriver = new ComboBox();
+            buttonGassKanSave = new Button();
+            buttonGassKanCancel = new Button();
             label44 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel4 = new Panel();
-            comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
+            comboBoxGassKanMenu = new ComboBox();
+            comboBoxGassKanTenant = new ComboBox();
             pictureBox9 = new PictureBox();
             label48 = new Label();
             pictureBox7 = new PictureBox();
@@ -168,7 +176,7 @@
             pictureBox8 = new PictureBox();
             label52 = new Label();
             label53 = new Label();
-            button8 = new Button();
+            buttonGassKanMyLocationSearch = new Button();
             tabPageGassMon = new TabPage();
             label49 = new Label();
             label50 = new Label();
@@ -691,11 +699,11 @@
             // textBox1
             // 
             textBox1.BackColor = Color.FromArgb(25, 25, 25);
-            textBox1.Font = new Font("Poppins ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.White;
             textBox1.Location = new Point(203, 223);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(352, 30);
+            textBox1.Size = new Size(352, 24);
             textBox1.TabIndex = 27;
             textBox1.Text = "Type New Name";
             textBox1.TextAlign = HorizontalAlignment.Center;
@@ -802,11 +810,11 @@
             // textBoxSettingFullName
             // 
             textBoxSettingFullName.BackColor = Color.FromArgb(25, 25, 25);
-            textBoxSettingFullName.Font = new Font("Poppins ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxSettingFullName.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBoxSettingFullName.ForeColor = Color.White;
             textBoxSettingFullName.Location = new Point(251, 119);
             textBoxSettingFullName.Name = "textBoxSettingFullName";
-            textBoxSettingFullName.Size = new Size(352, 30);
+            textBoxSettingFullName.Size = new Size(352, 24);
             textBoxSettingFullName.TabIndex = 17;
             textBoxSettingFullName.Text = "Type New Name";
             textBoxSettingFullName.TextAlign = HorizontalAlignment.Center;
@@ -827,11 +835,11 @@
             // textBoxSettingChangeUsername
             // 
             textBoxSettingChangeUsername.BackColor = Color.FromArgb(25, 25, 25);
-            textBoxSettingChangeUsername.Font = new Font("Poppins ExtraBold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBoxSettingChangeUsername.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBoxSettingChangeUsername.ForeColor = Color.White;
             textBoxSettingChangeUsername.Location = new Point(251, 80);
             textBoxSettingChangeUsername.Name = "textBoxSettingChangeUsername";
-            textBoxSettingChangeUsername.Size = new Size(352, 30);
+            textBoxSettingChangeUsername.Size = new Size(352, 24);
             textBoxSettingChangeUsername.TabIndex = 15;
             textBoxSettingChangeUsername.Text = "Type New Username";
             textBoxSettingChangeUsername.TextAlign = HorizontalAlignment.Center;
@@ -1708,7 +1716,9 @@
             // tabPageGassKan
             // 
             tabPageGassKan.BackColor = Color.FromArgb(25, 25, 25);
-            tabPageGassKan.Controls.Add(tableLayoutPanel3);
+            tabPageGassKan.Controls.Add(labelJamOngkir);
+            tabPageGassKan.Controls.Add(label9);
+            tabPageGassKan.Controls.Add(checkBoxMenuHalal);
             tabPageGassKan.Controls.Add(groupBox2);
             tabPageGassKan.Controls.Add(tableLayoutPanel2);
             tabPageGassKan.Location = new Point(4, 4);
@@ -1718,23 +1728,53 @@
             tabPageGassKan.TabIndex = 4;
             tabPageGassKan.Text = "GassKan";
             // 
-            // tableLayoutPanel3
+            // labelJamOngkir
             // 
-            tableLayoutPanel3.ColumnCount = 4;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 46.82081F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.17919F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 146F));
-            tableLayoutPanel3.Location = new Point(15, 214);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 46.6926079F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 53.3073921F));
-            tableLayoutPanel3.Size = new Size(675, 257);
-            tableLayoutPanel3.TabIndex = 25;
+            labelJamOngkir.AutoSize = true;
+            labelJamOngkir.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelJamOngkir.ForeColor = Color.Gray;
+            labelJamOngkir.Location = new Point(18, 297);
+            labelJamOngkir.Name = "labelJamOngkir";
+            labelJamOngkir.RightToLeft = RightToLeft.No;
+            labelJamOngkir.Size = new Size(475, 40);
+            labelJamOngkir.TabIndex = 32;
+            labelJamOngkir.Text = "*Jam Ongkir (11.00 - 13.00) &  (17.00 - 19.00): Biaya Rp 1.500 per KM.\r\nDi luar jam tersebut: Biaya Rp 750 per KM.\r\n";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(37, 37, 37);
+            label9.Cursor = Cursors.Hand;
+            label9.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.ImageAlign = ContentAlignment.MiddleLeft;
+            label9.Location = new Point(18, 206);
+            label9.Name = "label9";
+            label9.Size = new Size(159, 33);
+            label9.TabIndex = 30;
+            label9.Text = "OPSIONAL :";
+            // 
+            // checkBoxMenuHalal
+            // 
+            checkBoxMenuHalal.CheckAlign = ContentAlignment.MiddleRight;
+            checkBoxMenuHalal.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxMenuHalal.ForeColor = SystemColors.ControlLightLight;
+            checkBoxMenuHalal.Location = new Point(18, 242);
+            checkBoxMenuHalal.Name = "checkBoxMenuHalal";
+            checkBoxMenuHalal.Size = new Size(645, 37);
+            checkBoxMenuHalal.TabIndex = 31;
+            checkBoxMenuHalal.Text = "Makanan Halal";
+            checkBoxMenuHalal.UseVisualStyleBackColor = true;
+            checkBoxMenuHalal.CheckedChanged += checkBoxMenuHalal_CheckedChanged;
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(labelGassKanBiaya);
+            groupBox2.Controls.Add(labelGassKanExtra);
+            groupBox2.Controls.Add(labelGassKanOngkir);
+            groupBox2.Controls.Add(labelGassKanNotaAsal);
+            groupBox2.Controls.Add(labelGassKanNotaTujuan);
+            groupBox2.Controls.Add(labelGassKanJarak);
             groupBox2.Controls.Add(label33);
             groupBox2.Controls.Add(label34);
             groupBox2.Controls.Add(label35);
@@ -1742,19 +1782,103 @@
             groupBox2.Controls.Add(label37);
             groupBox2.Controls.Add(label38);
             groupBox2.Controls.Add(label39);
-            groupBox2.Controls.Add(label40);
+            groupBox2.Controls.Add(labelGassKanUsername);
             groupBox2.Controls.Add(label41);
             groupBox2.Controls.Add(label42);
             groupBox2.Controls.Add(label43);
-            groupBox2.Controls.Add(comboBox2);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button4);
+            groupBox2.Controls.Add(comboBoxGassKanDriver);
+            groupBox2.Controls.Add(buttonGassKanSave);
+            groupBox2.Controls.Add(buttonGassKanCancel);
             groupBox2.Controls.Add(label44);
             groupBox2.Location = new Point(713, 18);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(453, 588);
             groupBox2.TabIndex = 24;
             groupBox2.TabStop = false;
+            // 
+            // labelGassKanBiaya
+            // 
+            labelGassKanBiaya.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanBiaya.Cursor = Cursors.Hand;
+            labelGassKanBiaya.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanBiaya.ForeColor = Color.White;
+            labelGassKanBiaya.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanBiaya.Location = new Point(173, 385);
+            labelGassKanBiaya.Name = "labelGassKanBiaya";
+            labelGassKanBiaya.Size = new Size(262, 33);
+            labelGassKanBiaya.TabIndex = 47;
+            labelGassKanBiaya.Text = "Rp.0";
+            labelGassKanBiaya.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassKanExtra
+            // 
+            labelGassKanExtra.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanExtra.Cursor = Cursors.Hand;
+            labelGassKanExtra.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanExtra.ForeColor = Color.White;
+            labelGassKanExtra.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanExtra.Location = new Point(173, 343);
+            labelGassKanExtra.Name = "labelGassKanExtra";
+            labelGassKanExtra.Size = new Size(262, 33);
+            labelGassKanExtra.TabIndex = 46;
+            labelGassKanExtra.Text = "Rp.0";
+            labelGassKanExtra.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassKanOngkir
+            // 
+            labelGassKanOngkir.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanOngkir.Cursor = Cursors.Hand;
+            labelGassKanOngkir.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanOngkir.ForeColor = Color.White;
+            labelGassKanOngkir.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanOngkir.Location = new Point(173, 310);
+            labelGassKanOngkir.Name = "labelGassKanOngkir";
+            labelGassKanOngkir.Size = new Size(262, 33);
+            labelGassKanOngkir.TabIndex = 45;
+            labelGassKanOngkir.Text = "Rp.0";
+            labelGassKanOngkir.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassKanNotaAsal
+            // 
+            labelGassKanNotaAsal.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanNotaAsal.Cursor = Cursors.Hand;
+            labelGassKanNotaAsal.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanNotaAsal.ForeColor = Color.White;
+            labelGassKanNotaAsal.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanNotaAsal.Location = new Point(173, 176);
+            labelGassKanNotaAsal.Name = "labelGassKanNotaAsal";
+            labelGassKanNotaAsal.Size = new Size(262, 33);
+            labelGassKanNotaAsal.TabIndex = 44;
+            labelGassKanNotaAsal.Text = "<Asal>";
+            labelGassKanNotaAsal.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassKanNotaTujuan
+            // 
+            labelGassKanNotaTujuan.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanNotaTujuan.Cursor = Cursors.Hand;
+            labelGassKanNotaTujuan.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanNotaTujuan.ForeColor = Color.White;
+            labelGassKanNotaTujuan.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanNotaTujuan.Location = new Point(173, 207);
+            labelGassKanNotaTujuan.Name = "labelGassKanNotaTujuan";
+            labelGassKanNotaTujuan.Size = new Size(262, 33);
+            labelGassKanNotaTujuan.TabIndex = 43;
+            labelGassKanNotaTujuan.Text = "<Tujuan>";
+            labelGassKanNotaTujuan.TextAlign = ContentAlignment.TopRight;
+            // 
+            // labelGassKanJarak
+            // 
+            labelGassKanJarak.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanJarak.Cursor = Cursors.Hand;
+            labelGassKanJarak.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanJarak.ForeColor = Color.White;
+            labelGassKanJarak.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanJarak.Location = new Point(173, 240);
+            labelGassKanJarak.Name = "labelGassKanJarak";
+            labelGassKanJarak.Size = new Size(262, 33);
+            labelGassKanJarak.TabIndex = 42;
+            labelGassKanJarak.Text = "0 KM";
+            labelGassKanJarak.TextAlign = ContentAlignment.TopRight;
             // 
             // label33
             // 
@@ -1778,11 +1902,11 @@
             label34.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label34.ForeColor = Color.White;
             label34.ImageAlign = ContentAlignment.MiddleLeft;
-            label34.Location = new Point(38, 337);
+            label34.Location = new Point(23, 337);
             label34.Name = "label34";
-            label34.Size = new Size(91, 33);
+            label34.Size = new Size(126, 33);
             label34.TabIndex = 34;
-            label34.Text = "Extra :";
+            label34.Text = "Makanan :";
             // 
             // label35
             // 
@@ -1854,19 +1978,19 @@
             label39.TabIndex = 29;
             label39.Text = "Asal :";
             // 
-            // label40
+            // labelGassKanUsername
             // 
-            label40.AutoSize = true;
-            label40.BackColor = Color.FromArgb(25, 25, 25);
-            label40.Cursor = Cursors.Hand;
-            label40.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label40.ForeColor = Color.White;
-            label40.ImageAlign = ContentAlignment.MiddleLeft;
-            label40.Location = new Point(291, 141);
-            label40.Name = "label40";
-            label40.Size = new Size(144, 33);
-            label40.TabIndex = 28;
-            label40.Text = "<Username>";
+            labelGassKanUsername.AutoSize = true;
+            labelGassKanUsername.BackColor = Color.FromArgb(25, 25, 25);
+            labelGassKanUsername.Cursor = Cursors.Hand;
+            labelGassKanUsername.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelGassKanUsername.ForeColor = Color.White;
+            labelGassKanUsername.ImageAlign = ContentAlignment.MiddleLeft;
+            labelGassKanUsername.Location = new Point(291, 141);
+            labelGassKanUsername.Name = "labelGassKanUsername";
+            labelGassKanUsername.Size = new Size(144, 33);
+            labelGassKanUsername.TabIndex = 28;
+            labelGassKanUsername.Text = "<Username>";
             // 
             // label41
             // 
@@ -1909,37 +2033,39 @@
             label43.Text = "#IDTransaksi";
             label43.TextAlign = ContentAlignment.TopRight;
             // 
-            // comboBox2
+            // comboBoxGassKanDriver
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(274, 113);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(161, 23);
-            comboBox2.TabIndex = 22;
+            comboBoxGassKanDriver.FormattingEnabled = true;
+            comboBoxGassKanDriver.Location = new Point(274, 113);
+            comboBoxGassKanDriver.Name = "comboBoxGassKanDriver";
+            comboBoxGassKanDriver.Size = new Size(161, 23);
+            comboBoxGassKanDriver.TabIndex = 22;
             // 
-            // button3
+            // buttonGassKanSave
             // 
-            button3.BackColor = Color.FromArgb(37, 37, 37);
-            button3.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(299, 521);
-            button3.Name = "button3";
-            button3.Size = new Size(136, 45);
-            button3.TabIndex = 0;
-            button3.Text = "Save";
-            button3.UseVisualStyleBackColor = false;
+            buttonGassKanSave.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassKanSave.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonGassKanSave.ForeColor = Color.White;
+            buttonGassKanSave.Location = new Point(299, 521);
+            buttonGassKanSave.Name = "buttonGassKanSave";
+            buttonGassKanSave.Size = new Size(136, 45);
+            buttonGassKanSave.TabIndex = 0;
+            buttonGassKanSave.Text = "Save";
+            buttonGassKanSave.UseVisualStyleBackColor = false;
+            buttonGassKanSave.Click += buttonGassKanSave_Click;
             // 
-            // button4
+            // buttonGassKanCancel
             // 
-            button4.BackColor = Color.FromArgb(37, 37, 37);
-            button4.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(23, 521);
-            button4.Name = "button4";
-            button4.Size = new Size(136, 45);
-            button4.TabIndex = 1;
-            button4.Text = "Cancel";
-            button4.UseVisualStyleBackColor = false;
+            buttonGassKanCancel.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassKanCancel.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonGassKanCancel.ForeColor = Color.White;
+            buttonGassKanCancel.Location = new Point(23, 521);
+            buttonGassKanCancel.Name = "buttonGassKanCancel";
+            buttonGassKanCancel.Size = new Size(136, 45);
+            buttonGassKanCancel.TabIndex = 1;
+            buttonGassKanCancel.Text = "Cancel";
+            buttonGassKanCancel.UseVisualStyleBackColor = false;
+            buttonGassKanCancel.Click += buttonGassKanCancel_Click;
             // 
             // label44
             // 
@@ -1979,8 +2105,8 @@
             // 
             panel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel4.BackColor = Color.FromArgb(37, 37, 37);
-            panel4.Controls.Add(comboBox4);
-            panel4.Controls.Add(comboBox3);
+            panel4.Controls.Add(comboBoxGassKanMenu);
+            panel4.Controls.Add(comboBoxGassKanTenant);
             panel4.Controls.Add(pictureBox9);
             panel4.Controls.Add(label48);
             panel4.Controls.Add(pictureBox7);
@@ -1991,21 +2117,23 @@
             panel4.Size = new Size(669, 100);
             panel4.TabIndex = 19;
             // 
-            // comboBox4
+            // comboBoxGassKanMenu
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(411, 55);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(248, 23);
-            comboBox4.TabIndex = 36;
+            comboBoxGassKanMenu.FormattingEnabled = true;
+            comboBoxGassKanMenu.Location = new Point(411, 55);
+            comboBoxGassKanMenu.Name = "comboBoxGassKanMenu";
+            comboBoxGassKanMenu.Size = new Size(248, 23);
+            comboBoxGassKanMenu.TabIndex = 36;
+            comboBoxGassKanMenu.SelectedIndexChanged += comboBoxGassKanMenu_SelectedIndexChanged;
             // 
-            // comboBox3
+            // comboBoxGassKanTenant
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(411, 15);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(248, 23);
-            comboBox3.TabIndex = 36;
+            comboBoxGassKanTenant.FormattingEnabled = true;
+            comboBoxGassKanTenant.Location = new Point(411, 15);
+            comboBoxGassKanTenant.Name = "comboBoxGassKanTenant";
+            comboBoxGassKanTenant.Size = new Size(248, 23);
+            comboBoxGassKanTenant.TabIndex = 36;
+            comboBoxGassKanTenant.SelectedIndexChanged += comboBoxGassKanTenant_SelectedIndexChanged;
             // 
             // pictureBox9
             // 
@@ -2062,7 +2190,7 @@
             panel6.Controls.Add(pictureBox8);
             panel6.Controls.Add(label52);
             panel6.Controls.Add(label53);
-            panel6.Controls.Add(button8);
+            panel6.Controls.Add(buttonGassKanMyLocationSearch);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
@@ -2106,20 +2234,21 @@
             label53.TabIndex = 21;
             label53.Text = "My Location";
             // 
-            // button8
+            // buttonGassKanMyLocationSearch
             // 
-            button8.BackColor = Color.FromArgb(37, 37, 37);
-            button8.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button8.ForeColor = Color.White;
-            button8.Image = Properties.Resources.add_location;
-            button8.ImageAlign = ContentAlignment.MiddleLeft;
-            button8.Location = new Point(549, 3);
-            button8.Name = "button8";
-            button8.Size = new Size(110, 53);
-            button8.TabIndex = 0;
-            button8.Text = "Browse";
-            button8.TextAlign = ContentAlignment.MiddleRight;
-            button8.UseVisualStyleBackColor = false;
+            buttonGassKanMyLocationSearch.BackColor = Color.FromArgb(37, 37, 37);
+            buttonGassKanMyLocationSearch.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonGassKanMyLocationSearch.ForeColor = Color.White;
+            buttonGassKanMyLocationSearch.Image = Properties.Resources.add_location;
+            buttonGassKanMyLocationSearch.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonGassKanMyLocationSearch.Location = new Point(549, 3);
+            buttonGassKanMyLocationSearch.Name = "buttonGassKanMyLocationSearch";
+            buttonGassKanMyLocationSearch.Size = new Size(110, 53);
+            buttonGassKanMyLocationSearch.TabIndex = 0;
+            buttonGassKanMyLocationSearch.Text = "Browse";
+            buttonGassKanMyLocationSearch.TextAlign = ContentAlignment.MiddleRight;
+            buttonGassKanMyLocationSearch.UseVisualStyleBackColor = false;
+            buttonGassKanMyLocationSearch.Click += buttonGassKanMyLocationSearch_Click;
             // 
             // tabPageGassMon
             // 
@@ -2489,13 +2618,13 @@
         private Label label37;
         private Label label38;
         private Label label39;
-        private Label label40;
+        private Label labelGassKanUsername;
         private Label label41;
         private Label label42;
         private Label label43;
-        private ComboBox comboBox2;
-        private Button button3;
-        private Button button4;
+        private ComboBox comboBoxGassKanDriver;
+        private Button buttonGassKanSave;
+        private Button buttonGassKanCancel;
         private Label label44;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel4;
@@ -2503,11 +2632,11 @@
         private PictureBox pictureBox8;
         private Label label52;
         private Label label53;
-        private Button button8;
+        private Button buttonGassKanMyLocationSearch;
         private Label label47;
         private PictureBox pictureBox7;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
+        private ComboBox comboBoxGassKanMenu;
+        private ComboBox comboBoxGassKanTenant;
         private PictureBox pictureBox9;
         private Label label48;
         private RadioButton radioButton3;
@@ -2524,7 +2653,6 @@
         private PictureBox pictureBox12;
         private Label label51;
         private Label label54;
-        private TableLayoutPanel tableLayoutPanel3;
         private TabPage tabPageSettings;
         private Label labelSettingsIDUserProfile;
         private TableLayoutPanel tableLayoutPanel1;
@@ -2578,5 +2706,14 @@
         private Label labelGassRideExtra;
         private Label labelGassRideOngkir;
         private Label label8;
+        private Label labelGassKanBiaya;
+        private Label labelGassKanExtra;
+        private Label labelGassKanOngkir;
+        private Label labelGassKanNotaAsal;
+        private Label labelGassKanNotaTujuan;
+        private Label labelGassKanJarak;
+        private Label labelJamOngkir;
+        private Label label9;
+        private CheckBox checkBoxMenuHalal;
     }
 }

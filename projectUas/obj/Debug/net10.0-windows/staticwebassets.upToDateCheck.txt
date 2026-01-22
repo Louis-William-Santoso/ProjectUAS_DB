@@ -1,5 +1,5 @@
-C:\Users\Ire\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\build\..\staticwebassets\blazor.modules.json
-C:\Users\Ire\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\build\..\staticwebassets\blazor.webview.js
+C:\Users\Artchie\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\build\..\staticwebassets\blazor.modules.json
+C:\Users\Artchie\.nuget\packages\microsoft.aspnetcore.components.webview\10.0.0\build\..\staticwebassets\blazor.webview.js
 wwwroot\jatim.geojson
 wwwroot\leaflet\images\layers-2x.png
 wwwroot\leaflet\images\layers.png

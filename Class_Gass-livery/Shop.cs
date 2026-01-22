@@ -86,7 +86,7 @@ namespace Class_Gass_livery
 
             while (data.Read() == true)
             {
-                string menu = "select m.id_menu, m.id_tenant, nama_menu, stock, harga, m.rating, m.photo, description" +
+                string menu = "select m.id_menu, m.id_tenant, nama_menu, stock, harga, m.rating, m.photo, description,m.is_halal" +
                     "from tenant t inner join menu m" +
                     "on t.id_tenant=m.id_tenant" +
                     $"where m.id_tenant={data["id_tenant"]}" +
@@ -103,7 +103,9 @@ namespace Class_Gass_livery
                         (int)dataMenu["stock"],
                         (string)dataMenu["photo"],
                         (int)dataMenu["harga"],
-                        (string)dataMenu["description"]);
+                        (string)dataMenu["description"],
+                        Convert.ToBoolean(dataMenu["is_halal"])
+                        );
                     tempMenu.Rating = (float)dataMenu["rating"];
                     listMenu.Add(tempMenu);
                 }

@@ -17,7 +17,8 @@ namespace Class_Gass_livery
         private int stock;
         private float rating;
 
-        public Menu(int idMenu, int idTenant, string name,int stock=0, string photo="", int harga=0, string description="")
+
+        public Menu(int idMenu, int idTenant, string name,int stock=0, string photo="", int harga=0, string description="", bool isHalal = true)
         {
             IdMenu = idMenu;
             IdTenant = idTenant;
@@ -26,9 +27,10 @@ namespace Class_Gass_livery
             Description = description;
             Harga = harga;
             Stock = stock;
+            IsHalal = isHalal;
         }
 
-
+        public bool IsHalal { get; set; }
         public int IdMenu { get => idMenu; set => idMenu = value; }
         public int IdTenant { get => idTenant; set => idTenant = value; }
         public string Name { get => name; set => name = value; }

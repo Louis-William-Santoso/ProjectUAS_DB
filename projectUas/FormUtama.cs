@@ -157,6 +157,16 @@ namespace projectUas
             else if (pictureBox == pictureBoxHomepageGassKan)
             {
                 tabControlPage.SelectedTab = tabPageGassKan;
+
+                // Setup UI Awal
+                labelGassKanUsername.Text = loginUser.Username; // Pastikan label ini ada di Designer
+                                                                // labelGassKanIdTransaksi.Text = $"#{idTransaksi}"; // Uncomment jika ada label ID
+
+                // Load Data Tenant ke ComboBox
+                List<Shop> listShop = Shop.Bacadata();
+                comboBoxGassKanTenant.DataSource = listShop;
+                comboBoxGassKanTenant.DisplayMember = "NamaToko"; // Sesuai property di Class Shop
+                comboBoxGassKanTenant.ValueMember = "IdTenant";
             }
             else if (pictureBox == pictureBoxHomepageGassMon)
             {
@@ -275,7 +285,267 @@ namespace projectUas
             //    gassRideAddressAkhir.ToString()
 
             //    );
-            
+
+        }
+        #region Gass-Kan
+        // Variabel untuk Gass-Kan
+        private Address gassKanAddressUser; // Lokasi User (Tujuan)
+        private Address gassKanAddressShop; // Lokasi Toko (Asal)
+        private Shop gassKanSelectedShop;   // Toko yang dipilih
+        private Class_Gass_livery.Menu gassKanSelectedMenu; // Menu yang dipilih
+        private int gassKanJarak = 0;
+        private int gassKanOngkir = 0;
+        private int gassKanHargaMenu = 0;
+        private int gassKanTotal = 0;
+
+        #endregion
+
+        private void comboBoxGassKanTenant_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGassKanTenant.SelectedItem != null)
+            {
+
+                gassKanSelectedShop = (Shop)comboBoxGassKanTenant.SelectedItem;
+
+                try
+                {
+
+                    gassKanAddressShop = JsonSerializer.Deserialize<Address>(gassKanSelectedShop.Alamat);
+
+
+                    labelGassKanNotaTujuan.Text = Address.GetStringAddress(gassKanAddressShop);
+                }
+                catch
+                {
+                    labelGassKanNotaTujuan.Text = "Lokasi Error";
+                }
+
+
+                comboBoxGassKanMenu.DataSource = gassKanSelectedShop.MenuList;
+                comboBoxGassKanMenu.DisplayMember = "Name";
+                comboBoxGassKanMenu.ValueMember = "IdMenu";
+                TampilkanMenuTefilter();
+
+                labelGassKanExtra.Text = "Rp.0";
+                gassKanHargaMenu = 0;
+
+
+                HitungTotalGassKan();
+            }
+        }
+
+        private void comboBoxGassKanMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxGassKanMenu.SelectedItem != null)
+            {
+                gassKanSelectedMenu = (Class_Gass_livery.Menu)comboBoxGassKanMenu.SelectedItem;
+
+
+                gassKanHargaMenu = gassKanSelectedMenu.Harga;
+                labelGassKanExtra.Text = $"Rp.{gassKanHargaMenu}";
+
+                HitungTotalGassKan();
+            }
+        }
+
+        private void buttonGassKanMyLocationSearch_Click(object sender, EventArgs e)
+        {
+            FormMapSelector map = new FormMapSelector();
+            map.Owner = this;
+            map.ShowDialog();
+
+            if (!string.IsNullOrEmpty(map.Location))
+            {
+                try
+                {
+
+                    gassKanAddressUser = JsonSerializer.Deserialize<Address>(map.Location);
+
+
+                    labelGassKanNotaAsal.Text = Address.GetStringAddress(gassKanAddressUser);
+
+
+                    HitungTotalGassKan();
+                }
+                catch
+                {
+                    MessageBox.Show("Gagal mengambil lokasi.");
+                }
+            }
+        }
+        private void HitungTotalGassKan()
+        {
+
+            if (gassKanAddressShop != null && gassKanAddressUser != null)
+            {
+
+                gassKanJarak = (int)Transaksi.HitungJarak(gassKanAddressShop, gassKanAddressUser);
+
+
+                labelGassKanJarak.Text = $"{gassKanJarak} KM";
+
+
+                int jamSekarang = DateTime.Now.Hour;
+                int tarifPerKm = 750;
+
+
+                if ((jamSekarang >= 11 && jamSekarang < 13) ||
+                    (jamSekarang >= 17 && jamSekarang < 19))
+                {
+                    tarifPerKm = 1500;
+                }
+
+                gassKanOngkir = gassKanJarak * tarifPerKm;
+
+
+                labelGassKanOngkir.Text = $"Rp.{gassKanOngkir}";
+            }
+            else
+            {
+
+                gassKanJarak = 0;
+                gassKanOngkir = 0;
+                labelGassKanJarak.Text = "0 KM";
+                labelGassKanOngkir.Text = "Rp.0";
+            }
+
+
+            gassKanTotal = gassKanOngkir + gassKanHargaMenu;
+
+
+            labelGassKanBiaya.Text = $"Rp.{gassKanTotal}";
+        }
+
+        private void buttonGassKanCancel_Click(object sender, EventArgs e)
+        {
+
+            gassKanAddressUser = null;
+            gassKanAddressShop = null;
+            gassKanSelectedShop = null;
+            gassKanSelectedMenu = null;
+            gassKanJarak = 0;
+            gassKanOngkir = 0;
+            gassKanHargaMenu = 0;
+            gassKanTotal = 0;
+
+
+            labelGassKanNotaAsal.Text = "<Asal>";
+            labelGassKanNotaTujuan.Text = "<Tujuan>";
+            labelGassKanJarak.Text = "0 KM";
+            labelGassKanOngkir.Text = "Rp.0";
+            labelGassKanExtra.Text = "Rp.0";
+            labelGassKanBiaya.Text = "Rp.0";
+
+            tabControlPage.SelectedTab = tabPageHomepage;
+        }
+
+        private void buttonGassKanSave_Click(object sender, EventArgs e)
+        {
+            if (gassKanSelectedShop == null || gassKanSelectedMenu == null || gassKanAddressUser == null)
+            {
+                MessageBox.Show("Mohon lengkapi data pesanan.");
+                return;
+            }
+
+            try
+            {
+
+                List<Driver> listDriver = Driver.BacaData();
+                Driver assignedDriver = (listDriver.Count > 0) ? listDriver[0] : null;
+
+                if (assignedDriver == null)
+                {
+                    MessageBox.Show("Tidak ada driver tersedia.");
+                    return;
+                }
+
+
+                Transaksi transBaru = new Transaksi(
+                    idTransaksi,
+                    loginUser,
+                    assignedDriver,
+                    DateTime.Now,
+                    0,
+                    Address.GetStringAddress(gassKanAddressShop),
+                    Address.GetStringAddress(gassKanAddressUser),
+                    gassKanJarak
+                );
+                transBaru.Verifikasi = "Pending";
+
+
+                List<Class_Gass_livery.Menu> listMenu = new List<Class_Gass_livery.Menu> { gassKanSelectedMenu };
+                List<Shop> listShop = new List<Shop> { gassKanSelectedShop };
+
+
+                int newIdGassKan = GassKan.CreateID();
+
+
+                GassKan pesananBaru = new GassKan(
+                    transBaru,
+                    loginUser,
+                    assignedDriver,
+                    1,
+                    0,
+                    listShop,
+                    listMenu
+                );
+
+
+                pesananBaru.Id_gasskan = newIdGassKan;
+
+                GassKan.MasukData(pesananBaru);
+
+                MessageBox.Show("Pesanan berhasil disimpan!");
+
+
+                buttonGassKanCancel_Click(sender, e);
+                idTransaksi = Transaksi.CreateID();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+        }
+        private void TampilkanMenuTefilter()
+        {
+            if (gassKanSelectedShop == null) return;
+
+            List<Class_Gass_livery.Menu> sourceMenu;
+
+
+            if (checkBoxMenuHalal.Checked)
+            {
+
+                sourceMenu = new List<Class_Gass_livery.Menu>();
+                foreach (var m in gassKanSelectedShop.MenuList)
+                {
+                    if (m.IsHalal == true)
+                    {
+                        sourceMenu.Add(m);
+                    }
+                }
+            }
+            else
+            {
+
+                sourceMenu = gassKanSelectedShop.MenuList;
+            }
+
+
+            comboBoxGassKanMenu.DataSource = null;
+            comboBoxGassKanMenu.DataSource = sourceMenu;
+            comboBoxGassKanMenu.DisplayMember = "Name";
+            comboBoxGassKanMenu.ValueMember = "IdMenu";
+        }
+
+        private void checkBoxMenuHalal_CheckedChanged(object sender, EventArgs e)
+        {
+            TampilkanMenuTefilter();
+
+           
+            labelGassKanExtra.Text = "Rp.0";
+            gassKanHargaMenu = 0;
+            HitungTotalGassKan();
         }
     }
 }
