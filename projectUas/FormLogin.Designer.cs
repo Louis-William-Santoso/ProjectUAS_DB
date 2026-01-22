@@ -87,10 +87,10 @@
             textBoxNoPlatBlakang = new TextBox();
             label14 = new Label();
             tabPageMerchant = new TabPage();
-            button7 = new Button();
-            label21 = new Label();
+            buttonSelectShopAddress = new Button();
+            labelShopAddress = new Label();
             label22 = new Label();
-            textBox9 = new TextBox();
+            textBoxShopName = new TextBox();
             buttonSetShopProfile = new Button();
             pictureBoxShopProfile = new PictureBox();
             buttonAddShopBack = new Button();
@@ -100,7 +100,7 @@
             buttonFinishSetup = new Button();
             buttonFinishBack = new Button();
             pictureBox3 = new PictureBox();
-            label12 = new Label();
+            labelFinishSetup = new Label();
             tabControlLogin.SuspendLayout();
             tabPageLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -324,10 +324,10 @@
             labelSignUpAdress.BackColor = Color.FromArgb(25, 25, 25);
             labelSignUpAdress.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelSignUpAdress.ForeColor = Color.White;
-            labelSignUpAdress.Location = new Point(419, 281);
+            labelSignUpAdress.Location = new Point(338, 268);
             labelSignUpAdress.Name = "labelSignUpAdress";
             labelSignUpAdress.RightToLeft = RightToLeft.No;
-            labelSignUpAdress.Size = new Size(132, 20);
+            labelSignUpAdress.Size = new Size(313, 66);
             labelSignUpAdress.TabIndex = 46;
             labelSignUpAdress.Text = "...";
             labelSignUpAdress.TextAlign = ContentAlignment.MiddleCenter;
@@ -866,6 +866,7 @@
             // 
             textBoxNoPlatBlakang.BackColor = Color.FromArgb(25, 25, 25);
             textBoxNoPlatBlakang.BorderStyle = BorderStyle.FixedSingle;
+            textBoxNoPlatBlakang.ForeColor = Color.White;
             textBoxNoPlatBlakang.Location = new Point(341, 123);
             textBoxNoPlatBlakang.Name = "textBoxNoPlatBlakang";
             textBoxNoPlatBlakang.Size = new Size(50, 23);
@@ -888,10 +889,10 @@
             // tabPageMerchant
             // 
             tabPageMerchant.BackColor = Color.FromArgb(25, 25, 25);
-            tabPageMerchant.Controls.Add(button7);
-            tabPageMerchant.Controls.Add(label21);
+            tabPageMerchant.Controls.Add(buttonSelectShopAddress);
+            tabPageMerchant.Controls.Add(labelShopAddress);
             tabPageMerchant.Controls.Add(label22);
-            tabPageMerchant.Controls.Add(textBox9);
+            tabPageMerchant.Controls.Add(textBoxShopName);
             tabPageMerchant.Controls.Add(buttonSetShopProfile);
             tabPageMerchant.Controls.Add(pictureBoxShopProfile);
             tabPageMerchant.Controls.Add(buttonAddShopBack);
@@ -904,35 +905,36 @@
             tabPageMerchant.TabIndex = 5;
             tabPageMerchant.Text = "Merchant";
             // 
-            // button7
+            // buttonSelectShopAddress
             // 
-            button7.BackColor = Color.FromArgb(37, 37, 37);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.ForeColor = Color.White;
-            button7.Image = Properties.Resources.add_location;
-            button7.ImageAlign = ContentAlignment.MiddleLeft;
-            button7.Location = new Point(425, 185);
-            button7.Name = "button7";
-            button7.Size = new Size(110, 42);
-            button7.TabIndex = 57;
-            button7.Text = "Browse";
-            button7.TextAlign = ContentAlignment.MiddleRight;
-            button7.UseVisualStyleBackColor = false;
+            buttonSelectShopAddress.BackColor = Color.FromArgb(37, 37, 37);
+            buttonSelectShopAddress.FlatStyle = FlatStyle.Flat;
+            buttonSelectShopAddress.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonSelectShopAddress.ForeColor = Color.White;
+            buttonSelectShopAddress.Image = Properties.Resources.add_location;
+            buttonSelectShopAddress.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonSelectShopAddress.Location = new Point(425, 185);
+            buttonSelectShopAddress.Name = "buttonSelectShopAddress";
+            buttonSelectShopAddress.Size = new Size(110, 42);
+            buttonSelectShopAddress.TabIndex = 57;
+            buttonSelectShopAddress.Text = "Browse";
+            buttonSelectShopAddress.TextAlign = ContentAlignment.MiddleRight;
+            buttonSelectShopAddress.UseVisualStyleBackColor = false;
+            buttonSelectShopAddress.Click += buttonSelectShopAddress_Click;
             // 
-            // label21
+            // labelShopAddress
             // 
-            label21.AutoSize = true;
-            label21.BackColor = Color.FromArgb(25, 25, 25);
-            label21.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label21.ForeColor = Color.White;
-            label21.Location = new Point(247, 197);
-            label21.Name = "label21";
-            label21.RightToLeft = RightToLeft.No;
-            label21.Size = new Size(132, 20);
-            label21.TabIndex = 56;
-            label21.Text = "Add your address";
-            label21.TextAlign = ContentAlignment.TopRight;
+            labelShopAddress.AutoSize = true;
+            labelShopAddress.BackColor = Color.FromArgb(25, 25, 25);
+            labelShopAddress.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelShopAddress.ForeColor = Color.White;
+            labelShopAddress.Location = new Point(247, 197);
+            labelShopAddress.Name = "labelShopAddress";
+            labelShopAddress.RightToLeft = RightToLeft.No;
+            labelShopAddress.Size = new Size(132, 20);
+            labelShopAddress.TabIndex = 56;
+            labelShopAddress.Text = "Add your address";
+            labelShopAddress.TextAlign = ContentAlignment.TopRight;
             // 
             // label22
             // 
@@ -948,18 +950,18 @@
             label22.Text = "Shop Name";
             label22.TextAlign = ContentAlignment.TopRight;
             // 
-            // textBox9
+            // textBoxShopName
             // 
-            textBox9.BackColor = Color.FromArgb(25, 25, 25);
-            textBox9.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox9.ForeColor = Color.White;
-            textBox9.Location = new Point(249, 129);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(286, 34);
-            textBox9.TabIndex = 54;
-            textBox9.Tag = "";
-            textBox9.TextAlign = HorizontalAlignment.Center;
-            textBox9.WordWrap = false;
+            textBoxShopName.BackColor = Color.FromArgb(25, 25, 25);
+            textBoxShopName.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxShopName.ForeColor = Color.White;
+            textBoxShopName.Location = new Point(249, 129);
+            textBoxShopName.Name = "textBoxShopName";
+            textBoxShopName.Size = new Size(286, 34);
+            textBoxShopName.TabIndex = 54;
+            textBoxShopName.Tag = "";
+            textBoxShopName.TextAlign = HorizontalAlignment.Center;
+            textBoxShopName.WordWrap = false;
             // 
             // buttonSetShopProfile
             // 
@@ -1031,7 +1033,7 @@
             tabPageFinishSetup.Controls.Add(buttonFinishSetup);
             tabPageFinishSetup.Controls.Add(buttonFinishBack);
             tabPageFinishSetup.Controls.Add(pictureBox3);
-            tabPageFinishSetup.Controls.Add(label12);
+            tabPageFinishSetup.Controls.Add(labelFinishSetup);
             tabPageFinishSetup.Location = new Point(4, 4);
             tabPageFinishSetup.Name = "tabPageFinishSetup";
             tabPageFinishSetup.Padding = new Padding(3);
@@ -1074,18 +1076,18 @@
             pictureBox3.TabIndex = 38;
             pictureBox3.TabStop = false;
             // 
-            // label12
+            // labelFinishSetup
             // 
-            label12.BackColor = Color.FromArgb(25, 25, 25);
-            label12.Font = new Font("Comic Sans MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.ForeColor = Color.White;
-            label12.Location = new Point(108, 222);
-            label12.Name = "label12";
-            label12.RightToLeft = RightToLeft.No;
-            label12.Size = new Size(435, 128);
-            label12.TabIndex = 31;
-            label12.Text = "Hi <name> (๑'ᵕ'๑)⸝*\r\nYour account setup has been completed";
-            label12.TextAlign = ContentAlignment.MiddleCenter;
+            labelFinishSetup.BackColor = Color.FromArgb(25, 25, 25);
+            labelFinishSetup.Font = new Font("Comic Sans MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelFinishSetup.ForeColor = Color.White;
+            labelFinishSetup.Location = new Point(108, 222);
+            labelFinishSetup.Name = "labelFinishSetup";
+            labelFinishSetup.RightToLeft = RightToLeft.No;
+            labelFinishSetup.Size = new Size(435, 128);
+            labelFinishSetup.TabIndex = 31;
+            labelFinishSetup.Text = "Hi <name> (๑'ᵕ'๑)⸝*\r\nYour account setup has been completed";
+            labelFinishSetup.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
@@ -1094,7 +1096,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(25, 25, 25);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(662, 530);
+            ClientSize = new Size(662, 568);
             Controls.Add(tabControlLogin);
             DoubleBuffered = true;
             ForeColor = Color.White;
@@ -1162,7 +1164,7 @@
         private Button buttonSignUpBack;
         private Button buttonSignUpNext;
         private TabPage tabPageFinishSetup;
-        private Label label12;
+        private Label labelFinishSetup;
         private Button buttonFinishSetup;
         private Button buttonFinishBack;
         private PictureBox pictureBox3;
@@ -1188,10 +1190,10 @@
         private Label labelSignUpAdress;
         private Button buttonAddShopBack;
         private Button buttonAddShopNext;
-        private Button button7;
-        private Label label21;
+        private Button buttonSelectShopAddress;
+        private Label labelShopAddress;
         private Label label22;
-        private TextBox textBox9;
+        private TextBox textBoxShopName;
         private Button buttonSetShopProfile;
         private PictureBox pictureBoxShopProfile;
         private Label label15;

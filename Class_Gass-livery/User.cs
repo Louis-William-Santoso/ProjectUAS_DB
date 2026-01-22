@@ -1,6 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
+using System.Text;
 namespace Class_Gass_livery
 {
     public class User
@@ -34,6 +36,7 @@ namespace Class_Gass_livery
             ID_user = objUser.ID_user;
             Username = objUser.Username;
             Email = objUser.Email;
+            this.password = objUser.Password;
             FullName = objUser.FullName;
             Gender = objUser.Gender;
             PhoneNumber = objUser.PhoneNumber;
@@ -44,7 +47,12 @@ namespace Class_Gass_livery
 
         public int ID_user { get => id_user; set => id_user = value; }
         public string Username { get => username; set => username = value; }
-        public string Password { get => password; set => password = SHA256.Create(password).ToString(); }
+        public string Password { 
+            get => password; 
+            set {
+                password = PasswdMaker(value);
+            } 
+        }
         public string Email { get => email; set => email = value; }
         public string FullName { get => fullName; set => fullName = value; }
         public sbyte Gender { get => gender; set => gender = value; }
@@ -66,8 +74,8 @@ namespace Class_Gass_livery
                     (string)data["username"],
                     (string)data["email"],
                     (string)data["full_name"],
-                    (sbyte)data["geder"],
-                    (string)data["phone"],
+                    (sbyte)data["gender"],
+                    data["phone"].ToString(),
                     (string)data["address"],
                     (DateTime)data["birthday"],
                     (string)data["profile_pic_path"]);
@@ -111,7 +119,7 @@ namespace Class_Gass_livery
         public static int CreateID()
         {
             int noID = 0;
-            string select = $"SELECT id_users from users where id_users like '{DateTime.Now.ToString("yyMMdd")}%' order by id_users limit 1;";
+            string select = $"SELECT id_users FROM users WHERE id_users LIKE '{DateTime.Now.ToString("yyMMdd")}%' ORDER BY id_users DESC LIMIT 1; ";
             MySqlDataReader read = ConnectDB.Select(select);
             
             if (read.Read()) {
@@ -120,6 +128,19 @@ namespace Class_Gass_livery
             }
             int id = int.Parse($"{DateTime.Now.ToString("yyMMdd")}{noID.ToString().PadLeft(3,'0')}");
             return id;
+        }
+
+        public static string PasswdMaker (string password)
+        {
+            SHA256 sha256Hash = SHA256.Create();
+            byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("x2"));
+            }
+
+            return password = builder.ToString();
         }
     }
 }

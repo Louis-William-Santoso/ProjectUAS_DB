@@ -14,5 +14,4 @@ wwwroot\leaflet\leaflet.css
 wwwroot\leaflet\leaflet.js
 wwwroot\leaflet\leaflet.js.map
 wwwroot\maps.html
-wwwroot\package.json
 wwwroot\script.js

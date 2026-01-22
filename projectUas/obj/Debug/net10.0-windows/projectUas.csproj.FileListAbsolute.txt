@@ -49,7 +49,6 @@ D:\(=^.^=)\database\UAS\projectUas\obj\Debug\net10.0-windows\refint\projectUas.d
 D:\(=^.^=)\database\UAS\projectUas\obj\Debug\net10.0-windows\projectUas.pdb
 D:\(=^.^=)\database\UAS\projectUas\obj\Debug\net10.0-windows\projectUas.genruntimeconfig.cache
 D:\(=^.^=)\database\UAS\projectUas\obj\Debug\net10.0-windows\ref\projectUas.dll
-D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\maps.html
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\leaflet\images\layers-2x.png
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\leaflet\images\layers.png
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\leaflet\images\marker-icon-2x.png
@@ -70,4 +69,4 @@ D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\Class_Gass-livery.d
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\MySql.Data.dll
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\Class_Gass-livery.pdb
 D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\script.js
-D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\package.json
+D:\(=^.^=)\database\UAS\projectUas\bin\Debug\net10.0-windows\wwwroot\maps.html

@@ -125,9 +125,24 @@ namespace Class_Gass_livery
 
         public static void MasukData(Shop data)
         {
-            string perintah = $"INSERT INTO `tenant` (`id_tenant`, `id_users`, `nama_tenant`, `alamat`, `rating`, `photo`) " +
-                              $"VALUES ('{data.IdTenant}', '{data.User}', '{data.NamaToko}', '{data.alamat}', '{data.Rating}', '{data.Photo}');";
+            string perintah = $"INSERT INTO `gass_livery`.`tenant` (`id_tenant`, `id_users`, `nama_tenant`, `alamat`, `rating`, `photo`) " +
+                              $"VALUES ('{data.IdTenant}', '{data.User}', '{data.NamaToko}', '{data.Alamat}', '{data.Rating}', '{data.Photo}');";
             ConnectDB.InputData(perintah);
+        }
+
+        public static int CreateID()
+        {
+            int noID = 0;
+            string select = $"SELECT id_users FROM tenant WHERE id_tenant LIKE '{DateTime.Now.ToString("yyMMdd")}%' ORDER BY id_tenant DESC LIMIT 1; ";
+            MySqlDataReader read = ConnectDB.Select(select);
+
+            if (read.Read())
+            {
+                string lastID = read.GetValue(0).ToString().Substring(6);
+                noID = int.Parse(lastID) + 1;
+            }
+            int id = int.Parse($"{DateTime.Now.ToString("yyMMdd")}{noID.ToString().PadLeft(3, '0')}");
+            return id;
         }
     }
 }

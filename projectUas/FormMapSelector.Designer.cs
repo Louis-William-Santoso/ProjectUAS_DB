@@ -32,9 +32,9 @@ namespace projectUas
         {
             labelHomepageNama = new Label();
             blazorWebViewMapSelector = new BlazorWebView();
-            comboBox1 = new ComboBox();
+            buttonSaveLoc = new Button();
             button1 = new Button();
-            button2 = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // labelHomepageNama
@@ -56,13 +56,15 @@ namespace projectUas
             blazorWebViewMapSelector.TabIndex = 5;
             blazorWebViewMapSelector.Text = "blazorWebView1";
             // 
-            // comboBox1
+            // buttonSaveLoc
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(39, 95);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(351, 23);
-            comboBox1.TabIndex = 6;
+            buttonSaveLoc.Location = new Point(434, 509);
+            buttonSaveLoc.Name = "buttonSaveLoc";
+            buttonSaveLoc.Size = new Size(123, 38);
+            buttonSaveLoc.TabIndex = 8;
+            buttonSaveLoc.Text = "Save";
+            buttonSaveLoc.UseVisualStyleBackColor = true;
+            buttonSaveLoc.Click += buttonSaveLoc_Click;
             // 
             // button1
             // 
@@ -73,14 +75,13 @@ namespace projectUas
             button1.Text = "Search";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // comboBox1
             // 
-            button2.Location = new Point(434, 509);
-            button2.Name = "button2";
-            button2.Size = new Size(123, 38);
-            button2.TabIndex = 8;
-            button2.Text = "Save";
-            button2.UseVisualStyleBackColor = true;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(39, 95);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(351, 23);
+            comboBox1.TabIndex = 6;
             // 
             // FormMapSelector
             // 
@@ -88,7 +89,8 @@ namespace projectUas
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 25, 25);
             ClientSize = new Size(617, 580);
-            Controls.Add(button2);
+            ControlBox = false;
+            Controls.Add(buttonSaveLoc);
             Controls.Add(button1);
             Controls.Add(comboBox1);
             Controls.Add(blazorWebViewMapSelector);
@@ -104,8 +106,8 @@ namespace projectUas
 
         private Label labelHomepageNama;
         private BlazorWebView blazorWebViewMapSelector;
-        private ComboBox comboBox1;
+        private Button buttonSaveLoc;
         private Button button1;
-        private Button button2;
+        private ComboBox comboBox1;
     }
 }

@@ -1,15 +1,17 @@
-﻿using System;
+﻿using Class_Gass_livery;
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using projectUas.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Resources;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
 using System.Windows.Forms;
-using Class_Gass_livery;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Mvc.Formatters;
-using projectUas.Properties;
 
 namespace projectUas
 {
@@ -36,7 +38,7 @@ namespace projectUas
             try
             {
                 string uName = textBoxLoginUsername.Text;
-                string uPasswd = textBoxLoginPassword.Text;
+                string uPasswd = User.PasswdMaker(textBoxLoginPassword.Text);
 
                 User user = (User.Bacadata($"select * from users where username='{uName}' and password='{uPasswd}';"))[0];
                 if (user != null)
@@ -58,15 +60,15 @@ namespace projectUas
         #region Create Account
         # region Fields
         private int id_user;
-        private string username;
+        private string username = "<uname>";
         private string password;
         private string email;
         private string fullName;
         private sbyte gender;
         private string phoneNumber;
-        private string address;
+        public string userAddress;
         private DateTime birthDay;
-        private string photoUser;
+        private string photoUser="tess";
         private int idDriver;
         private int pendapatan = 0;
         private float rating = 0;
@@ -78,8 +80,8 @@ namespace projectUas
         List<Kendaraan> listKendaraan = new List<Kendaraan>();
         private int idTenant;
         private string namaToko;
-        private string alamatToko;
-        private string photoShop;
+        public string alamatToko;
+        private string photoShop="tesss";
         private float ratingShop;
         private List<Class_Gass_livery.Menu> menuList = new List<Class_Gass_livery.Menu>();
         #endregion
@@ -93,20 +95,34 @@ namespace projectUas
         }
         private void buttonSignUpNext_Click(object sender, EventArgs e)
         {
+            List<User> listUser = User.Bacadata();
             if (textBoxSignUpPassword.Text == textBoxSignUpValidatePassword.Text)
             {
-                username = textBoxLoginUsername.Text;
+                username = textBoxSignUpUsername.Text;
                 fullName = textBoxSignUpFullname.Text;
                 email = textBoxSignUpEmail.Text;
-                password = textBoxLoginPassword.Text;
+                password = textBoxSignUpPassword.Text;
 
+                
+                labelFinishSetup.Text = $"Hi {username} (๑'ᵕ'๑)⸝*\r\nYour account setup has been completed";
+                
                 if (radioButtonSignUpMale.Checked) gender = 0;
                 else if (radioButtonSignUpFemale.Checked) gender = 1;
                 else gender = 2;
 
-
-
-                tabControlLogin.SelectedTab = tabPageSelectRole;
+                bool namaSama = false;
+                for(int i = 0; i<listUser.Count; i++)
+                {
+                    if (listUser[i].Username == username || listUser[i].Email == email)
+                    {
+                        namaSama = true;
+                        break;
+                    }
+                }
+                
+                if (namaSama) { MessageBox.Show("Username or email already existed!!"); }
+                else if (textBoxLoginUsername.Text != string.Empty) { MessageBox.Show("Username already existed!!"); }
+                else tabControlLogin.SelectedTab = tabPageSelectRole;
             }
             else { MessageBox.Show("Password Not Match", "Info"); }
         }
@@ -115,6 +131,9 @@ namespace projectUas
             FormMapSelector map = new FormMapSelector();
             map.Owner = this;
             map.ShowDialog();
+            userAddress = map.Location;
+            Address address = JsonSerializer.Deserialize<Address>(userAddress);
+            labelSignUpAdress.Text = $"Lat :{Math.Round(address.Latitude, 3)}, Long: {Math.Round(address.Longitude, 3)}";
         }
         #endregion
 
@@ -136,14 +155,14 @@ namespace projectUas
         }
         private void buttonFinishSetup_Click(object sender, EventArgs e)
         {
-            User newUser = new User( id_user, username, email, fullName, 
-                                     gender, phoneNumber, address, birthDay, photoUser);
-
-            Driver newDriver = new Driver(newUser, idDriver, pendapatan, 
+            User newUser = new User(id_user, username, email, fullName,
+                                     gender, phoneNumber, userAddress, birthDay, photoUser);
+            newUser.Password = password;
+            Driver newDriver = new Driver(newUser, idDriver, pendapatan,
                                           listKendaraan, description, statusDriver);
 
             Shop newShop = new Shop(idTenant, newUser, namaToko,
-                                    alamatToko, menuList, photoShop );
+                                    alamatToko, menuList, photoShop);
 
             if (checkBoxSelectRoleDriver.Checked && checkBoxSelectRoleMerchant.Checked)
             {
@@ -152,14 +171,18 @@ namespace projectUas
             }
             else if (checkBoxSelectRoleMerchant.Checked)
             {
+                User.MasukData(newUser);
                 Shop.MasukData(newShop);
             }
             else if (checkBoxSelectRoleDriver.Checked)
             {
-                Driver.MasukData(newDriver);
+                //Driver.MasukData(newDriver);
+                Driver.Masukdata(newDriver);
             }
             else User.MasukData(newUser);
-            
+
+            MessageBox.Show(newDriver.Password);
+
             tabControlLogin.SelectedTab = tabPageLogin;
         }
         #endregion
@@ -170,16 +193,27 @@ namespace projectUas
             idKendaraan = $"{comboBoxNoPlatDepan.Text}{numericUpDownNoPlatTengah.Value}{textBoxNoPlatBlakang.Text}";
             tahunProduksi = dateTimePickerYearProduce.Value;
             jenis = comboBoxVehicleType.ValueMember;
-
+            idDriver = id_user;
             if (checkBoxSelectRoleMerchant.Checked) tabControlLogin.SelectedTab = tabPageMerchant;
             else tabControlLogin.SelectedTab = tabPageFinishSetup;
         }
         #endregion
 
         #region Shop
+        private void buttonSelectShopAddress_Click(object sender, EventArgs e)
+        {
+            FormMapSelector maps = new FormMapSelector();
+            maps.Owner = this;
+            maps.ShowDialog();
+            alamatToko = maps.Location;
+
+            Address addr = JsonSerializer.Deserialize<Address>(alamatToko);
+            labelShopAddress.Text = $"Lat:{Math.Round(addr.Latitude),3},Long:{Math.Round(addr.Longitude,3)}";
+        }
         private void buttonAddShopNext_Click(object sender, EventArgs e)
         {
-
+            namaToko = textBoxShopName.Text;
+            idTenant = Shop.CreateID();
             tabControlLogin.SelectedTab = tabPageFinishSetup;
         }
         #endregion
@@ -209,5 +243,6 @@ namespace projectUas
 
         }
 
+        
     }
 }

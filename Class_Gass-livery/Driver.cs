@@ -99,8 +99,8 @@ namespace Class_Gass_livery
             string perintah = $"INSERT INTO `driver` " +
                               $"(`id_driver`, `id_user`, `pendapatan`, `review`, `description`, `status`) " +
                               $"VALUES ('{data.IdDriver}', '{data.ID_user}', '{data.Pendapatan}', '{data.Rating}', '{data.Description}', '{data.status}');";
-            User dataUser = (User)data;
-
+            //ConnectDB.InputData(perintah);
+            User dataUser = (User)data; 
             User.MasukData(dataUser);
             ConnectDB.InputData(perintah);
         }
