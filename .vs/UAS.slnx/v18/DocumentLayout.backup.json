@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\(=^.^=)\\database\\UAS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formutama.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formutama.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,56 +15,76 @@
       "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formutama.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formratingdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formaddmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formaddmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formratingdriver.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formratingdriver.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|D:\\(=^.^=)\\database\\UAS\\projectuas\\formratingdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formratingdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formutama.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formutama.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formmapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formmapselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formaddmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formaddmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formratingdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formratingdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\gasskan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\gasskan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\gassride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\gassride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\driver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\gassmon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\gassmon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\topup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\topup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\transfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\transfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\topup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\topup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|D:\\(=^.^=)\\database\\UAS\\projectuas\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\formlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\formlogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\transaksi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|d:\\(=^.^=)\\database\\uas\\projectuas\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{7FD5A990-D3DB-6072-80E0-8C8373FBDDE8}|projectUas\\projectUas.csproj|solutionrelative:projectuas\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|d:\\(=^.^=)\\database\\uas\\class_gass-livery\\gassmon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB04066A-13A9-4539-88A8-1D9DF4BC1C18}|Class_Gass-livery\\Class_Gass-livery.csproj|solutionrelative:class_gass-livery\\gassmon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,21 +93,35 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 223,
-          "SelectedChildIndex": 10,
+          "DockedWidth": 269,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FormUtama.cs [Design]",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs",
               "RelativeDocumentMoniker": "projectUas\\FormUtama.cs",
-              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs [Design]",
-              "RelativeToolTip": "projectUas\\FormUtama.cs [Design]",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs [Design]*",
+              "RelativeToolTip": "projectUas\\FormUtama.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-26T04:27:16.744Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormUtama.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormUtama.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs*",
+              "RelativeToolTip": "projectUas\\FormUtama.cs*",
+              "ViewState": "AgIAAIEBAAAAAAAAAIAwwKMBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:02:57.805Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -104,31 +142,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "FormRatingDriver.Designer.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.Designer.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormRatingDriver.Designer.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.Designer.cs",
+              "RelativeToolTip": "projectUas\\FormRatingDriver.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T03:19:11.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormAddMenu.cs [Design]",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormAddMenu.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormAddMenu.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormAddMenu.cs [Design]",
+              "RelativeToolTip": "projectUas\\FormAddMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:35:51.985Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FormUtama.Designer.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.Designer.cs",
               "RelativeDocumentMoniker": "projectUas\\FormUtama.Designer.cs",
               "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.Designer.cs",
               "RelativeToolTip": "projectUas\\FormUtama.Designer.cs",
-              "ViewState": "AgIAACEBAAAAAAAAAIAwwDIBAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAANYHAAAAAAAAAAAowPAHAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T17:56:49.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "projectUas\\Properties\\Resources.resx",
-              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\Properties\\Resources.resx",
-              "RelativeToolTip": "projectUas\\Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-01-22T16:49:27.305Z",
-              "EditorCaption": ""
+              "DocumentIndex": 5,
+              "Title": "FormRatingDriver.cs [Design]",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormRatingDriver.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.cs [Design]",
+              "RelativeToolTip": "projectUas\\FormRatingDriver.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T16:35:22.184Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "FormAddMenu.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormAddMenu.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormAddMenu.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormAddMenu.cs",
+              "RelativeToolTip": "projectUas\\FormAddMenu.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:20:27.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "FormRatingDriver.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.cs",
               "RelativeDocumentMoniker": "projectUas\\FormRatingDriver.cs",
@@ -141,51 +217,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormRatingDriver.cs [Design]",
-              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.cs",
-              "RelativeDocumentMoniker": "projectUas\\FormRatingDriver.cs",
-              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormRatingDriver.cs [Design]",
-              "RelativeToolTip": "projectUas\\FormRatingDriver.cs [Design]",
+              "DocumentIndex": 16,
+              "Title": "FormLogin.cs [Design]",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormLogin.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormLogin.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormLogin.cs [Design]",
+              "RelativeToolTip": "projectUas\\FormLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T16:35:22.184Z",
+              "WhenOpened": "2026-01-23T00:20:18.368Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormMapSelector.cs",
-              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormMapSelector.cs",
-              "RelativeDocumentMoniker": "projectUas\\FormMapSelector.cs",
-              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormMapSelector.cs",
-              "RelativeToolTip": "projectUas\\FormMapSelector.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA9wCcAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "FormLogin.Designer.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormLogin.Designer.cs",
+              "RelativeDocumentMoniker": "projectUas\\FormLogin.Designer.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormLogin.Designer.cs",
+              "RelativeToolTip": "projectUas\\FormLogin.Designer.cs",
+              "ViewState": "AgIAAJAEAAAAAAAAAAAYwKUEAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-23T12:25:54.288Z",
+              "WhenOpened": "2026-01-23T00:20:40.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormUtama.cs",
-              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs",
-              "RelativeDocumentMoniker": "projectUas\\FormUtama.cs",
-              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\FormUtama.cs",
-              "RelativeToolTip": "projectUas\\FormUtama.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAIwLwAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T09:02:57.805Z",
-              "EditorCaption": ""
+              "DocumentIndex": 19,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\projectUas\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "projectUas\\Properties\\Resources.resx",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\projectUas\\Properties\\Resources.resx",
+              "RelativeToolTip": "projectUas\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-01-22T16:49:27.305Z"
             }
           ]
         },
         {
-          "DockedWidth": 203,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 157,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "Transaksi.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Transaksi.cs",
               "RelativeDocumentMoniker": "Class_Gass-livery\\Transaksi.cs",
@@ -194,18 +268,17 @@
               "ViewState": "AgIAAFoAAAAAAAAAAAAowGwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T11:05:37.211Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Shop.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Shop.cs",
               "RelativeDocumentMoniker": "Class_Gass-livery\\Shop.cs",
               "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Shop.cs",
               "RelativeToolTip": "Class_Gass-livery\\Shop.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAYwIQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAgwHsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T17:40:30Z",
               "EditorCaption": ""
@@ -218,7 +291,7 @@
               "RelativeDocumentMoniker": "Class_Gass-livery\\Driver.cs",
               "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Driver.cs",
               "RelativeToolTip": "Class_Gass-livery\\Driver.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAjwGkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAkwGkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-22T15:13:13.253Z",
               "EditorCaption": ""
@@ -226,6 +299,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "GassKan.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassKan.cs",
+              "RelativeDocumentMoniker": "Class_Gass-livery\\GassKan.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassKan.cs",
+              "RelativeToolTip": "Class_Gass-livery\\GassKan.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAkwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:09:22.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GassRide.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassRide.cs",
+              "RelativeDocumentMoniker": "Class_Gass-livery\\GassRide.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassRide.cs",
+              "RelativeToolTip": "Class_Gass-livery\\GassRide.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAIwF0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-22T11:06:15.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Menu.cs",
+              "RelativeDocumentMoniker": "Class_Gass-livery\\Menu.cs",
+              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Menu.cs",
+              "RelativeToolTip": "Class_Gass-livery\\Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T00:36:11.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\User.cs",
               "RelativeDocumentMoniker": "Class_Gass-livery\\User.cs",
@@ -238,32 +350,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Topup.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Topup.cs",
               "RelativeDocumentMoniker": "Class_Gass-livery\\Topup.cs",
               "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Topup.cs",
               "RelativeToolTip": "Class_Gass-livery\\Topup.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBsAAAB9AAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBsAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T06:16:35.093Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "GassRide.cs",
-              "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassRide.cs",
-              "RelativeDocumentMoniker": "Class_Gass-livery\\GassRide.cs",
-              "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassRide.cs",
-              "RelativeToolTip": "Class_Gass-livery\\GassRide.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAIwFcAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T11:06:15.547Z",
+              "WhenOpened": "2026-01-22T06:16:35.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 20,
               "Title": "GassMon.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\GassMon.cs",
               "RelativeDocumentMoniker": "Class_Gass-livery\\GassMon.cs",
@@ -275,15 +375,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Transfer.cs",
               "DocumentMoniker": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Transfer.cs",
               "RelativeDocumentMoniker": "Class_Gass-livery\\Transfer.cs",
               "ToolTip": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Transfer.cs",
               "RelativeToolTip": "Class_Gass-livery\\Transfer.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvyEAAACxAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAADwvx4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T06:16:26.875Z"
+              "WhenOpened": "2026-01-22T06:16:26.875Z",
+              "EditorCaption": ""
             }
           ]
         }

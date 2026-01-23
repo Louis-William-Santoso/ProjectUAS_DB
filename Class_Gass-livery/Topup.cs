@@ -24,8 +24,8 @@ namespace Class_Gass_livery
         public static void MasukData(Topup tp)
         {
             string perintah =
-                $"INSERT INTO `gass_livery`.`topup` (`id_topup`, `id_gassmon`, `jumlah_topup`, `tanggal`)" +
-                $"VALUES ('{tp.Id_topup}', '{tp.Id_gassmon}', '{tp.Jumlah_topup}', '{tp.Tanggal.ToString("yyyy-MM-dd HH:mm:dd")}');";
+                $"INSERT INTO `topup` (`id_topup`, `id_gassmon`, `jumlah_topup`, `tanggal`)" +
+                $"VALUES ('{tp.Id_topup}', '{tp.Id_gassmon}', '{tp.Jumlah_topup}', '{tp.Tanggal.ToString("yyMMdd HH:mm:dd")}');";
             ConnectDB.InputData(perintah);
         }
     }

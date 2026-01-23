@@ -50,20 +50,6 @@ namespace Class_Gass_livery
                 MySqlDataReader dataMenu = ConnectDB.Select(menu);
                 List<Menu> listMenu = new List<Menu>();
 
-                while (dataMenu.Read() == true)
-                {
-                    Menu tempMenu = new Menu(
-                        (int)dataMenu["id_menu"],
-                        (int)dataMenu["id_tenant"],
-                        (string)dataMenu["nama_menu"],
-                        (int)dataMenu["stock"],
-                        (string)dataMenu["photo"],
-                        (int)dataMenu["harga"],
-                        (string)dataMenu["description"]);
-                    tempMenu.Rating = (float)dataMenu["rating"];
-                    listMenu.Add(tempMenu);
-                }
-
                 string selectUser = $"select * from users where id_users={data["id_users"]};";
                 User dataUser = User.Bacadata(selectUser)[0];
                 Shop temp = new Shop(
@@ -73,6 +59,21 @@ namespace Class_Gass_livery
                     (string)data["alamat"],
                     listMenu,
                     (string)data["photo"]);
+
+                while (dataMenu.Read() == true)
+                {
+                    Menu tempMenu = new Menu(
+                        (int)dataMenu["id_menu"],
+                        temp,
+                        (string)dataMenu["nama_menu"],
+                        (int)dataMenu["stock"],
+                        (string)dataMenu["photo"],
+                        (int)dataMenu["harga"],
+                        (string)dataMenu["description"]);
+                    tempMenu.Rating = (float)dataMenu["rating"];
+                    listMenu.Add(tempMenu);
+                }
+                temp.MenuList = listMenu;
                 temp.Rating = (float)data["rating"];
                 list.Add(temp);
             }
@@ -86,27 +87,13 @@ namespace Class_Gass_livery
 
             while (data.Read() == true)
             {
-                string menu = "select m.id_menu, m.id_tenant, nama_menu, stock, harga, m.rating, m.photo, description" +
-                    "from tenant t inner join menu m" +
-                    "on t.id_tenant=m.id_tenant" +
-                    $"where m.id_tenant={data["id_tenant"]}" +
+                string menu = "select m.id_menu, m.id_tenant, nama_menu, stock, harga, m.rating, m.photo, description " +
+                    "from tenant t inner join menu m " +
+                    "on t.id_tenant=m.id_tenant " +
+                    $"where m.id_tenant={data["id_tenant"]} " +
                     "group by m.id_menu;";
                 MySqlDataReader dataMenu = ConnectDB.Select(menu);
                 List<Menu> listMenu = new List<Menu>();
-
-                while (dataMenu.Read() == true)
-                {
-                    Menu tempMenu = new Menu(
-                        (int)dataMenu["id_menu"],
-                        (int)dataMenu["id_tenant"],
-                        (string)dataMenu["nama_menu"],
-                        (int)dataMenu["stock"],
-                        (string)dataMenu["photo"],
-                        (int)dataMenu["harga"],
-                        (string)dataMenu["description"]);
-                    tempMenu.Rating = (float)dataMenu["rating"];
-                    listMenu.Add(tempMenu);
-                }
 
                 string selectUser = $"select * from users where id_users={data["id_users"]};";
                 User dataUser = User.Bacadata(selectUser)[0];
@@ -117,6 +104,21 @@ namespace Class_Gass_livery
                     (string)data["alamat"],
                     listMenu,
                     (string)data["photo"]);
+
+                while (dataMenu.Read() == true)
+                {
+                    Menu tempMenu = new Menu(
+                        (int)dataMenu["id_menu"],
+                        temp,
+                        (string)dataMenu["nama_menu"],
+                        (int)dataMenu["stock"],
+                        (string)dataMenu["photo"],
+                        (int)dataMenu["harga"],
+                        (string)dataMenu["description"]);
+                    tempMenu.Rating = (float)dataMenu["rating"];
+                    listMenu.Add(tempMenu);
+                }
+                temp.MenuList = listMenu;
                 temp.Rating = (float)data["rating"];
                 list.Add(temp);
             }

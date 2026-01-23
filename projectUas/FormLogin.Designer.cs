@@ -1096,7 +1096,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(25, 25, 25);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(662, 530);
+            ClientSize = new Size(662, 576);
             Controls.Add(tabControlLogin);
             DoubleBuffered = true;
             ForeColor = Color.White;
@@ -1131,11 +1131,11 @@
 
         #endregion
 
-        private TabControl tabControlLogin;
+        public TabControl tabControlLogin;
         private TabPage tabPageLogin;
         private TabPage tabPageSignUp;
         private PictureBox pictureBox1;
-        private TabPage tabPageDriverSetup;
+        public TabPage tabPageDriverSetup;
         private TextBox textBoxLoginPassword;
         private TextBox textBoxLoginUsername;
         private Label label2;
@@ -1183,12 +1183,12 @@
         private Label label17;
         private Button buttonCreateDriverBack;
         private Button buttonCreateDriverNext;
-        private TabPage tabPageMerchant;
+        public TabPage tabPageMerchant;
         private Label label18;
         private Label label19;
         private Button buttonSignUpAddress;
         private Label labelSignUpAdress;
-        private Button buttonAddShopBack;
+        public Button buttonAddShopBack;
         private Button buttonAddShopNext;
         private Button buttonSelectShopAddress;
         private Label labelShopAddress;

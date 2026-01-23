@@ -177,10 +177,19 @@ namespace projectUas
             else if (pictureBox == pictureBoxHomepageGassKan)
             {
                 tabControlPage.SelectedTab = tabPageGassKan;
+                comboBoxGasskanShop.DataSource = Shop.Bacadata();
+                comboBoxGasskanShop.DisplayMember = "NamaToko";
+                comboBoxGassKanDriver.DataSource = Driver.BacaData();
+                comboBoxGassKanDriver.DisplayMember = "Username";
+                idTransaksiGassKan = Transaksi.CreateID(loginUser);
+                labelGassKanIdTransaksi.Text = "#" + idTransaksiGassKan;
+                labelGassKanUsername.Text = loginUser.Username;
+
             }
             else if (pictureBox == pictureBoxHomepageGassMon)
             {
                 tabControlPage.SelectedTab = tabPageGassMon;
+
             }
             else if (pictureBox == pictureBoxHomepageMyShop)
             {
@@ -336,10 +345,91 @@ namespace projectUas
         #endregion
 
         #region Tenant
-
+        private void buttonAddMenu_Click(object sender, EventArgs e)
+        {
+            //FormLogin login = new FormLogin();
+            //login.Owner = this;
+            //login.tabControlLogin.SelectedTab = login.tabPageMerchant;
+            //login.buttonAddShopBack.Hide();
+            //login.ShowDialog();
+            FormAddMenu addMenu = new FormAddMenu();
+            addMenu.Owner = this;
+            addMenu.shop = (Shop)comboBoxShopSelectShop.SelectedItem;
+            addMenu.ShowDialog();
+        }
         #endregion
 
         #region Gass-Kan
+        string idTransaksiGassKan;
+        Address gassKanAddressAwal;
+        Address shopGassKan;
+        int gassKanJarak = 0;
+        private void comboBoxGasskanShop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBoxGassKanMenu.DataSource = ((Shop)comboBoxGasskanShop.SelectedItem).MenuList;
+            comboBoxGassKanMenu.DisplayMember = "Nama";
+
+        }
+
+        private void buttonGassKanSave_Click(object sender, EventArgs e)
+        {
+            FormRatingDriver rd = new FormRatingDriver();
+            rd.Owner = this;
+            rd.ShowDialog();
+
+
+            Transaksi transaksi = new Transaksi(
+                idTransaksi,
+                loginUser,
+                (Driver)comboBoxGassRideDriver.SelectedItem,
+                DateTime.Now,
+                rd.rating,
+                JsonSerializer.Serialize(gassRideAddressAkhir),
+                JsonSerializer.Serialize(gassRideAddressAwal),
+                gassRideJarak
+            );
+            transaksi.Verifikasi = rd.confirm;
+
+            FormRatingDriver ratingMenu = new FormRatingDriver();
+            ratingMenu.Owner = this;
+            ratingMenu.labelTitle.Text = "Rate the Menu";
+            ratingMenu.ShowDialog();
+
+            int jumlahBarang = (int)numericUpDownGassKanJumlahBarang.Value;
+            List<Shop> tenant = new List<Shop>();
+            tenant.Add((Shop)comboBoxGasskanShop.SelectedItem);
+            List<Class_Gass_livery.Menu> menus = new List<Class_Gass_livery.Menu>();
+            menus.Add((Class_Gass_livery.Menu)comboBoxGassKanMenu.SelectedItem);
+
+            sbyte ha = 0;
+            if (checkBoxGassKanHalalFood.Checked) ha = 1;
+            else ha = 0;
+
+            GassKan gassRide = new GassKan(transaksi, jumlahBarang, ratingMenu.rating, tenant, menus, ha);
+            try
+            {
+                GassRide.MasukData(gassRide);
+                MessageBox.Show("Data saved!!");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FormMapSelector map = new FormMapSelector();
+            map.ShowDialog();
+            gassKanAddressAwal = JsonSerializer.Deserialize<Address>(map.Location);
+            labelGassKanMyLoc.Text = Address.GetStringAddress(gassKanAddressAwal);
+
+            if (gassKanAddressAwal != null)
+            {
+                gassKanJarak = (int)Transaksi.HitungJarak(gassKanAddressAwal, shopGassKan);
+                labelGassK.Text = $"{gassKanJarak} KM";
+            }
+        }
         #endregion
+
+
     }
 }

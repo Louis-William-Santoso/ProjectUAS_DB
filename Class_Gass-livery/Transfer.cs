@@ -30,8 +30,8 @@ namespace Class_Gass_livery
         public static void MasukData(Transfer tf)
         {
             string perintah = 
-                $"INSERT INTO `gass_livery`.`transfer` (`id_transfer`, `id_gassmon`, `jumlah_transfer`, `tanggal`, `id_sender`, `id_receiver`)" +
-                $"VALUES ('{tf.Id_transfer}', '{tf.Id_gassmon}', '{tf.Jumlah_transfer}', '{tf.Tanggal.ToString("yyyy-MM-dd HH:mm:dd")}', '{tf.Id_sender}', '{tf.Id_receiver}');";
+                $"INSERT INTO `transfer` (`id_transfer`, `id_gassmon`, `jumlah_transfer`, `tanggal`, `id_sender`, `id_receiver`)" +
+                $"VALUES ('{tf.Id_transfer}', '{tf.Id_gassmon}', '{tf.Jumlah_transfer}', '{tf.Tanggal.ToString("yyMMdd HH:mm:dd")}', '{tf.Id_sender}', '{tf.Id_receiver}');";
             ConnectDB.InputData(perintah);
         }
     }

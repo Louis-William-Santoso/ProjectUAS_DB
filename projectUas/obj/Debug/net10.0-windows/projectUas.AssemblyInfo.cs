@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projectUas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a051f3eb6fe9e0ab2b45cf6f7b598c03c0ed7fa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c032d5100bcec32fd5445a66969b8938aa1c94b")]
 [assembly: System.Reflection.AssemblyProductAttribute("projectUas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projectUas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
