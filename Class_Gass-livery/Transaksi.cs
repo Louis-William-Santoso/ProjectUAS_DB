@@ -29,11 +29,11 @@ namespace Class_Gass_livery
             Jarak = jarak;
         }
 
-        public Transaksi(Transaksi transaksi, User user, Driver driver)
+        public Transaksi(Transaksi transaksi)
         {
             Id_transaksi = transaksi.id_transaksi;
-            this.Users = user;
-            this.Driver = driver;
+            this.Users = transaksi.Users;
+            this.Driver = transaksi.Driver;
             Tanggal = transaksi.Tanggal;
             Rating_driver = transaksi.rating_driver;
             Titik_jemput = transaksi.titik_jemput;
@@ -109,24 +109,24 @@ namespace Class_Gass_livery
         public static void MasukData(Transaksi transaksi)
         {
             string query = $"INSERT INTO `transaksi` (`id_transaksi`, `id_users`, `id_driver`, `rating_driver`, `titik_jemput`, `titik_antar`, `jarak`, `verifikasi`) " +
-                           $"VALUES ('{transaksi.Id_transaksi}', '{transaksi.Users.ID_user}', '{transaksi.Driver.IdDriver}'', '{transaksi.Rating_driver}', '{transaksi.Titik_jemput}', " +
+                           $"VALUES ('{transaksi.Id_transaksi}', '{transaksi.Users.ID_user}', '{transaksi.Driver.IdDriver}', '{transaksi.Rating_driver}', '{transaksi.Titik_jemput}', " +
                            $"'{transaksi.titik_antar}', '{transaksi.Jarak}', '{transaksi.Verifikasi}');";
-            //Connect DB.InputData(query);
+            ConnectDB.InputData(query);
         }
 
-        public static string CreateID()
+        public static string CreateID(User user)
         {
-            string noID ="";
-            //string select = $"SELECT id_transaksi FROM transaksi WHERE id_transaksi LIKE '{DateTime.Now.ToString("yyMMdd")}%' ORDER BY id_transaksi DESC LIMIT 1; ";
-            //MySqlDataReader read = ConnectDB.Select(select);
+            int noID =0;
+            string select = $"SELECT id_transaksi FROM transaksi WHERE id_transaksi LIKE '{user.Username.Substring(0,3)}{DateTime.Now.ToString("yyMMdd")}%' ORDER BY id_transaksi DESC LIMIT 1; ";
+            MySqlDataReader read = ConnectDB.Select(select);
 
-            //if (read.Read())
-            //{
-            //    string lastID = read.GetValue(0).ToString().Substring(6);
-            //    noID = $"{int.Parse(lastID) + 1}";
-            //}
-            //int id = int.Parse($"{DateTime.Now.ToString("yyMMdd")}{noID.PadLeft(3, '0')}");
-            return noID;
+            if (read.Read())
+            {
+                string lastID = read.GetValue(0).ToString().Substring(9);
+                noID = int.Parse(lastID) + 1;
+            }
+            int id = int.Parse($"{DateTime.Now.ToString("yyMMdd")}{noID.ToString().PadLeft(3, '0')}");
+            return $"{user.Username.Substring(0,3)}{id}";
         }
 
         public static double HitungJarak(Address awal, Address akhir)

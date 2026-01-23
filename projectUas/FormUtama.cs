@@ -15,6 +15,8 @@ namespace projectUas
 
         #region Declaration
         public User loginUser;
+        public List<Shop> listShop;
+        public List<Shop> userShop = new List<Shop>();
         string idTransaksi;
         int controlPanelWidthNormal = 67;
         int controlPanelWidthExpanded = 350;
@@ -40,6 +42,20 @@ namespace projectUas
                     if (loginUser == null) throw new Exception("data user kosong");
 
                     labelHomepageNama.Text = $"Hi {loginUser.Username}";
+
+                    listShop = Shop.Bacadata();
+                    List<Shop> tempList = new List<Shop>();
+                    bool userPunyaToko = false;
+                    for (int i = 0; i < listShop.Count; i++)
+                    {
+                        if (listShop[i].User.ID_user == loginUser.ID_user)
+                        {
+                            tempList.Add(listShop[i]);
+                            userPunyaToko = true;
+                        }
+                    }
+                    if (userPunyaToko == false) { label20.Hide(); pictureBoxHomepageMyShop.Hide(); }
+                    else { userShop = tempList; }
                 }
                 else
                 {
@@ -144,15 +160,19 @@ namespace projectUas
         #region Homepage
         public void Picture_click(object sender, EventArgs e)
         {
-            idTransaksi = Transaksi.CreateID();
+            idTransaksi = Transaksi.CreateID(loginUser);
+            labelGassRideIdTransaksi.Text = idTransaksi;
             PictureBox pictureBox = (PictureBox)sender;
             if (pictureBox == pictureBoxHomepageGassRide)
             {
                 tabControlPage.SelectedTab = tabPageGassRide;
+
                 labelGassRideUsername.Text = loginUser.Username;
                 labelGassRideIdTransaksi.Text = $"#{idTransaksi.ToString()}";
                 comboBoxGassRideDriver.DataSource = Driver.BacaData();
                 comboBoxGassRideDriver.DisplayMember = "Username";
+
+                if (loginUser.Gender == 0) checkBoxGassRideRequestDriver.Hide(); label7.Hide();
             }
             else if (pictureBox == pictureBoxHomepageGassKan)
             {
@@ -162,6 +182,13 @@ namespace projectUas
             {
                 tabControlPage.SelectedTab = tabPageGassMon;
             }
+            else if (pictureBox == pictureBoxHomepageMyShop)
+            {
+                tabControlPage.SelectedTab = tabPageTenant;
+                comboBoxShopSelectShop.DataSource = userShop;
+                comboBoxShopSelectShop.DisplayMember = "NamaToko";
+                dataGridViewDataShopMenu.DataSource = ((Shop)comboBoxShopSelectShop.SelectedItem).MenuList;
+            }
         }
         #endregion
 
@@ -169,7 +196,8 @@ namespace projectUas
         private int gassRideJarak = 0;
         private int gassRideOngkir = 0;
         private int gassRideEkstra = 0;
-        private float gassRideRatingDriver = 0;
+        private sbyte gassRideDriverWanita = 0;
+        private sbyte gassRideKendaraanbaru = 0;
         private Address gassRideAddressAwal;
         private Address gassRideAddressAkhir;
         private void buttonGassRideTargetLocationSearch_Click(object sender, EventArgs e)
@@ -189,17 +217,21 @@ namespace projectUas
         }
         private void buttonGassRideMyLocationSearch_Click(object sender, EventArgs e)
         {
-            FormMapSelector map = new FormMapSelector();
-            map.ShowDialog();
-            gassRideAddressAwal = JsonSerializer.Deserialize<Address>(map.Location);
-            labelGassRideMyLocation.Text = Address.GetStringAddress(gassRideAddressAwal);
-            labelGassRideNotaTitikAsal.Text = Address.GetStringAddress(gassRideAddressAwal);
-
-            if (gassRideAddressAkhir != null)
+            try
             {
-                gassRideJarak = (int)Transaksi.HitungJarak(gassRideAddressAwal, gassRideAddressAkhir);
-                labelGassRideJarak.Text = $"{gassRideJarak} KM";
+                FormMapSelector map = new FormMapSelector();
+                map.ShowDialog();
+                gassRideAddressAwal = JsonSerializer.Deserialize<Address>(map.Location);
+                labelGassRideMyLocation.Text = Address.GetStringAddress(gassRideAddressAwal);
+                labelGassRideNotaTitikAsal.Text = Address.GetStringAddress(gassRideAddressAwal);
+
+                if (gassRideAddressAkhir != null)
+                {
+                    gassRideJarak = (int)Transaksi.HitungJarak(gassRideAddressAwal, gassRideAddressAkhir);
+                    labelGassRideJarak.Text = $"{gassRideJarak} KM";
+                }
             }
+            catch (Exception er) { MessageBox.Show(er.Message); }
         }
         private void HitungTotalGassRide(object sender, EventArgs e)
         {
@@ -217,13 +249,21 @@ namespace projectUas
 
             if (sender == checkBoxGassRideMotorBaru)
             {
-                if (checkBoxGassRideMotorBaru.Checked) gassRideEkstra += 5000;
-                else gassRideEkstra -= 5000;
+                if (checkBoxGassRideMotorBaru.Checked)
+                {
+                    gassRideEkstra += 5000;
+                    gassRideKendaraanbaru = 1;
+                }
+                else gassRideEkstra -= 5000; gassRideKendaraanbaru = 0;
             }
             else if (sender == checkBoxGassRideRequestDriver)
             {
-                if (checkBoxGassRideRequestDriver.Checked) gassRideEkstra += 1500;
-                else gassRideEkstra -= 1500;
+                if (checkBoxGassRideRequestDriver.Checked)
+                {
+                    gassRideEkstra += 1500;
+                    gassRideDriverWanita = 1;
+                }
+                else gassRideEkstra -= 1500; gassRideDriverWanita = 0;
             }
             else if (sender == labelGassRideJarak)
             {
@@ -239,8 +279,6 @@ namespace projectUas
             labelGassRideOngkir.Text = $"Rp.{gassRideOngkir}";
             labelGassRideTotalBayar.Text = $"Rp.{gassRideEkstra + gassRideOngkir}";
         }
-
-        #endregion
 
         private void buttonGassRideCancel_Click(object sender, EventArgs e)
         {
@@ -266,16 +304,42 @@ namespace projectUas
         }
         private void buttonGassRideSave_Click(object sender, EventArgs e)
         {
-            //Transaksi transaksi = new Transaksi(
-            //    (string)$"{loginUser.Username.Substring(0, 3)}{Transaksi.CreateID()}",
-            //    loginUser,
-            //    comboBoxGassRideDriver.SelectedItem,
-            //    DateTime.Now,
-            //    gassRideRatingDriver,
-            //    gassRideAddressAkhir.ToString()
+            FormRatingDriver rd = new FormRatingDriver();
+            rd.Owner = this;
+            rd.ShowDialog();
 
-            //    );
-            
+            Transaksi transaksi = new Transaksi(
+                idTransaksi,
+                loginUser,
+                (Driver)comboBoxGassRideDriver.SelectedItem,
+                DateTime.Now,
+                rd.rating,
+                JsonSerializer.Serialize(gassRideAddressAkhir),
+                JsonSerializer.Serialize(gassRideAddressAwal),
+                gassRideJarak
+            );
+            transaksi.Verifikasi = rd.confirm;
+            GassRide gassRide = new GassRide(transaksi,
+                GassRide.CreateID(),
+                (gassRideEkstra + gassRideOngkir),
+                gassRideDriverWanita,
+                gassRideKendaraanbaru
+            );
+            try
+            {
+                GassRide.MasukData(gassRide);
+                MessageBox.Show("Data saved!!");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+
         }
+        #endregion
+
+        #region Tenant
+
+        #endregion
+
+        #region Gass-Kan
+        #endregion
     }
 }

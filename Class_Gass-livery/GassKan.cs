@@ -15,9 +15,9 @@ namespace Class_Gass_livery
         private int jumlah;
         private float rating_menu;
 
-        public GassKan(Transaksi transaksi, User user, Driver driver,
+        public GassKan(Transaksi transaksi,
                        int jumlah, float rating_menu, List<Shop> tenant, List<Menu> menus) 
-               : base (transaksi, user,driver)
+               : base (transaksi)
         {
             Jumlah = jumlah;
             Rating_menu = rating_menu;
@@ -25,7 +25,7 @@ namespace Class_Gass_livery
             Menus = menus;
         }
 
-        public GassKan(Transaksi transaksi, User user, Driver driver, GassKan gassKan) : base(transaksi, user, driver)
+        public GassKan(Transaksi transaksi, User user, Driver driver, GassKan gassKan) : base(transaksi)
         {
             Jumlah = jumlah;
             Rating_menu = rating_menu;

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\projectUas.csproj": {}
+    "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj": {
+    "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj",
+        "projectUniqueName": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj",
         "projectName": "Class_Gass-livery",
-        "projectPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj",
-        "packagesPath": "C:\\Users\\Ire\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\obj\\",
+        "projectPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj",
+        "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
+        "outputPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ire\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -343,20 +343,20 @@
         }
       }
     },
-    "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\projectUas.csproj": {
+    "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\projectUas.csproj",
+        "projectUniqueName": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
         "projectName": "projectUas",
-        "projectPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\projectUas.csproj",
-        "packagesPath": "C:\\Users\\Ire\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\projectUas\\obj\\",
+        "projectPath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\projectUas.csproj",
+        "packagesPath": "C:\\Users\\louis\\.nuget\\packages\\",
+        "outputPath": "D:\\(=^.^=)\\database\\UAS\\projectUas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Ire\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\louis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -371,8 +371,8 @@
           "net10.0-windows7.0": {
             "targetAlias": "net10.0-windows",
             "projectReferences": {
-              "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj": {
-                "projectPath": "C:\\Users\\Ire\\Documents\\!College\\current\\Database\\ProjectUAS_DB\\Class_Gass-livery\\Class_Gass-livery.csproj"
+              "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj": {
+                "projectPath": "D:\\(=^.^=)\\database\\UAS\\Class_Gass-livery\\Class_Gass-livery.csproj"
               }
             }
           }

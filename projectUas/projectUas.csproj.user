@@ -7,6 +7,9 @@
     <Compile Update="FormMapSelector.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormRatingDriver.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormUtama.cs">
       <SubType>Form</SubType>
     </Compile>

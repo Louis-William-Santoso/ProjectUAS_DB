@@ -30,6 +30,8 @@
         {
             tabControlPage = new TabControl();
             tabPageHomepage = new TabPage();
+            label20 = new Label();
+            pictureBoxHomepageMyShop = new PictureBox();
             label13 = new Label();
             pictureBoxHomepageGassMon = new PictureBox();
             label2 = new Label();
@@ -139,6 +141,7 @@
             label10 = new Label();
             buttonGassRideMyLocationSearch = new Button();
             tabPageGassKan = new TabPage();
+            checkBoxGassKanHalalFood = new CheckBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             groupBox2 = new GroupBox();
             label33 = new Label();
@@ -159,14 +162,14 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             panel4 = new Panel();
             comboBox4 = new ComboBox();
-            comboBox3 = new ComboBox();
+            comboBoxGasskanShop = new ComboBox();
             pictureBox9 = new PictureBox();
             label48 = new Label();
             pictureBox7 = new PictureBox();
             label47 = new Label();
             panel6 = new Panel();
+            label9 = new Label();
             pictureBox8 = new PictureBox();
-            label52 = new Label();
             label53 = new Label();
             button8 = new Button();
             tabPageGassMon = new TabPage();
@@ -178,6 +181,9 @@
             label46 = new Label();
             pictureBox6 = new PictureBox();
             tabPageTenant = new TabPage();
+            comboBoxShopSelectShop = new ComboBox();
+            buttonAddMenu = new Button();
+            dataGridViewDataShopMenu = new DataGridView();
             label51 = new Label();
             label54 = new Label();
             pictureBox12 = new PictureBox();
@@ -188,6 +194,7 @@
             buttonMenu = new PictureBox();
             tabControlPage.SuspendLayout();
             tabPageHomepage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageMyShop).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassMon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassKan).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassRide).BeginInit();
@@ -233,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             tabPageTenant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDataShopMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             panelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)buttonMenu).BeginInit();
@@ -258,6 +266,8 @@
             // tabPageHomepage
             // 
             tabPageHomepage.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageHomepage.Controls.Add(label20);
+            tabPageHomepage.Controls.Add(pictureBoxHomepageMyShop);
             tabPageHomepage.Controls.Add(label13);
             tabPageHomepage.Controls.Add(pictureBoxHomepageGassMon);
             tabPageHomepage.Controls.Add(label2);
@@ -273,6 +283,28 @@
             tabPageHomepage.Size = new Size(1181, 625);
             tabPageHomepage.TabIndex = 0;
             tabPageHomepage.Text = "Homepage";
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label20.ForeColor = Color.White;
+            label20.Location = new Point(526, 308);
+            label20.Name = "label20";
+            label20.Size = new Size(92, 27);
+            label20.TabIndex = 12;
+            label20.Text = "My Shop";
+            // 
+            // pictureBoxHomepageMyShop
+            // 
+            pictureBoxHomepageMyShop.BackgroundImage = Properties.Resources.shop;
+            pictureBoxHomepageMyShop.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBoxHomepageMyShop.Location = new Point(543, 239);
+            pictureBoxHomepageMyShop.Name = "pictureBoxHomepageMyShop";
+            pictureBoxHomepageMyShop.Size = new Size(66, 66);
+            pictureBoxHomepageMyShop.TabIndex = 11;
+            pictureBoxHomepageMyShop.TabStop = false;
+            pictureBoxHomepageMyShop.Click += Picture_click;
             // 
             // label13
             // 
@@ -1708,6 +1740,7 @@
             // tabPageGassKan
             // 
             tabPageGassKan.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageGassKan.Controls.Add(checkBoxGassKanHalalFood);
             tabPageGassKan.Controls.Add(tableLayoutPanel3);
             tabPageGassKan.Controls.Add(groupBox2);
             tabPageGassKan.Controls.Add(tableLayoutPanel2);
@@ -1718,6 +1751,18 @@
             tabPageGassKan.TabIndex = 4;
             tabPageGassKan.Text = "GassKan";
             // 
+            // checkBoxGassKanHalalFood
+            // 
+            checkBoxGassKanHalalFood.CheckAlign = ContentAlignment.MiddleRight;
+            checkBoxGassKanHalalFood.Font = new Font("Comic Sans MS", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            checkBoxGassKanHalalFood.ForeColor = SystemColors.ControlLightLight;
+            checkBoxGassKanHalalFood.Location = new Point(32, 214);
+            checkBoxGassKanHalalFood.Name = "checkBoxGassKanHalalFood";
+            checkBoxGassKanHalalFood.Size = new Size(645, 37);
+            checkBoxGassKanHalalFood.TabIndex = 30;
+            checkBoxGassKanHalalFood.Text = "Halal Food";
+            checkBoxGassKanHalalFood.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 4;
@@ -1725,7 +1770,7 @@
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 53.17919F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 182F));
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 146F));
-            tableLayoutPanel3.Location = new Point(15, 214);
+            tableLayoutPanel3.Location = new Point(15, 317);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 46.6926079F));
@@ -1980,7 +2025,7 @@
             panel4.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel4.BackColor = Color.FromArgb(37, 37, 37);
             panel4.Controls.Add(comboBox4);
-            panel4.Controls.Add(comboBox3);
+            panel4.Controls.Add(comboBoxGasskanShop);
             panel4.Controls.Add(pictureBox9);
             panel4.Controls.Add(label48);
             panel4.Controls.Add(pictureBox7);
@@ -1999,13 +2044,13 @@
             comboBox4.Size = new Size(248, 23);
             comboBox4.TabIndex = 36;
             // 
-            // comboBox3
+            // comboBoxGasskanShop
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(411, 15);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(248, 23);
-            comboBox3.TabIndex = 36;
+            comboBoxGasskanShop.FormattingEnabled = true;
+            comboBoxGasskanShop.Location = new Point(411, 15);
+            comboBoxGasskanShop.Name = "comboBoxGasskanShop";
+            comboBoxGasskanShop.Size = new Size(248, 23);
+            comboBoxGasskanShop.TabIndex = 36;
             // 
             // pictureBox9
             // 
@@ -2051,16 +2096,16 @@
             label47.ImageAlign = ContentAlignment.MiddleLeft;
             label47.Location = new Point(58, 9);
             label47.Name = "label47";
-            label47.Size = new Size(92, 33);
+            label47.Size = new Size(72, 33);
             label47.TabIndex = 23;
-            label47.Text = "Tenant";
+            label47.Text = "Shop";
             // 
             // panel6
             // 
             panel6.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel6.BackColor = Color.FromArgb(37, 37, 37);
+            panel6.Controls.Add(label9);
             panel6.Controls.Add(pictureBox8);
-            panel6.Controls.Add(label52);
             panel6.Controls.Add(label53);
             panel6.Controls.Add(button8);
             panel6.Dock = DockStyle.Fill;
@@ -2068,6 +2113,18 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(669, 60);
             panel6.TabIndex = 11;
+            // 
+            // label9
+            // 
+            label9.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Gray;
+            label9.Location = new Point(240, 25);
+            label9.Name = "label9";
+            label9.RightToLeft = RightToLeft.No;
+            label9.Size = new Size(286, 20);
+            label9.TabIndex = 23;
+            label9.Text = "......";
+            label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox8
             // 
@@ -2078,19 +2135,6 @@
             pictureBox8.Size = new Size(40, 40);
             pictureBox8.TabIndex = 0;
             pictureBox8.TabStop = false;
-            // 
-            // label52
-            // 
-            label52.AutoSize = true;
-            label52.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label52.ForeColor = Color.Gray;
-            label52.Location = new Point(411, 32);
-            label52.Name = "label52";
-            label52.RightToLeft = RightToLeft.No;
-            label52.Size = new Size(27, 20);
-            label52.TabIndex = 22;
-            label52.Text = "......";
-            label52.TextAlign = ContentAlignment.TopRight;
             // 
             // label53
             // 
@@ -2215,6 +2259,9 @@
             // tabPageTenant
             // 
             tabPageTenant.BackColor = Color.FromArgb(25, 25, 25);
+            tabPageTenant.Controls.Add(comboBoxShopSelectShop);
+            tabPageTenant.Controls.Add(buttonAddMenu);
+            tabPageTenant.Controls.Add(dataGridViewDataShopMenu);
             tabPageTenant.Controls.Add(label51);
             tabPageTenant.Controls.Add(label54);
             tabPageTenant.Controls.Add(pictureBox12);
@@ -2224,6 +2271,35 @@
             tabPageTenant.Size = new Size(1181, 625);
             tabPageTenant.TabIndex = 6;
             tabPageTenant.Text = "Tenant";
+            // 
+            // comboBoxShopSelectShop
+            // 
+            comboBoxShopSelectShop.FormattingEnabled = true;
+            comboBoxShopSelectShop.Location = new Point(333, 102);
+            comboBoxShopSelectShop.Name = "comboBoxShopSelectShop";
+            comboBoxShopSelectShop.Size = new Size(252, 23);
+            comboBoxShopSelectShop.TabIndex = 11;
+            // 
+            // buttonAddMenu
+            // 
+            buttonAddMenu.BackColor = Color.FromArgb(37, 37, 37);
+            buttonAddMenu.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonAddMenu.ForeColor = Color.White;
+            buttonAddMenu.Location = new Point(975, 105);
+            buttonAddMenu.Name = "buttonAddMenu";
+            buttonAddMenu.Size = new Size(136, 45);
+            buttonAddMenu.TabIndex = 10;
+            buttonAddMenu.Text = "Add Menu";
+            buttonAddMenu.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewDataShopMenu
+            // 
+            dataGridViewDataShopMenu.BackgroundColor = Color.DimGray;
+            dataGridViewDataShopMenu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDataShopMenu.Location = new Point(43, 173);
+            dataGridViewDataShopMenu.Name = "dataGridViewDataShopMenu";
+            dataGridViewDataShopMenu.Size = new Size(1068, 412);
+            dataGridViewDataShopMenu.TabIndex = 9;
             // 
             // label51
             // 
@@ -2346,6 +2422,7 @@
             tabControlPage.ResumeLayout(false);
             tabPageHomepage.ResumeLayout(false);
             tabPageHomepage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageMyShop).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassMon).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassKan).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxHomepageGassRide).EndInit();
@@ -2411,6 +2488,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             tabPageTenant.ResumeLayout(false);
             tabPageTenant.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDataShopMenu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             panelControl.ResumeLayout(false);
             panelControl.PerformLayout();
@@ -2501,13 +2579,12 @@
         private Panel panel4;
         private Panel panel6;
         private PictureBox pictureBox8;
-        private Label label52;
         private Label label53;
         private Button button8;
         private Label label47;
         private PictureBox pictureBox7;
         private ComboBox comboBox4;
-        private ComboBox comboBox3;
+        private ComboBox comboBoxGasskanShop;
         private PictureBox pictureBox9;
         private Label label48;
         private RadioButton radioButton3;
@@ -2524,7 +2601,6 @@
         private PictureBox pictureBox12;
         private Label label51;
         private Label label54;
-        private TableLayoutPanel tableLayoutPanel3;
         private TabPage tabPageSettings;
         private Label labelSettingsIDUserProfile;
         private TableLayoutPanel tableLayoutPanel1;
@@ -2578,5 +2654,13 @@
         private Label labelGassRideExtra;
         private Label labelGassRideOngkir;
         private Label label8;
+        private TableLayoutPanel tableLayoutPanel3;
+        private Label label9;
+        private CheckBox checkBoxGassKanHalalFood;
+        private DataGridView dataGridViewDataShopMenu;
+        private Button buttonAddMenu;
+        private Label label20;
+        private PictureBox pictureBoxHomepageMyShop;
+        private ComboBox comboBoxShopSelectShop;
     }
 }

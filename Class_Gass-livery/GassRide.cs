@@ -13,9 +13,9 @@ namespace Class_Gass_livery
         private sbyte driverWanita;
         private sbyte kendaraanBaru;
 
-        public GassRide(Transaksi transaksi, User user, Driver driver,
+        public GassRide(Transaksi transaksi,
                         GassRide gassRide)
-                        : base(transaksi,user,driver)
+                        : base(transaksi)
         {
             Id_gassride = gassRide.Id_gassride;
             totalBayar = gassRide.TotalBayar;
@@ -23,9 +23,9 @@ namespace Class_Gass_livery
             kendaraanBaru = gassRide.KendaraanBaru;
         }
 
-        public GassRide(Transaksi transaksi, User user, Driver driver,
+        public GassRide(Transaksi transaksi,
                         int id_gassride,int totalBayar, sbyte driverWanita, sbyte kendaraanBaru)
-                        : base(transaksi, user, driver)
+                        : base(transaksi)
         {
             Id_gassride = id_gassride;
             TotalBayar = totalBayar;
@@ -47,13 +47,9 @@ namespace Class_Gass_livery
             while (data.Read())
             { 
                 Transaksi transaksi = (Transaksi.BacaData($"SELECT * FROM transaksi where id_transaksi={data["id_transaksi"]};"))[0];
-                User dataUser = User.Bacadata($"select * from users where id_users = {data["id_users"]};")[0];
-                Driver dataDriver = Driver.BacaData($"select * from driver where id_driver={data["id_driver"]};")[0];
 
                 GassRide dataGassRide = new GassRide(
                     transaksi,
-                    dataUser,
-                    dataDriver,
                     (int)data["id_gassride"],
                     (int)data["total_bayar"],
                     (sbyte)data["driver_wanita"],
@@ -72,13 +68,9 @@ namespace Class_Gass_livery
             while (data.Read())
             {
                 Transaksi transaksi = (Transaksi.BacaData($"SELECT * FROM transaksi where id_transaksi={data["id_transaksi"]};"))[0];
-                User dataUser = User.Bacadata($"select * from users where id_users = {data["id_users"]};")[0];
-                Driver dataDriver = Driver.BacaData($"select * from driver where id_driver={data["id_driver"]};")[0];
 
                 GassRide dataGassRide = new GassRide(
                     transaksi,
-                    dataUser,
-                    dataDriver,
                     (int)data["id_gassride"],
                     (int)data["total_bayar"],
                     (sbyte)data["driver_wanita"],
@@ -91,10 +83,27 @@ namespace Class_Gass_livery
 
         public static void MasukData(GassRide gassRide)
         {
+            Transaksi temp = gassRide;
+            Transaksi.MasukData(temp);
             string query = $"INSERT INTO `gass_ride` (`id_gassride`, `id_transaksi`, `driver_wanita`, `kendaraan_baru`, `total_bayar`) " +
                            $"VALUES('{gassRide.Id_gassride}', '{gassRide.Id_transaksi}', '{gassRide.DriverWanita}', '{gassRide.KendaraanBaru}', '{gassRide.totalBayar}');";
-            Transaksi.MasukData(gassRide);
+            
             ConnectDB.InputData(query);
+        }
+
+        public static int CreateID()
+        {
+            int noID = 0;
+            string select = $"SELECT id_gassride FROM gass_ride WHERE id_gassride LIKE '{DateTime.Now.ToString("yyMMdd")}%' ORDER BY id_gassride DESC LIMIT 1; ";
+            MySqlDataReader read = ConnectDB.Select(select);
+
+            if (read.Read())
+            {
+                string lastID = read.GetValue(0).ToString().Substring(6);
+                noID = int.Parse(lastID) + 1;
+            }
+            int id = int.Parse($"{DateTime.Now.ToString("yyMMdd")}{noID.ToString().PadLeft(3, '0')}");
+            return id;
         }
     }
 }

@@ -142,3 +142,4 @@ C:\Users\Ire\Documents\!College\current\Database\ProjectUAS_DB\projectUas\obj\De
 C:\Users\Ire\Documents\!College\current\Database\ProjectUAS_DB\projectUas\obj\Debug\net10.0-windows\projectUas.pdb
 C:\Users\Ire\Documents\!College\current\Database\ProjectUAS_DB\projectUas\obj\Debug\net10.0-windows\projectUas.genruntimeconfig.cache
 C:\Users\Ire\Documents\!College\current\Database\ProjectUAS_DB\projectUas\obj\Debug\net10.0-windows\ref\projectUas.dll
+D:\(=^.^=)\database\UAS\projectUas\obj\Debug\net10.0-windows\projectUas.FormRatingDriver.resources
